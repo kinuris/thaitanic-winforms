@@ -11,6 +11,8 @@
   - ### GetAllItems `STATIC METHOD` <br>
     Returns all `Items` as `List<Items>`.
   - ### GetItemById `STATIC METHOD` <br>
+  - ### Fetch `INSTANCE METHOD` <br>
+    Updates the instance to reflect the changes made to the record in the `items` table.
 
 - ### OrderBatch `CLASS`
 - ### Orders `CLASS`
