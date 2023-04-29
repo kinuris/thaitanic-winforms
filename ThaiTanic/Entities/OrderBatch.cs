@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using ThaiTanic.State;
 
 namespace ThaiTanic.Entities
 {
@@ -7,6 +8,15 @@ namespace ThaiTanic.Entities
         public int Id;
         public Items AssociatedItem;
         public int Quantity;
+
+        public CartEntry ToCartEntry()
+        {
+            return new CartEntry()
+            {
+                Item = AssociatedItem,
+                Quantity = Quantity,
+            };
+        }
 
         public OrderBatch(MySqlDataReader reader, int offset)
         {
