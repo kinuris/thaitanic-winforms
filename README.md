@@ -21,8 +21,8 @@
     Takes a `username` and a `password` as the parameters, and returns the user, as an instance of the `User` class, that matches the parameters. If none exists, it will return `null`.
 
 ## To Implement (Back-End)
- 1. `UpdateItem` instance method for `Items`
- 2. `AddEntry` static method for `Cart`
- 3. `SubtractEntry` static method for `Cart`
+ 1. ~~ `UpdateItem` instance method for `Items` ~~
+ 2. ~~ `AddEntry` static method for `Cart` ~~ **API MAY CHANGE**
+ 3. ~~ `SubtractEntry` static method for `Cart` ~~ **API MAY CHANGE**
  4. Database `Exception` handling for each `Entity`. (Low Priority)
  5. Conversion of `OrderBatch` instance to `CartEntry` instance. (Low Priority)
