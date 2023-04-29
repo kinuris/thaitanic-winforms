@@ -13,12 +13,15 @@
   - ### GetItemById `STATIC METHOD` <br>
   - ### Fetch `INSTANCE METHOD` <br>
     Updates the instance to reflect the changes made to the record in the `items` table.
+  - ### UpdateItem `INSTANCE METHOD` <br>
+    In contrast to `Fetch()`, this method updates the record in the database and updates the instance via `Fetch()` method.
 
 - ### OrderBatch `CLASS`
 - ### Orders `CLASS`
 - ### User `CLASS`
   - ### AuthUser `STATIC METHOD` <br>
     Takes a `username` and a `password` as the parameters, and returns the user, as an instance of the `User` class, that matches the parameters. If none exists, it will return `null`.
+  - ### GetUserById `STATIC METHOD` <br>
 
 ## To Implement (Back-End)
  1. ~~`UpdateItem` instance method for `Items`~~
