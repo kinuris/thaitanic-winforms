@@ -42,6 +42,29 @@ namespace ThaiTanic.Entities
         public DateTime UpdatedAt;
 
         // Syncs object with corresponding table record
+
+        public void UpdateItem(string name, string description, decimal price, ItemCategory category)
+        {
+            string sql = "UPDATE items SET name = @name, description = @description, price = @price, category = @category WHERE id = @id";
+
+            // TODO: Handle failure and id not existing case
+            using (MySqlConnection conn = new MySqlConnection(Connection.ConnectionString))
+            using (MySqlCommand cmd = new MySqlCommand(sql, conn))
+            {
+                conn.Open();
+
+                cmd.Parameters.AddWithValue("@name", name);
+                cmd.Parameters.AddWithValue("@description", description);
+                cmd.Parameters.AddWithValue("@price", price);
+                cmd.Parameters.AddWithValue("@category", category.ToString());
+                cmd.Parameters.AddWithValue("@id", Id);
+
+                cmd.ExecuteNonQuery();
+            }
+
+            Fetch();
+        }
+
         public void Fetch()
         {
             string sql = "SELECT id, name, description, price, category, created_at, updated_at FROM items WHERE id = @id";
