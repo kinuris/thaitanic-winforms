@@ -28,4 +28,4 @@
  2. ~~`AddEntry` static method for `Cart`~~ **API MAY CHANGE**
  3. ~~`SubtractEntry` static method for `Cart`~~ **API MAY CHANGE**
  4. Database `Exception` handling for each `Entity`. (Low Priority)
- 5. Conversion of `OrderBatch` instance to `CartEntry` instance. (Low Priority)
+ 5. ~~Conversion of `OrderBatch` instance to `CartEntry` instance. (Low Priority)~~
