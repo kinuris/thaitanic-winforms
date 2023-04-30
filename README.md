@@ -27,6 +27,6 @@
  1. ~~`UpdateItem` instance method for `Items`~~
  2. ~~`AddEntry` static method for `Cart`~~ **API MAY CHANGE**
  3. ~~`SubtractEntry` static method for `Cart`~~ **API MAY CHANGE**
- 4. Implement `OrdersByUser()` static method `Orders` (High Priority)
+ 4. ~~Implement `OrdersByUser()` static method `Orders` (High Priority)~~
  5. Database `Exception` handling for each `Entity`. (Low Priority)
  6. ~~Conversion of `OrderBatch` instance to `CartEntry` instance. (Low Priority)~~
