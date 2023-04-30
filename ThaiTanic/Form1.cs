@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using ThaiTanic.Entities;
@@ -19,6 +20,7 @@ namespace ThaiTanic
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+            // SAMPLE LOGIC
             var user = User.AuthUser(txtUsername.Text, txtPassword.Text);
 
             if (user == null) 
@@ -26,6 +28,12 @@ namespace ThaiTanic
                 MessageBox.Show("User does not exist");
                 return;
             }
+
+            var orders = Orders.OrdersByUser(user);
+
+            foreach (var order in orders)
+                foreach (var batch in order.GetBatch())
+                    MessageBox.Show($"From Order: {order.Id} => Item: {batch.AssociatedItem.Name}");
 
             MessageBox.Show($"Welcome {user.FullName}");
         }
