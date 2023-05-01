@@ -8,14 +8,29 @@ using ThaiTanic.Entities;
 namespace ThaiTanic.State
 {
     // TODO: Consider making this a singleton instead to lessen confusion
-    static internal class Cart
+    internal class Cart
     {
-        public static List<CartEntry> Entries = new List<CartEntry>();
+        public List<CartEntry> Entries = new List<CartEntry>();
+        public User User;
+
+        public decimal TotalPrice
+        {
+            get
+            {
+                return Entries.Select(entry => entry.Item.Price * entry.Quantity).Sum();
+            }
+        }
 
         // TODO: Do validation such that no 'Item' in the entries have the same 'Id'
         // Adds an 'entry' if an 'entry.Item' in 'Entries' with the same 'Id' does not exist
-        public static void AddCartEntry(int itemId, int quantity)
+        public void AddCartEntry(int itemId, int quantity)
         {
+            if (quantity < 0)
+            {
+                // TODO: Should throw some exception
+                return;
+            }
+
             var existing = Entries.Where(entry => entry.Item.Id == itemId);
             
             if (existing.Any())
@@ -34,7 +49,7 @@ namespace ThaiTanic.State
 
         // If you want to remove an entry altogether (not just decrease the quantity), you will need to enter 0 or a negative number
         // NOTE: SubtractCartEntry(2, 0) does NOTHING
-        public static void SubtractCartEntry(int itemId, int quantity)
+        public void SubtractCartEntry(int itemId, int quantity)
         {
             var existing = Entries.Where(entry => entry.Item.Id == itemId);
 
@@ -52,33 +67,38 @@ namespace ThaiTanic.State
                 item.Quantity -= quantity;
 
             if (item.Quantity <= 0)
-            {
                 Entries = Entries.Where(entry => entry.Item.Id != itemId).ToList();
-            }
         }
 
-        public static void Deserialize()
+        public void Deserialize()
         {
             Entries = new List<CartEntry>();
-            var stream = File.OpenRead("localStorage.json");
+
+            // TODO: Catch FileNotFoundException
+            var stream = File.OpenRead($"uid{User.Id}-localStorage.json");
             var serde = new DataContractJsonSerializer(Entries.GetType());
 
             Entries = (List<CartEntry>) serde.ReadObject(stream);
             stream.Close();
         }
 
-        public static void Serialize()
+        public void Serialize()
         {
             var serde = new DataContractJsonSerializer(Entries.GetType());
-            var stream = File.Create("localStorage.json");
+            var stream = File.Create($"uid{User.Id}-localStorage.json");
 
             serde.WriteObject(stream, Entries);
             stream.Close();
         }
 
-        public static void Clear()
+        public void Clear()
         {
-            File.Create("localStorage.json").Close();
+            File.Create($"uid{User.Id}-localStorage.json").Close();
+        }
+
+        public Cart(User user)
+        {
+            User = user;
         }
     }
 
