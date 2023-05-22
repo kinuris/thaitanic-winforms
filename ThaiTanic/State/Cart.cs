@@ -47,7 +47,7 @@ namespace ThaiTanic.State
             });
         }
 
-        // If you want to remove an entry altogether (not just decrease the quantity), you will need to enter 0 or a negative number
+        // If you want to remove an entry altogether (not just decrease the quantity), you will need to a negative number
         // NOTE: SubtractCartEntry(2, 0) does NOTHING
         public void SubtractCartEntry(int itemId, int quantity)
         {
@@ -95,6 +95,13 @@ namespace ThaiTanic.State
         {
             File.Create($"uid{User.Id}-localStorage.json").Close();
         }
+
+        // cart = new Cart(user)
+        // cart.AddEntry(id, 10)
+        // cart.SubtractEntry(id, 5) -> quantity = 5
+        // cart.Sb(id, 6) -> Remove Entry
+        // cart.Sb(id, -1) -> Remove
+        // cart.Sb(id, 0) nothing
 
         public Cart(User user)
         {

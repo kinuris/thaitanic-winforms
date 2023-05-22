@@ -3,6 +3,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using ThaiTanic.Entities;
+using ThaiTanic.State;
 
 namespace ThaiTanic
 {
@@ -28,10 +29,19 @@ namespace ThaiTanic
                 MessageBox.Show("User does not exist");
                 return;
             }
+            var cart = new Cart(user);
 
-            var orders = Orders.OrdersByUser(user);
+            var items = Items.GetAllItems();
+            foreach (var item in items)
+            {
+                cart.AddCartEntry(item.Id, 10);
+            }
 
-            foreach (var order in orders)
+            var userBatch = Orders.OrdersByUser(user).First().GetBatch().First();
+           
+            cart.Serialize();
+
+            foreach (var order in Orders.OrdersByUser(user))
                 foreach (var batch in order.GetBatch())
                     MessageBox.Show($"From Order: {order.Id} => Item: {batch.AssociatedItem.Name}");
 

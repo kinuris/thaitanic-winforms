@@ -18,8 +18,8 @@ namespace ThaiTanic.Entities
         public List<OrderBatch> GetBatch()
         {
             string sql = @"SELECT i.id, i.name, i.description, i.price, i.category, i.created_at, i.updated_at, ob.id, ob.quantity FROM 
-                    orders AS o INNER JOIN order_batch AS ob 
-                    ON o.id = ob.order_fid INNER JOIN items AS i ON ob.item_fid = i.id WHERE ob.order_fid = @order_id";
+                orders AS o INNER JOIN order_batch AS ob 
+                ON o.id = ob.order_fid INNER JOIN items AS i ON ob.item_fid = i.id WHERE ob.order_fid = @order_id";
 
             using (MySqlConnection conn = new MySqlConnection(Connection.ConnectionString))
             using (MySqlCommand cmd = new MySqlCommand(sql, conn))
@@ -41,11 +41,24 @@ namespace ThaiTanic.Entities
             }
         }
 
+        // TODO: Finalize
+        public string GenerateReceipt()
+        {
+            var batches = GetBatch();
+            var resultReceipt = "CHARLES POS\n\n";
+
+            foreach (var batch in batches)
+            {
+                resultReceipt += $"{batch.AssociatedItem.Name} x {batch.Quantity}\n";
+            }
+
+            return resultReceipt;
+        }
+
         public static List<Orders> OrdersByUser(User user)
         {
             string sql = @"SELECT id, date_ordered, total_price, user_fid FROM orders
                          WHERE user_fid = @id";
-
             // TODO:
 
             using (MySqlConnection conn = new MySqlConnection(Connection.ConnectionString))

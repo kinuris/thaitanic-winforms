@@ -43,8 +43,16 @@ namespace ThaiTanic.Entities
 
         // Syncs object with corresponding table record
 
-        public void UpdateItem(string name, string description, decimal price, ItemCategory category)
+        public void UpdateItem(string name, string description, decimal price, ItemCategory category, string username, string password)
         {
+            var user = User.AuthUser(username, password);
+
+            if (user == null || user.Role != UserRole.Admin)
+            {
+                // TODO: 
+                return;
+            }
+
             string sql = "UPDATE items SET name = @name, description = @description, price = @price, category = @category WHERE id = @id";
 
             // TODO: Handle failure and id not existing case

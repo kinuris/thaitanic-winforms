@@ -89,6 +89,11 @@ namespace ThaiTanic.Entities
             string sql = @"INSERT INTO user (username, password, first_name, last_name, middle_name, phone_number, birthday, email) VALUES 
                         (@username, MD5(@password), @first_name, @last_name, @middle_name, @phone_number, @birthday, @email)";
 
+            if(AssertUserExistsByUsername(username))
+            {
+                return false;
+            }
+
             using (MySqlConnection conn = new MySqlConnection(Connection.ConnectionString))
             using (MySqlCommand cmd = new MySqlCommand(sql, conn))
             {
