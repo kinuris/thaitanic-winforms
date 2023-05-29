@@ -66,9 +66,10 @@ namespace ThaiTanic.Forms
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Corbel", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(28, 160);
+            this.label1.Location = new System.Drawing.Point(56, 308);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(244, 42);
+            this.label1.Size = new System.Drawing.Size(498, 86);
             this.label1.TabIndex = 4;
             this.label1.Text = "Create Account";
             // 
@@ -77,9 +78,10 @@ namespace ThaiTanic.Forms
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Corbel", 12.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(32, 202);
+            this.label2.Location = new System.Drawing.Point(64, 388);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(433, 21);
+            this.label2.Size = new System.Drawing.Size(861, 41);
             this.label2.TabIndex = 5;
             this.label2.Text = "Ahoy! Get on board with ThaiTanic by creating an account";
             // 
@@ -88,9 +90,10 @@ namespace ThaiTanic.Forms
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Corbel", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(28, 248);
+            this.label3.Location = new System.Drawing.Point(56, 477);
+            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 28);
+            this.label3.Size = new System.Drawing.Size(225, 56);
             this.label3.TabIndex = 10;
             this.label3.Text = "Firstname";
             // 
@@ -99,9 +102,10 @@ namespace ThaiTanic.Forms
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Corbel", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(340, 248);
+            this.label4.Location = new System.Drawing.Point(680, 477);
+            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 28);
+            this.label4.Size = new System.Drawing.Size(223, 56);
             this.label4.TabIndex = 11;
             this.label4.Text = "Lastname";
             // 
@@ -110,9 +114,10 @@ namespace ThaiTanic.Forms
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Corbel", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(28, 333);
+            this.label5.Location = new System.Drawing.Point(56, 640);
+            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(257, 28);
+            this.label5.Size = new System.Drawing.Size(502, 56);
             this.label5.TabIndex = 12;
             this.label5.Text = "Middle name   (optional)";
             // 
@@ -121,9 +126,10 @@ namespace ThaiTanic.Forms
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Corbel", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(340, 333);
+            this.label6.Location = new System.Drawing.Point(680, 640);
+            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 28);
+            this.label6.Size = new System.Drawing.Size(153, 56);
             this.label6.TabIndex = 13;
             this.label6.Text = "Phone";
             // 
@@ -132,9 +138,10 @@ namespace ThaiTanic.Forms
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Corbel", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(28, 418);
+            this.label7.Location = new System.Drawing.Point(56, 804);
+            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 28);
+            this.label7.Size = new System.Drawing.Size(136, 56);
             this.label7.TabIndex = 14;
             this.label7.Text = "Email";
             // 
@@ -143,9 +150,10 @@ namespace ThaiTanic.Forms
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Corbel", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(445, 418);
+            this.label8.Location = new System.Drawing.Point(890, 804);
+            this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(99, 28);
+            this.label8.Size = new System.Drawing.Size(197, 56);
             this.label8.TabIndex = 15;
             this.label8.Text = "Birthday";
             // 
@@ -154,9 +162,10 @@ namespace ThaiTanic.Forms
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Corbel", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(28, 504);
+            this.label9.Location = new System.Drawing.Point(56, 969);
+            this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(115, 28);
+            this.label9.Size = new System.Drawing.Size(229, 56);
             this.label9.TabIndex = 16;
             this.label9.Text = "Username";
             // 
@@ -165,9 +174,10 @@ namespace ThaiTanic.Forms
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Corbel", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(340, 505);
+            this.label10.Location = new System.Drawing.Point(680, 971);
+            this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(109, 28);
+            this.label10.Size = new System.Drawing.Size(217, 56);
             this.label10.TabIndex = 17;
             this.label10.Text = "Password";
             // 
@@ -184,14 +194,14 @@ namespace ThaiTanic.Forms
             this.txtFirstName.Font = new System.Drawing.Font("Corbel", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFirstName.ForeColor = System.Drawing.Color.Black;
             this.txtFirstName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFirstName.Location = new System.Drawing.Point(33, 275);
-            this.txtFirstName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtFirstName.Location = new System.Drawing.Point(66, 529);
+            this.txtFirstName.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.PasswordChar = '\0';
             this.txtFirstName.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.txtFirstName.PlaceholderText = "John";
             this.txtFirstName.SelectedText = "";
-            this.txtFirstName.Size = new System.Drawing.Size(288, 45);
+            this.txtFirstName.Size = new System.Drawing.Size(576, 87);
             this.txtFirstName.TabIndex = 18;
             this.txtFirstName.TextOffset = new System.Drawing.Point(15, 0);
             // 
@@ -208,14 +218,14 @@ namespace ThaiTanic.Forms
             this.txtLastName.Font = new System.Drawing.Font("Corbel", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLastName.ForeColor = System.Drawing.Color.Black;
             this.txtLastName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLastName.Location = new System.Drawing.Point(345, 275);
-            this.txtLastName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtLastName.Location = new System.Drawing.Point(690, 529);
+            this.txtLastName.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.PasswordChar = '\0';
             this.txtLastName.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.txtLastName.PlaceholderText = "Doe";
             this.txtLastName.SelectedText = "";
-            this.txtLastName.Size = new System.Drawing.Size(288, 45);
+            this.txtLastName.Size = new System.Drawing.Size(576, 87);
             this.txtLastName.TabIndex = 19;
             this.txtLastName.TextOffset = new System.Drawing.Point(15, 0);
             // 
@@ -232,14 +242,14 @@ namespace ThaiTanic.Forms
             this.txtMiddleName.Font = new System.Drawing.Font("Corbel", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMiddleName.ForeColor = System.Drawing.Color.Black;
             this.txtMiddleName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMiddleName.Location = new System.Drawing.Point(33, 361);
-            this.txtMiddleName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtMiddleName.Location = new System.Drawing.Point(66, 694);
+            this.txtMiddleName.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
             this.txtMiddleName.Name = "txtMiddleName";
             this.txtMiddleName.PasswordChar = '\0';
             this.txtMiddleName.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.txtMiddleName.PlaceholderText = "Smith";
             this.txtMiddleName.SelectedText = "";
-            this.txtMiddleName.Size = new System.Drawing.Size(288, 45);
+            this.txtMiddleName.Size = new System.Drawing.Size(576, 87);
             this.txtMiddleName.TabIndex = 20;
             this.txtMiddleName.TextOffset = new System.Drawing.Point(15, 0);
             // 
@@ -256,14 +266,14 @@ namespace ThaiTanic.Forms
             this.txtPhoneNumber.Font = new System.Drawing.Font("Corbel", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhoneNumber.ForeColor = System.Drawing.Color.Black;
             this.txtPhoneNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhoneNumber.Location = new System.Drawing.Point(345, 361);
-            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(690, 694);
+            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.PasswordChar = '\0';
             this.txtPhoneNumber.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.txtPhoneNumber.PlaceholderText = "09xxxxxxxxx";
             this.txtPhoneNumber.SelectedText = "";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(288, 45);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(576, 87);
             this.txtPhoneNumber.TabIndex = 21;
             this.txtPhoneNumber.TextOffset = new System.Drawing.Point(15, 0);
             // 
@@ -280,14 +290,14 @@ namespace ThaiTanic.Forms
             this.txtUsername.Font = new System.Drawing.Font("Corbel", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.Color.Black;
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsername.Location = new System.Drawing.Point(33, 534);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtUsername.Location = new System.Drawing.Point(66, 1027);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.txtUsername.PlaceholderText = "johndoe";
             this.txtUsername.SelectedText = "";
-            this.txtUsername.Size = new System.Drawing.Size(288, 45);
+            this.txtUsername.Size = new System.Drawing.Size(576, 87);
             this.txtUsername.TabIndex = 22;
             this.txtUsername.TextOffset = new System.Drawing.Point(15, 0);
             // 
@@ -304,15 +314,15 @@ namespace ThaiTanic.Forms
             this.txtPassword.Font = new System.Drawing.Font("Corbel", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.Black;
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassword.Location = new System.Drawing.Point(345, 534);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtPassword.Location = new System.Drawing.Point(690, 1027);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            this.txtPassword.Padding = new System.Windows.Forms.Padding(0, 0, 40, 0);
             this.txtPassword.PasswordChar = '●';
             this.txtPassword.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.txtPassword.PlaceholderText = "●●●●●●●●●●●●";
             this.txtPassword.SelectedText = "";
-            this.txtPassword.Size = new System.Drawing.Size(288, 45);
+            this.txtPassword.Size = new System.Drawing.Size(576, 87);
             this.txtPassword.TabIndex = 23;
             this.txtPassword.TextOffset = new System.Drawing.Point(15, 0);
             this.txtPassword.UseSystemPasswordChar = true;
@@ -330,14 +340,14 @@ namespace ThaiTanic.Forms
             this.txtEmail.Font = new System.Drawing.Font("Corbel", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.Color.Black;
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.Location = new System.Drawing.Point(33, 447);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtEmail.Location = new System.Drawing.Point(66, 860);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.txtEmail.PlaceholderText = "thai.tanic@gmail.com";
             this.txtEmail.SelectedText = "";
-            this.txtEmail.Size = new System.Drawing.Size(392, 45);
+            this.txtEmail.Size = new System.Drawing.Size(784, 87);
             this.txtEmail.TabIndex = 24;
             this.txtEmail.TextOffset = new System.Drawing.Point(15, 0);
             // 
@@ -348,11 +358,12 @@ namespace ThaiTanic.Forms
             this.dateTimeBirthday.FillColor = System.Drawing.Color.White;
             this.dateTimeBirthday.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dateTimeBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dateTimeBirthday.Location = new System.Drawing.Point(450, 447);
+            this.dateTimeBirthday.Location = new System.Drawing.Point(900, 860);
+            this.dateTimeBirthday.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.dateTimeBirthday.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateTimeBirthday.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dateTimeBirthday.Name = "dateTimeBirthday";
-            this.dateTimeBirthday.Size = new System.Drawing.Size(184, 45);
+            this.dateTimeBirthday.Size = new System.Drawing.Size(368, 87);
             this.dateTimeBirthday.TabIndex = 25;
             this.dateTimeBirthday.Value = new System.DateTime(2023, 5, 15, 13, 33, 12, 985);
             // 
@@ -366,11 +377,13 @@ namespace ThaiTanic.Forms
             this.btnCreateAccount.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(187)))), ((int)(((byte)(228)))));
             this.btnCreateAccount.Font = new System.Drawing.Font("Corbel", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateAccount.ForeColor = System.Drawing.Color.White;
-            this.btnCreateAccount.Location = new System.Drawing.Point(236, 643);
+            this.btnCreateAccount.Location = new System.Drawing.Point(472, 1237);
+            this.btnCreateAccount.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnCreateAccount.Name = "btnCreateAccount";
-            this.btnCreateAccount.Size = new System.Drawing.Size(185, 49);
+            this.btnCreateAccount.Size = new System.Drawing.Size(370, 94);
             this.btnCreateAccount.TabIndex = 28;
             this.btnCreateAccount.Text = "Create Account";
+            this.btnCreateAccount.Click += new System.EventHandler(this.btnCreateAccount_Click);
             // 
             // checkBoxTermsAndConditions
             // 
@@ -381,9 +394,10 @@ namespace ThaiTanic.Forms
             this.checkBoxTermsAndConditions.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.checkBoxTermsAndConditions.Font = new System.Drawing.Font("Corbel", 12.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxTermsAndConditions.ForeColor = System.Drawing.Color.White;
-            this.checkBoxTermsAndConditions.Location = new System.Drawing.Point(33, 588);
+            this.checkBoxTermsAndConditions.Location = new System.Drawing.Point(66, 1131);
+            this.checkBoxTermsAndConditions.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.checkBoxTermsAndConditions.Name = "checkBoxTermsAndConditions";
-            this.checkBoxTermsAndConditions.Size = new System.Drawing.Size(227, 24);
+            this.checkBoxTermsAndConditions.Size = new System.Drawing.Size(454, 46);
             this.checkBoxTermsAndConditions.TabIndex = 29;
             this.checkBoxTermsAndConditions.Text = "I have read and accept the ";
             this.checkBoxTermsAndConditions.UncheckedState.BorderColor = System.Drawing.Color.White;
@@ -408,10 +422,11 @@ namespace ThaiTanic.Forms
             this.btnTermsAndConditions.HoverState.BorderColor = System.Drawing.Color.Transparent;
             this.btnTermsAndConditions.HoverState.CustomBorderColor = System.Drawing.Color.Transparent;
             this.btnTermsAndConditions.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.btnTermsAndConditions.Location = new System.Drawing.Point(246, 587);
+            this.btnTermsAndConditions.Location = new System.Drawing.Point(492, 1129);
+            this.btnTermsAndConditions.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnTermsAndConditions.Name = "btnTermsAndConditions";
             this.btnTermsAndConditions.PressedColor = System.Drawing.Color.Transparent;
-            this.btnTermsAndConditions.Size = new System.Drawing.Size(171, 25);
+            this.btnTermsAndConditions.Size = new System.Drawing.Size(342, 48);
             this.btnTermsAndConditions.TabIndex = 30;
             this.btnTermsAndConditions.Text = "Terms & Conditions";
             this.btnTermsAndConditions.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -434,11 +449,12 @@ namespace ThaiTanic.Forms
             this.btnShowPass.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnShowPass.ImageRotate = 0F;
             this.btnShowPass.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnShowPass.Location = new System.Drawing.Point(595, 541);
+            this.btnShowPass.Location = new System.Drawing.Point(1190, 1040);
+            this.btnShowPass.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnShowPass.Name = "btnShowPass";
             this.btnShowPass.PressedState.Image = global::ThaiTanic.Properties.Resources.show_pass_pressed;
             this.btnShowPass.PressedState.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnShowPass.Size = new System.Drawing.Size(32, 32);
+            this.btnShowPass.Size = new System.Drawing.Size(64, 62);
             this.btnShowPass.TabIndex = 31;
             this.btnShowPass.UseTransparentBackground = true;
             this.btnShowPass.Click += new System.EventHandler(this.btnShowPass_Click);
@@ -453,9 +469,10 @@ namespace ThaiTanic.Forms
             this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(28, 22);
+            this.guna2Button1.Location = new System.Drawing.Point(56, 42);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(39, 39);
+            this.guna2Button1.Size = new System.Drawing.Size(78, 75);
             this.guna2Button1.TabIndex = 26;
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
@@ -464,9 +481,10 @@ namespace ThaiTanic.Forms
             this.guna2PictureBox2.BackgroundImage = global::ThaiTanic.Properties.Resources.Logo_1;
             this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(236, 22);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(472, 42);
+            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(184, 122);
+            this.guna2PictureBox2.Size = new System.Drawing.Size(368, 235);
             this.guna2PictureBox2.TabIndex = 2;
             this.guna2PictureBox2.TabStop = false;
             // 
@@ -480,9 +498,10 @@ namespace ThaiTanic.Forms
             this.btnClose.FillColor = System.Drawing.Color.Transparent;
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(1215, 10);
+            this.btnClose.Location = new System.Drawing.Point(2430, 19);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(55, 55);
+            this.btnClose.Size = new System.Drawing.Size(110, 106);
             this.btnClose.TabIndex = 1;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -491,18 +510,19 @@ namespace ThaiTanic.Forms
             this.guna2PictureBox1.BackgroundImage = global::ThaiTanic.Properties.Resources.banner_signup;
             this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(652, 22);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(1304, 42);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(608, 676);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(1216, 1300);
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
             // 
             // frmCreateAccount
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
-            this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.ClientSize = new System.Drawing.Size(2560, 1385);
             this.Controls.Add(this.btnShowPass);
             this.Controls.Add(this.btnTermsAndConditions);
             this.Controls.Add(this.checkBoxTermsAndConditions);
@@ -530,6 +550,7 @@ namespace ThaiTanic.Forms
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.txtPassword);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "frmCreateAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCreateAccount";

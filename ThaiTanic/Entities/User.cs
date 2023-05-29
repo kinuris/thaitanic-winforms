@@ -143,7 +143,15 @@ namespace ThaiTanic.Entities
             Username = reader.GetFieldValue<string>(offset + 1);
             FirstName = reader.GetFieldValue<string>(offset + 2);
             LastName = reader.GetFieldValue<string>(offset + 3);
-            MiddleName = reader.GetFieldValue<string>(offset + 4);
+
+            if (reader.IsDBNull(offset + 4))
+            {
+                MiddleName = null;
+            } else
+            {
+                MiddleName = reader.GetFieldValue<string>(offset + 4);
+            }
+
             PhoneNumber = reader.GetFieldValue<string>(offset + 5);
             Birthday = reader.GetDateTime(offset + 6);
             Email = reader.GetFieldValue<string>(offset + 7);
