@@ -22,5 +22,11 @@ namespace ThaiTanic.UserControls
             get { return txtItemTitle.Text; }
             set { txtItemTitle.Text = value; }
         }
+
+        public string ItemPrice
+        {
+            get { return txtPrice.Text; }
+            set { txtPrice.Text = value; }
+        }
     }
 }

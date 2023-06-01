@@ -22,5 +22,10 @@ namespace ThaiTanic.Forms
             pnlContainer.Controls.Add(frmMenu);
             frmMenu.Show();
         }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
