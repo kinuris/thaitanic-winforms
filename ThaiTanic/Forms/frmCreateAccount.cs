@@ -35,12 +35,33 @@ namespace ThaiTanic.Forms
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
+        }
+
+        private void btnCreateAccount_Click(object sender, EventArgs e)
+        {
+            if (!checkBoxTermsAndConditions.Checked)
+            {
+                MessageBox.Show("Agree to terms and conditions", "Required", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // TODO: Add validation
+
+            bool success = Entities.User.CreateUser(txtUsername.Text, txtPassword.Text, txtFirstName.Text, txtLastName.Text, txtMiddleName.Text, txtPhoneNumber.Text, dateTimeBirthday.Value, txtEmail.Text);
+        
+            if (!success)
+            {
+                MessageBox.Show("Failed to create user", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            MessageBox.Show("Successfully created user", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

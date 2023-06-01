@@ -97,11 +97,11 @@
     <Compile Include="Entities\OrderBatch.cs" />
     <Compile Include="Entities\Orders.cs" />
     <Compile Include="Entities\User.cs" />
-    <Compile Include="Forms\Form1.cs">
+    <Compile Include="Forms\frmSignIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Forms\frmSignIn.Designer.cs">
+      <DependentUpon>frmSignIn.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmCreateAccount.cs">
       <SubType>Form</SubType>
@@ -130,8 +130,8 @@
     <Compile Include="UserControls\ucItemCard.Designer.cs">
       <DependentUpon>ucItemCard.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmSignIn.resx">
+      <DependentUpon>frmSignIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmCreateAccount.resx">
       <DependentUpon>frmCreateAccount.cs</DependentUpon>

@@ -30,13 +30,15 @@ namespace ThaiTanic
                 return;
             }
 
-            var orders = Orders.OrdersByUser(user);
+            if (user.Role == UserRole.Admin)
+            {
+                // TODO: Show admin page
+                MessageBox.Show($"Show non-existent admin page: {user.FullName}");
+                return;
+            }
 
-            foreach (var order in orders)
-                foreach (var batch in order.GetBatch())
-                    MessageBox.Show($"From Order: {order.Id} => Item: {batch.AssociatedItem.Name}");
-
-            MessageBox.Show($"Welcome {user.FullName}");
+            var frmDashboard = new frmDashboard();
+            frmDashboard.ShowDialog(this);
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]

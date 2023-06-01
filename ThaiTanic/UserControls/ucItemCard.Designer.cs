@@ -48,9 +48,10 @@ namespace ThaiTanic.UserControls
             this.guna2Panel1.Controls.Add(this.txtQuantity);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.txtItemTitle);
-            this.guna2Panel1.Location = new System.Drawing.Point(3, 4);
+            this.guna2Panel1.Location = new System.Drawing.Point(6, 8);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(180, 155);
+            this.guna2Panel1.Size = new System.Drawing.Size(360, 298);
             this.guna2Panel1.TabIndex = 0;
             // 
             // txtPrice
@@ -113,7 +114,7 @@ namespace ThaiTanic.UserControls
             this.txtQuantity.PasswordChar = '\0';
             this.txtQuantity.PlaceholderText = "0";
             this.txtQuantity.SelectedText = "";
-            this.txtQuantity.Size = new System.Drawing.Size(65, 36);
+            this.txtQuantity.Size = new System.Drawing.Size(130, 69);
             this.txtQuantity.TabIndex = 2;
             this.txtQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -159,12 +160,13 @@ namespace ThaiTanic.UserControls
             // 
             // ucItemCard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.guna2Panel1);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "ucItemCard";
-            this.Size = new System.Drawing.Size(187, 162);
+            this.Size = new System.Drawing.Size(374, 312);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -177,6 +179,7 @@ namespace ThaiTanic.UserControls
         private Guna.UI2.WinForms.Guna2Button btnAdd;
         private Guna.UI2.WinForms.Guna2TextBox txtQuantity;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2TextBox txtItemTitle;
         private Guna.UI2.WinForms.Guna2TextBox txtPrice;
     }
