@@ -93,6 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connection.cs" />
+    <Compile Include="Entities\BillingAddress.cs" />
     <Compile Include="Entities\Items.cs" />
     <Compile Include="Entities\OrderBatch.cs" />
     <Compile Include="Entities\Orders.cs" />
