@@ -2,7 +2,7 @@
 using System;
 using System.Linq;
 
-enum UserRole
+public enum UserRole
 {
     Admin,
     User
@@ -10,7 +10,7 @@ enum UserRole
 
 namespace ThaiTanic.Entities
 {
-    internal class User
+    public class User
     {
         public int Id;
         public string Username;

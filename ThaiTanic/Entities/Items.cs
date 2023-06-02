@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 
 namespace ThaiTanic.Entities
 {
-    enum ItemCategory
+    public enum ItemCategory
     {
         Invalid,
         Breakfast,
@@ -18,7 +18,7 @@ namespace ThaiTanic.Entities
     }
 
     [DataContract]
-    internal class Items
+    public class Items
     {
         [DataMember]
         public int Id;
@@ -132,6 +132,25 @@ namespace ThaiTanic.Entities
 
             return true;
         }
+
+        //public static List<Items> GetByCategory(ItemCategory category)
+        //{
+        //    string sql = "SELECT id, name, description, price, category, created_at, updated_at, available FROM items WHERE category = @category";
+
+        //    using (MySqlConnection conn = new MySqlConnection(Connection.ConnectionString))
+        //    using (MySqlCommand cmd = new MySqlCommand(sql, conn))
+        //    {
+        //        conn.Open();
+
+        //        var reader = cmd.ExecuteReader();
+        //        var result = new List<Items>();
+
+        //        while (reader.Read())
+        //            result.Add(new Items(reader));
+
+        //        return result;
+        //    }
+        //}
 
         public static List<Items> GetAllItems()
         {
