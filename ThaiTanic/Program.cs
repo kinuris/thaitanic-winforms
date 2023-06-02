@@ -17,7 +17,7 @@ namespace ThaiTanic
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmSignIn());
+            Application.Run(new frmDashboard());
         }
     }
 }
