@@ -51,7 +51,7 @@ CREATE TABLE `ORDERS` (
   `total_price` DECIMAL(10, 2) NOT NULL,
   `user_fid` INT NOT NULL,
   `billing_address_fid` INT NOT NULL,
-  `status` ENUM ('To Pay', 'To Shipping', 'To Recieve', 'Completed', 'Cancelled') NOT NULL,
+  `status` ENUM ('To Pay', 'To Ship', 'To Recieve', 'Completed', 'Cancelled') NOT NULL,
   PRIMARY KEY (`id`),
   FOREIGN KEY (`user_fid`) REFERENCES `USER`(`id`),
   FOREIGN KEY (`billing_address_fid`) REFERENCES `BILLING_ADDRESS` (`id`)
