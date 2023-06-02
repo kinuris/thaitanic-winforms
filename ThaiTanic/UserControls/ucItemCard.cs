@@ -1,26 +1,32 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using ThaiTanic.Entities;
 
 namespace ThaiTanic.UserControls
 {
     public partial class ucItemCard : UserControl
     {
-        public ucItemCard()
+        private readonly Action<Items, int> AddCartEntry;
+
+        public ucItemCard(Action<Items, int> addCartEntry)
         {
             InitializeComponent();
+
+            AddCartEntry = addCartEntry;
         }
 
-        public string ItemName
+        private Items item;
+        public Items Item
         {
-            get { return txtItemTitle.Text; }
-            set { txtItemTitle.Text = value; }
+            get
+            {
+                return item;
+            }
+            set
+            {
+                item = value;
+                txtItemTitle.Text = item.Name;
+            }
         }
 
         //public string ItemPrice
@@ -29,14 +35,24 @@ namespace ThaiTanic.UserControls
         //    set { txtPrice.Text = value; }
         //}
 
-        private void txtQuantity_TextChanged(object sender, EventArgs e)
+        private void txtQuantity_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
-        private void txtPrice_TextChanged(object sender, EventArgs e)
+        private void btnAddToCart_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtQuantity.Text))
+            {
+                MessageBox.Show("Must specify quantity", "Required", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+                return;
+            }
+
+            AddCartEntry(Item, int.Parse(txtQuantity.Text));
         }
     }
 }

@@ -9,78 +9,41 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ThaiTanic.UserControls;
 using Guna.UI2.WinForms;
+using ThaiTanic.Entities;
 
 namespace ThaiTanic.Forms
 {
     public partial class frmMenu : Form
-    {      
-        public frmMenu()
+    {
+        private readonly Action<Items, int> AddCartEntry;
+
+        public frmMenu(Action<Items, int> addCartEntry)
         {
             InitializeComponent();
 
-            for (int i = 0; i < 8; i++)
+            AddCartEntry = addCartEntry;
+
+            LoadMenuWithItems(ItemCategory.Drinks);
+        }
+
+        private void LoadMenuWithItems(ItemCategory category)
+        {
+            pnlContainerCart.Controls.Clear();
+
+            foreach (var dessert in Items.GetAllItems().Where(i => i.Category == category))
             {
-                ucItemCard itemCard = new ucItemCard();
+                ucItemCard itemCard = new ucItemCard(AddCartEntry)
+                {
+                    Item = dessert
+                };
 
                 pnlContainerItems.Controls.Add(itemCard);
             }
-
-
-            // guna2DataGridView1.DataSource = new { items = "Item 1", quantity = 10, cost = 10.00 };
-
-            guna2DataGridView1.Rows.Add(new object[] { "item2", 10, 50.00 });
-            guna2DataGridView1.Rows.Add("item 3", 10, 69.69);
-            guna2DataGridView1.Rows.Add("item 3", 10, 69.69);
-            guna2DataGridView1.Rows.Add("item 3", 10, 69.69);
-            guna2DataGridView1.Rows.Add("item 3", 10, 69.69);
-            guna2DataGridView1.Rows.Add("item 3", 10, 69.69);
-            guna2DataGridView1.Rows.Add("item 3", 10, 69.69);
-            guna2DataGridView1.Rows.Add("item 3", 10, 69.69);
-            guna2DataGridView1.Rows.Add("item 3", 10, 69.69);
-            guna2DataGridView1.Rows.Add("item 3", 10, 69.69);
-            guna2DataGridView1.Rows.Add("item 3", 10, 69.69);
-
-
-            int index = guna2DataGridView1.Rows.Add();
-            var currentRow = guna2DataGridView1.Rows[index];
-
-            currentRow.Cells[0].Value = "Item 1";
-            currentRow.Cells[1].Value = 10;
-            currentRow.Cells[2].Value = 1.00;
-
-           // guna2DataGridView1.Invoke((Action)delegate
-           //{
-           //    guna2DataGridView1.Rows.Add();
-           //});
-
-           // var rowCount = guna2DataGridView1.Rows.Count;
-
-           // guna2DataGridView1.Rows[rowCount - 1].Cells["items"].Value = "item 2";
-           // guna2DataGridView1.Rows[rowCount - 1].Cells["quantity"].Value = 20;
-           // guna2DataGridView1.Rows[rowCount - 1].Cells["cost"].Value = 20.00;
-        
-           // //guna2DataGridView1.Rows[rowCount - 1].EndEdit()
-
         }
 
         private void guna2DataGridView1_SelectionChanged(object sender, EventArgs e)
         {
             guna2DataGridView1.ClearSelection();
-        }
-
-        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void guna2HtmlLabel2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using ThaiTanic.Entities;
@@ -17,28 +16,6 @@ namespace ThaiTanic
         private void guna2Button3_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            // SAMPLE LOGIC
-            var user = User.AuthUser(txtUsername.Text, txtPassword.Text);
-
-            if (user == null) 
-            {
-                MessageBox.Show("User does not exist");
-                return;
-            }
-
-            if (user.Role == UserRole.Admin)
-            {
-                // TODO: Show admin page
-                MessageBox.Show($"Show non-existent admin page: {user.FullName}");
-                return;
-            }
-
-            var frmDashboard = new frmDashboard();
-            frmDashboard.ShowDialog(this);
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -83,7 +60,7 @@ namespace ThaiTanic
 
             MessageBox.Show($"Welcome {user.FullName}");
 
-            frmDashboard dashboard = new frmDashboard();
+            frmDashboard dashboard = new frmDashboard(user);
 
             dashboard.Show();
         }
