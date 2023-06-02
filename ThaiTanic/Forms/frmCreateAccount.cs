@@ -53,6 +53,14 @@ namespace ThaiTanic.Forms
 
             // TODO: Add validation
 
+            if (string.IsNullOrWhiteSpace(txtUsername.Text) || string.IsNullOrWhiteSpace(txtPassword.Text) ||
+                string.IsNullOrWhiteSpace(txtFirstName.Text) || string.IsNullOrWhiteSpace(txtLastName.Text) ||
+                string.IsNullOrWhiteSpace(txtPhoneNumber.Text) || string.IsNullOrWhiteSpace(dateTimeBirthday.Text) ||
+                string.IsNullOrWhiteSpace(txtEmail.Text))
+            {
+                return;
+            }
+
             bool success = Entities.User.CreateUser(txtUsername.Text, txtPassword.Text, txtFirstName.Text, txtLastName.Text, txtMiddleName.Text, txtPhoneNumber.Text, dateTimeBirthday.Value, txtEmail.Text);
         
             if (!success)

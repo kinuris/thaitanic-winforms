@@ -23,10 +23,20 @@ namespace ThaiTanic.UserControls
             set { txtItemTitle.Text = value; }
         }
 
-        public string ItemPrice
+        //public string ItemPrice
+        //{
+        //    get { return txtPrice.Text; }
+        //    set { txtPrice.Text = value; }
+        //}
+
+        private void txtQuantity_TextChanged(object sender, EventArgs e)
         {
-            get { return txtPrice.Text; }
-            set { txtPrice.Text = value; }
+
+        }
+
+        private void txtPrice_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

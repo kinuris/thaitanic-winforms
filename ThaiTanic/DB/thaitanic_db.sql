@@ -9,10 +9,10 @@ CREATE TABLE `ITEMS` (
   `description` VARCHAR(255) NOT NULL,
   `price` DECIMAL(10, 2) NOT NULL,
   `category` ENUM('Breakfast', 'Burgers', 'Dessert' , 'Drinks', 'Alcohol', 'Main Course', 'Pasta') NOT NULL,
+  `available` BOOLEAN NOT NULL,
   `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  KEY `'` (`category`)
+  PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `USER` (
@@ -31,13 +31,30 @@ CREATE TABLE `USER` (
   PRIMARY KEY (`id`)
 );
 
+CREATE TABLE `BILLING_ADDRESS` (
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `user_fid` INT NOT NULL,
+    `full_name` VARCHAR(64) NOT NULL,
+    `phone_number` VARCHAR(64) NOT NULL,
+    `region` VARCHAR(64) NOT NULL,
+    `province` VARCHAR(64) NOT NULL,
+    `city` VARCHAR(64) NOT NULL,
+    `barangay` VARCHAR(64) NOT NULL,
+    `postal_code` VARCHAR(12) NOT NULL,
+    PRIMARY KEY (`id`),
+    FOREIGN KEY (`user_fid`) REFERENCES `USER` (`id`)
+);
+
 CREATE TABLE `ORDERS` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `date_ordered` DATETIME NOT NULL,
   `total_price` DECIMAL(10, 2) NOT NULL,
   `user_fid` INT NOT NULL,
+  `billing_address_fid` INT NOT NULL,
+  `status` ENUM ('To Pay', 'To Shipping', 'To Recieve', 'Completed', 'Cancelled') NOT NULL,
   PRIMARY KEY (`id`),
-  FOREIGN KEY (`user_fid`) REFERENCES `USER`(`id`)
+  FOREIGN KEY (`user_fid`) REFERENCES `USER`(`id`),
+  FOREIGN KEY (`billing_address_fid`) REFERENCES `BILLING_ADDRESS` (`id`)
 );
 
 CREATE TABLE `ORDER_BATCH` (

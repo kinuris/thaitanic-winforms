@@ -63,5 +63,30 @@ namespace ThaiTanic
         {
 
         }
+
+        private void guna2Button1_Click_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtUsername.Text) || string.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+                MessageBox.Show("Required username and password", "Required", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            var user = User.AuthUser(txtUsername.Text, txtPassword.Text);
+
+            if (user == null)
+            {
+                MessageBox.Show("Incorrect username or password", "Incorrect", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (user.Role == UserRole.Admin)
+            {
+                MessageBox.Show("Redirect to non-existent admin page");
+                return;
+            }
+
+            MessageBox.Show($"Welcome {user.FullName}");
+        }
     }
 }
