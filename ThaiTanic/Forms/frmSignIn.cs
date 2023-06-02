@@ -58,5 +58,10 @@ namespace ThaiTanic
             frmCreateAccount frmCreateAccount = new frmCreateAccount();
             frmCreateAccount.ShowDialog(this);
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
