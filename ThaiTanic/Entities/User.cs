@@ -86,8 +86,8 @@ namespace ThaiTanic.Entities
         public static bool CreateUser(string username, string password, string firstName, string lastName, 
             string middleName, string phoneNumber, DateTime birthday, string email) 
         {
-            string sql = @"INSERT INTO user (username, password, first_name, last_name, middle_name, phone_number, birthday, email) VALUES 
-                        (@username, MD5(@password), @first_name, @last_name, @middle_name, @phone_number, @birthday, @email)";
+            string sql = @"INSERT INTO user (username, password, first_name, last_name, middle_name, phone_number, birthday, email, role_enum) VALUES 
+                        (@username, MD5(@password), @first_name, @last_name, @middle_name, @phone_number, @birthday, @email, false)";
 
             if(AssertUserExistsByUsername(username))
             {

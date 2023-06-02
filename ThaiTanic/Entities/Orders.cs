@@ -17,6 +17,8 @@ namespace ThaiTanic.Entities
         Invalid
     }
 
+    // TODO: Add ability to change Orders.Status
+
     internal class Orders
     {
         public int Id;
