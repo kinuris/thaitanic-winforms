@@ -59,7 +59,7 @@
             this.txtUsername.ForeColor = System.Drawing.Color.Black;
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUsername.Location = new System.Drawing.Point(704, 341);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(6);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -83,7 +83,7 @@
             this.txtPassword.ForeColor = System.Drawing.Color.Black;
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.Location = new System.Drawing.Point(704, 449);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(6);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '●';
             this.txtPassword.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -101,7 +101,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(704, 211);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(321, 42);
+            this.label1.Size = new System.Drawing.Size(644, 86);
             this.label1.TabIndex = 3;
             this.label1.Text = "Craving Something?";
             // 
@@ -112,10 +112,9 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(710, 254);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(347, 21);
+            this.label2.Size = new System.Drawing.Size(689, 41);
             this.label2.TabIndex = 4;
             this.label2.Text = "Enter the fields below to satisfy your cravings.";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // guna2CheckBox1
             // 
@@ -178,7 +177,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(702, 311);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 28);
+            this.label3.Size = new System.Drawing.Size(229, 56);
             this.label3.TabIndex = 9;
             this.label3.Text = "Username";
             // 
@@ -189,7 +188,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(702, 419);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 28);
+            this.label4.Size = new System.Drawing.Size(217, 56);
             this.label4.TabIndex = 10;
             this.label4.Text = "Password";
             // 
@@ -261,7 +260,7 @@
             // 
             // frmSignIn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);

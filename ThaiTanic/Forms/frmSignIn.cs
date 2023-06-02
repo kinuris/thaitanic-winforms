@@ -59,11 +59,6 @@ namespace ThaiTanic
             frmCreateAccount.ShowDialog(this);
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void guna2Button1_Click_1(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtUsername.Text) || string.IsNullOrWhiteSpace(txtPassword.Text))
@@ -87,6 +82,10 @@ namespace ThaiTanic
             }
 
             MessageBox.Show($"Welcome {user.FullName}");
+
+            frmDashboard dashboard = new frmDashboard();
+
+            dashboard.Show();
         }
     }
 }
