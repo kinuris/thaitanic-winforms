@@ -36,6 +36,9 @@ namespace ThaiTanic.Entities
         public ItemCategory Category;
 
         [DataMember]
+        public bool Available;
+
+        [DataMember]
         public DateTime CreatedAt;
 
         [DataMember]
@@ -43,7 +46,7 @@ namespace ThaiTanic.Entities
 
         // Syncs object with corresponding table record
 
-        public void UpdateItem(string name, string description, decimal price, ItemCategory category, string username, string password)
+        public void UpdateItem(string name, string description, decimal price, ItemCategory category, bool available, string username, string password)
         {
             var user = User.AuthUser(username, password);
 
@@ -53,7 +56,7 @@ namespace ThaiTanic.Entities
                 return;
             }
 
-            string sql = "UPDATE items SET name = @name, description = @description, price = @price, category = @category WHERE id = @id";
+            string sql = "UPDATE items SET name = @name, description = @description, price = @price, category = @category, available = @available WHERE id = @id";
 
             // TODO: Handle failure and id not existing case
             using (MySqlConnection conn = new MySqlConnection(Connection.ConnectionString))
@@ -65,6 +68,7 @@ namespace ThaiTanic.Entities
                 cmd.Parameters.AddWithValue("@description", description);
                 cmd.Parameters.AddWithValue("@price", price);
                 cmd.Parameters.AddWithValue("@category", category.ToString());
+                cmd.Parameters.AddWithValue("@available", available);
                 cmd.Parameters.AddWithValue("@id", Id);
 
                 cmd.ExecuteNonQuery();
@@ -75,7 +79,7 @@ namespace ThaiTanic.Entities
 
         public void Fetch()
         {
-            string sql = "SELECT id, name, description, price, category, created_at, updated_at FROM items WHERE id = @id";
+            string sql = "SELECT id, name, description, price, category, created_at, updated_at, available FROM items WHERE id = @id";
 
             using (MySqlConnection conn = new MySqlConnection(Connection.ConnectionString))
             using (MySqlCommand cmd = new MySqlCommand(sql, conn))
@@ -102,9 +106,9 @@ namespace ThaiTanic.Entities
 
         // NOTE: This needs the username and password, because ONLY admins should be able to create items
         // Create a new record in the table
-        public static bool CreateItem(string name, string description, decimal price, ItemCategory category, string username, string password)
+        public static bool CreateItem(string name, string description, decimal price, ItemCategory category, bool available, string username, string password)
         {
-            string sql = "INSERT INTO items (name, description, price, category) VALUES (@name, @description, @price, @category)";
+            string sql = "INSERT INTO items (name, description, price, category, available) VALUES (@name, @description, @price, @category, @available)";
 
             User user = User.AuthUser(username, password);
 
@@ -119,6 +123,7 @@ namespace ThaiTanic.Entities
                 cmd.Parameters.AddWithValue("@description", description);
                 cmd.Parameters.AddWithValue("@price", price);
                 cmd.Parameters.AddWithValue("@category", category);
+                cmd.Parameters.AddWithValue("@available", available);
 
                 cmd.ExecuteNonQuery();
 
@@ -130,7 +135,7 @@ namespace ThaiTanic.Entities
 
         public static List<Items> GetAllItems()
         {
-            string sql = "SELECT id, name, description, price, category, created_at, updated_at FROM items";
+            string sql = "SELECT id, name, description, price, category, created_at, updated_at, available FROM items";
 
             using (MySqlConnection conn = new MySqlConnection(Connection.ConnectionString))
             using (MySqlCommand cmd = new MySqlCommand(sql, conn))
@@ -149,7 +154,7 @@ namespace ThaiTanic.Entities
 
         public static Items GetItemById(int id)
         {
-            string sql = "SELECT id, name, description, price, category, created_at, updated_at FROM items WHERE id = @id";
+            string sql = "SELECT id, name, description, price, category, created_at, updated_at, available FROM items WHERE id = @id";
 
             using (MySqlConnection conn = new MySqlConnection(Connection.ConnectionString))
             using (MySqlCommand cmd = new MySqlCommand(sql, conn))
@@ -199,6 +204,7 @@ namespace ThaiTanic.Entities
             Category = ParseItemCategory(reader.GetFieldValue<string>(offset + 4));
             CreatedAt = reader.GetDateTime(offset + 5);
             UpdatedAt = reader.GetDateTime(offset + 6);
+            Available = reader.GetFieldValue<bool>(offset + 7);
         }
 
         public Items(MySqlDataReader reader): this(reader, 0) {}
