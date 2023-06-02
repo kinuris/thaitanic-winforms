@@ -30,6 +30,16 @@ namespace ThaiTanic.Forms
 
             guna2DataGridView1.Rows.Add(new object[] { "item2", 10, 50.00 });
             guna2DataGridView1.Rows.Add("item 3", 10, 69.69);
+            guna2DataGridView1.Rows.Add("item 3", 10, 69.69);
+            guna2DataGridView1.Rows.Add("item 3", 10, 69.69);
+            guna2DataGridView1.Rows.Add("item 3", 10, 69.69);
+            guna2DataGridView1.Rows.Add("item 3", 10, 69.69);
+            guna2DataGridView1.Rows.Add("item 3", 10, 69.69);
+            guna2DataGridView1.Rows.Add("item 3", 10, 69.69);
+            guna2DataGridView1.Rows.Add("item 3", 10, 69.69);
+            guna2DataGridView1.Rows.Add("item 3", 10, 69.69);
+            guna2DataGridView1.Rows.Add("item 3", 10, 69.69);
+
 
             int index = guna2DataGridView1.Rows.Add();
             var currentRow = guna2DataGridView1.Rows[index];
@@ -50,6 +60,26 @@ namespace ThaiTanic.Forms
            // guna2DataGridView1.Rows[rowCount - 1].Cells["cost"].Value = 20.00;
         
            // //guna2DataGridView1.Rows[rowCount - 1].EndEdit()
+
+        }
+
+        private void guna2DataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            guna2DataGridView1.ClearSelection();
+        }
+
+        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel2_Click(object sender, EventArgs e)
+        {
 
         }
     }
