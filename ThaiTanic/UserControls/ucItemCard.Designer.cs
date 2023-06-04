@@ -48,10 +48,9 @@ namespace ThaiTanic.UserControls
             this.guna2Panel1.Controls.Add(this.lblQuantity);
             this.guna2Panel1.Controls.Add(this.txtItemTitle);
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
-            this.guna2Panel1.Location = new System.Drawing.Point(6, 8);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(6);
+            this.guna2Panel1.Location = new System.Drawing.Point(3, 4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(360, 298);
+            this.guna2Panel1.Size = new System.Drawing.Size(180, 155);
             this.guna2Panel1.TabIndex = 0;
             // 
             // guna2Panel2
@@ -61,10 +60,9 @@ namespace ThaiTanic.UserControls
             this.guna2Panel2.BorderRadius = 5;
             this.guna2Panel2.BorderThickness = 1;
             this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
-            this.guna2Panel2.Location = new System.Drawing.Point(150, 217);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(6);
+            this.guna2Panel2.Location = new System.Drawing.Point(75, 113);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(188, 62);
+            this.guna2Panel2.Size = new System.Drawing.Size(94, 32);
             this.guna2Panel2.TabIndex = 3;
             // 
             // txtQuantity
@@ -79,13 +77,13 @@ namespace ThaiTanic.UserControls
             this.txtQuantity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtQuantity.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtQuantity.Location = new System.Drawing.Point(18, 217);
-            this.txtQuantity.Margin = new System.Windows.Forms.Padding(4);
+            this.txtQuantity.Location = new System.Drawing.Point(9, 113);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.PasswordChar = '\0';
             this.txtQuantity.PlaceholderText = "0";
             this.txtQuantity.SelectedText = "";
-            this.txtQuantity.Size = new System.Drawing.Size(114, 62);
+            this.txtQuantity.Size = new System.Drawing.Size(57, 32);
             this.txtQuantity.TabIndex = 2;
             this.txtQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQuantity_KeyPress);
@@ -95,10 +93,10 @@ namespace ThaiTanic.UserControls
             this.lblQuantity.AutoSize = true;
             this.lblQuantity.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.lblQuantity.Location = new System.Drawing.Point(14, 148);
-            this.lblQuantity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblQuantity.Location = new System.Drawing.Point(7, 77);
+            this.lblQuantity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(141, 32);
+            this.lblQuantity.Size = new System.Drawing.Size(70, 15);
             this.lblQuantity.TabIndex = 1;
             this.lblQuantity.Text = "QUANTITY";
             // 
@@ -121,14 +119,14 @@ namespace ThaiTanic.UserControls
             this.txtItemTitle.ForeColor = System.Drawing.Color.White;
             this.txtItemTitle.HoverState.BorderColor = System.Drawing.Color.Transparent;
             this.txtItemTitle.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.txtItemTitle.Location = new System.Drawing.Point(4, 6);
-            this.txtItemTitle.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtItemTitle.Location = new System.Drawing.Point(0, 3);
+            this.txtItemTitle.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtItemTitle.Multiline = true;
             this.txtItemTitle.Name = "txtItemTitle";
             this.txtItemTitle.PasswordChar = '\0';
             this.txtItemTitle.PlaceholderText = "";
             this.txtItemTitle.SelectedText = "";
-            this.txtItemTitle.Size = new System.Drawing.Size(415, 226);
+            this.txtItemTitle.Size = new System.Drawing.Size(169, 89);
             this.txtItemTitle.TabIndex = 0;
             // 
             // btnAddToCart
@@ -141,24 +139,22 @@ namespace ThaiTanic.UserControls
             this.btnAddToCart.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(162)))), ((int)(((byte)(78)))));
             this.btnAddToCart.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnAddToCart.ForeColor = System.Drawing.Color.White;
-            this.btnAddToCart.Location = new System.Drawing.Point(6, 323);
-            this.btnAddToCart.Margin = new System.Windows.Forms.Padding(6);
+            this.btnAddToCart.Location = new System.Drawing.Point(3, 168);
             this.btnAddToCart.Name = "btnAddToCart";
-            this.btnAddToCart.Size = new System.Drawing.Size(220, 62);
+            this.btnAddToCart.Size = new System.Drawing.Size(110, 32);
             this.btnAddToCart.TabIndex = 1;
             this.btnAddToCart.Text = "Add to Cart";
             this.btnAddToCart.Click += new System.EventHandler(this.btnAddToCart_Click);
             // 
             // ucItemCard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.btnAddToCart);
             this.Controls.Add(this.guna2Panel1);
-            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "ucItemCard";
-            this.Size = new System.Drawing.Size(374, 396);
+            this.Size = new System.Drawing.Size(187, 206);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
