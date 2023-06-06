@@ -10,29 +10,40 @@ using System.Windows.Forms;
 using ThaiTanic.UserControls;
 using Guna.UI2.WinForms;
 using ThaiTanic.Entities;
+using Org.BouncyCastle.Asn1;
 
 namespace ThaiTanic.Forms
 {
     public partial class frmMenu : Form
     {
-        private readonly Action<Items, int> AddCartEntry;
+        private readonly Action<Items, int> _AddCartEntry;
+        private int _CategoryPage;
+        private ItemCategory _CurrentCategory;
+        private List<Items> _CurrentItems;
 
         public frmMenu(Action<Items, int> addCartEntry)
         {
             InitializeComponent();
 
-            AddCartEntry = addCartEntry;
+            _AddCartEntry = addCartEntry;
+            _CategoryPage = 1;
+            _CurrentCategory = ItemCategory.Breakfast;
+            _CurrentItems = Items.GetAllItems().Where(i => i.Category == _CurrentCategory).ToList();
 
-            LoadMenuWithItems(ItemCategory.Drinks);
-
+            UpdateShownMenuItems();
 
             //------------------- DUMMY CATEGORIES -------------------------------------
             Color[] colors = new Color[] { Color.FromArgb(170, 216, 213), Color.FromArgb(194, 156, 156), Color.FromArgb(174, 201, 217), Color.FromArgb(255, 200, 221), Color.FromArgb(162, 210, 255), Color.FromArgb(205, 180, 219), Color.FromArgb(255, 178, 178), Color.FromArgb(246, 234, 194) };
-            
-            for (int i = 0; i < 8; i++)
+            int iteration = 0;
+            foreach (ItemCategory category in Enum.GetValues(typeof(ItemCategory)))
             {
-                ucCategoryCard categoryCard = new ucCategoryCard();
-                categoryCard.BgColor = colors[i];
+                if (category == ItemCategory.Invalid)
+                    continue;
+
+                ucCategoryCard categoryCard = new ucCategoryCard(category.ToString(), Items.GetAllItems().Where(e => e.Category == category).Count())
+                {
+                    BgColor = colors[iteration++]
+                };
 
                 pnlContainerCategories.Controls.Add(categoryCard);
             }
@@ -48,15 +59,25 @@ namespace ThaiTanic.Forms
             dgvCart.Rows.Add("Applesauce Muffins", 10, 10.10);           
         }
 
-        private void LoadMenuWithItems(ItemCategory category)
+        private void UpdateShownMenuItems()
         {
             pnlContainerItems.Controls.Clear();
 
-            foreach (var dessert in Items.GetAllItems().Where(i => i.Category == category))
+            // foreach (var dessert in Items.GetAllItems().Where(i => i.Category == category).Skip((page - 1) * 8).Take(8 * page))
+            // {
+            //     ucItemCard itemCard = new ucItemCard(AddCartEntry)
+            //     {
+            //         Item = dessert
+            //     };
+
+            //     pnlContainerItems.Controls.Add(itemCard);
+            // }
+
+            foreach (var item in _CurrentItems.Skip((_CategoryPage - 1) * 8).Take(_CategoryPage * 8)) 
             {
-                ucItemCard itemCard = new ucItemCard(AddCartEntry)
+                ucItemCard itemCard = new ucItemCard(_AddCartEntry)
                 {
-                    Item = dessert
+                    Item = item
                 };
 
                 pnlContainerItems.Controls.Add(itemCard);
@@ -66,6 +87,24 @@ namespace ThaiTanic.Forms
         private void dgvCart_SelectionChanged(object sender, EventArgs e)
         {
             dgvCart.ClearSelection();
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            if (_CategoryPage <= _CurrentItems.Count / 8)
+            {
+                _CategoryPage++;
+                UpdateShownMenuItems();
+            }
+        }
+
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            if (_CategoryPage > 1)
+            {
+                _CategoryPage--;
+                UpdateShownMenuItems();
+            }
         }
     }
 }
