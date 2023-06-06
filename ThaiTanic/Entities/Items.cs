@@ -1,6 +1,8 @@
 ﻿using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Asn1;
 using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using System.Runtime.Serialization;
 
 namespace ThaiTanic.Entities
@@ -15,6 +17,20 @@ namespace ThaiTanic.Entities
         Alcohol,
         MainCourse,
         Pasta
+    }
+
+    public static class ItemCategoryMethods
+    {
+        public static string AsString(this ItemCategory category)
+        {
+            switch (category)
+            {
+                case ItemCategory.MainCourse:
+                    return "Main Course";
+                default:
+                    return category.ToString();
+            }
+        }
     }
 
     [DataContract]
