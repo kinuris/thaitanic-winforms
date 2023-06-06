@@ -50,7 +50,7 @@ namespace ThaiTanic.Forms
 
         private void LoadMenuWithItems(ItemCategory category)
         {
-            //pnlContainerCart.Controls.Clear();
+            pnlContainerItems.Controls.Clear();
 
             foreach (var dessert in Items.GetAllItems().Where(i => i.Category == category))
             {
