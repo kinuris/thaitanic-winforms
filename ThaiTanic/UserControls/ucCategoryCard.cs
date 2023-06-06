@@ -12,9 +12,18 @@ namespace ThaiTanic.UserControls
 {
     public partial class ucCategoryCard : UserControl
     {
-        public ucCategoryCard()
+        private string _CategoryName;
+        private int _Count;
+
+        public ucCategoryCard(string categoryName, int count)
         {
             InitializeComponent();
+
+            _CategoryName = categoryName;
+            _Count = count;
+
+            lblCategoryName.Text = _CategoryName;
+            lblCount.Text = $"{_Count} Items";
         }
 
         private Color _color;

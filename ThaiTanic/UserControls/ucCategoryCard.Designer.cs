@@ -31,7 +31,7 @@ namespace ThaiTanic.UserControls
         {
             this.lblCategoryName = new System.Windows.Forms.Label();
             this.pnlBackground = new Guna.UI2.WinForms.Guna2Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblCount = new System.Windows.Forms.Label();
             this.pnlBackground.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -39,9 +39,9 @@ namespace ThaiTanic.UserControls
             // 
             this.lblCategoryName.AutoSize = true;
             this.lblCategoryName.Font = new System.Drawing.Font("Corbel", 19F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoryName.Location = new System.Drawing.Point(3, 47);
+            this.lblCategoryName.Location = new System.Drawing.Point(3, 24);
             this.lblCategoryName.Name = "lblCategoryName";
-            this.lblCategoryName.Size = new System.Drawing.Size(116, 32);
+            this.lblCategoryName.Size = new System.Drawing.Size(115, 32);
             this.lblCategoryName.TabIndex = 0;
             this.lblCategoryName.Text = "Category";
             // 
@@ -49,23 +49,23 @@ namespace ThaiTanic.UserControls
             // 
             this.pnlBackground.BackColor = System.Drawing.Color.Transparent;
             this.pnlBackground.BorderRadius = 5;
-            this.pnlBackground.Controls.Add(this.label1);
+            this.pnlBackground.Controls.Add(this.lblCount);
             this.pnlBackground.Controls.Add(this.lblCategoryName);
             this.pnlBackground.FillColor = System.Drawing.Color.MediumAquamarine;
             this.pnlBackground.Location = new System.Drawing.Point(3, 3);
             this.pnlBackground.Name = "pnlBackground";
-            this.pnlBackground.Size = new System.Drawing.Size(127, 109);
+            this.pnlBackground.Size = new System.Drawing.Size(180, 99);
             this.pnlBackground.TabIndex = 1;
             // 
-            // label1
+            // lblCount
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 79);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 15);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "13 Items";
+            this.lblCount.AutoSize = true;
+            this.lblCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCount.Location = new System.Drawing.Point(6, 56);
+            this.lblCount.Name = "lblCount";
+            this.lblCount.Size = new System.Drawing.Size(62, 15);
+            this.lblCount.TabIndex = 1;
+            this.lblCount.Text = "13 Items";
             // 
             // ucCategoryCard
             // 
@@ -74,7 +74,7 @@ namespace ThaiTanic.UserControls
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.pnlBackground);
             this.Name = "ucCategoryCard";
-            this.Size = new System.Drawing.Size(133, 115);
+            this.Size = new System.Drawing.Size(187, 105);
             this.pnlBackground.ResumeLayout(false);
             this.pnlBackground.PerformLayout();
             this.ResumeLayout(false);
@@ -85,6 +85,6 @@ namespace ThaiTanic.UserControls
 
         private System.Windows.Forms.Label lblCategoryName;
         private Guna.UI2.WinForms.Guna2Panel pnlBackground;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblCount;
     }
 }
