@@ -21,11 +21,22 @@ namespace ThaiTanic.Forms
         private ItemCategory _CurrentCategory;
         private List<Items> _CurrentItems;
 
-        public frmMenu(Action<Items, int> addCartEntry)
+        public frmMenu(Action<Items, int> addCartEntry, Action<DataGridView> addEntriesToDGV)
         {
             InitializeComponent();
+            lblSubtotal.Text = "0.00";
+            lblShippingCost.Text = "50.00";
 
-            _AddCartEntry = addCartEntry;
+            // Hooking into _AddCartEntry
+            _AddCartEntry = (Items items, int quantity) => {
+                addCartEntry(items, quantity);
+                dgvCart.Rows.Clear();
+                addEntriesToDGV(dgvCart);
+
+                lblSubtotal.Text = string.Format("{0:n}", dgvCart.Rows.Cast<DataGridViewRow>().Select(e => Convert.ToDecimal(e.Cells[2].Value)).Sum());
+                lblVat.Text = string.Format("{0:n}", Convert.ToDecimal(lblSubtotal.Text) * 0.12m);
+            };
+
             _CategoryPage = 1;
             _CurrentCategory = ItemCategory.Breakfast;
             _CurrentItems = Items.GetAllItems().Where(i => i.Category == _CurrentCategory).ToList();
@@ -48,15 +59,15 @@ namespace ThaiTanic.Forms
                 pnlContainerCategories.Controls.Add(categoryCard);
             }
 
-            //------------------- DUMMY CART DATA -------------------------------------
-            dgvCart.Rows.Add("Egg Sandwich", 10, 1000.19);
-            dgvCart.Rows.Add("Tuna Sandwich", 10, 10.10);
-            dgvCart.Rows.Add("ButetrScotch Muffins", 10, 10.10);
-            dgvCart.Rows.Add("Tuna Pie", 10, 10.10);
-            dgvCart.Rows.Add("Thai Sandwich", 10, 10.10);
-            dgvCart.Rows.Add("Crispy Hashbrowns", 10, 10.10);
-            dgvCart.Rows.Add("Cheesy Potatoes", 10, 10.10);
-            dgvCart.Rows.Add("Applesauce Muffins", 10, 10.10);           
+            //-------------------DUMMY CART DATA -------------------------------------
+            //dgvCart.Rows.Add("Egg Sandwich", 10, 1000.19);
+            //dgvCart.Rows.Add("Tuna Sandwich", 10, 10.10);
+            //dgvCart.Rows.Add("ButetrScotch Muffins", 10, 10.10);
+            //dgvCart.Rows.Add("Tuna Pie", 10, 10.10);
+            //dgvCart.Rows.Add("Thai Sandwich", 10, 10.10);
+            //dgvCart.Rows.Add("Crispy Hashbrowns", 10, 10.10);
+            //dgvCart.Rows.Add("Cheesy Potatoes", 10, 10.10);
+            //dgvCart.Rows.Add("Applesauce Muffins", 10, 10.10);
         }
 
         private void UpdateShownMenuItems()

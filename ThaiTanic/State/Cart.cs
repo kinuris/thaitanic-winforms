@@ -3,6 +3,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Json;
+using System.Windows.Forms;
 using ThaiTanic.Entities;
 
 namespace ThaiTanic.State
@@ -103,6 +104,14 @@ namespace ThaiTanic.State
         // cart.Sb(id, -1) -> Remove
         // cart.Sb(id, 0) nothing
 
+        public void AddEntriesToDGV(DataGridView dgv)
+        {
+            foreach (var entry in Entries)
+            {
+                dgv.Rows.Add(entry.Item.Name, entry.Quantity, entry.TotalPrice);
+            }
+        }
+
         public Cart(User user)
         {
             User = user;
@@ -117,5 +126,12 @@ namespace ThaiTanic.State
 
         [DataMember]
         public int Quantity;
+
+        public decimal TotalPrice {
+            get
+            {
+                return Quantity * Item.Price;
+            }
+        }
     }
 }

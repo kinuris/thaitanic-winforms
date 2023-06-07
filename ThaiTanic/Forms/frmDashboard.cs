@@ -23,7 +23,7 @@ namespace ThaiTanic.Forms
 
             loggedInUser = user;
             cart = new Cart(user);
-            frmMenu frmMenu = new frmMenu(AddCartEntry)
+            frmMenu frmMenu = new frmMenu(AddCartEntry, cart.AddEntriesToDGV)
             {
                 TopLevel = false,
                 Dock = DockStyle.Fill
