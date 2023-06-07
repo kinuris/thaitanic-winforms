@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,7 +24,17 @@ namespace ThaiTanic.Forms
 
             loggedInUser = user;
             cart = new Cart(user);
-            frmMenu frmMenu = new frmMenu(AddCartEntry, cart.AddEntriesToDGV)
+
+            try
+            {
+                cart.Deserialize();
+            }
+            catch (FileNotFoundException)
+            {
+                // PASS
+            }
+
+            frmMenu frmMenu = new frmMenu(AddCartEntry, cart.AddEntriesToDGV, cart.Clear)
             {
                 TopLevel = false,
                 Dock = DockStyle.Fill
@@ -39,6 +50,7 @@ namespace ThaiTanic.Forms
 
         private void guna2ImageButton1_Click(object sender, EventArgs e)
         {
+            cart.Serialize();
             Close();
         }
     }
