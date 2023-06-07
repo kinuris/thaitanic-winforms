@@ -146,6 +146,7 @@ namespace ThaiTanic.Forms
         {
             lblSubtotal.Text = string.Format("{0:n}", dgvCart.Rows.Cast<DataGridViewRow>().Select(el => Convert.ToDecimal(el.Cells[3].Value)).Sum());
             lblVat.Text = string.Format("{0:n}", Convert.ToDecimal(lblSubtotal.Text) * 0.12m);
+            lblGrandTotal.Text = string.Format("{0:n}", Convert.ToDecimal(lblShippingCost.Text) + Convert.ToDecimal(lblSubtotal.Text) + Convert.ToDecimal(lblVat.Text));
         }
 
         private void dgvCart_CellContentClick(object sender, DataGridViewCellEventArgs e)
