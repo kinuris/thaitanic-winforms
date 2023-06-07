@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ThaiTanic.Entities;
 
 namespace ThaiTanic.UserControls
 {
@@ -14,13 +15,15 @@ namespace ThaiTanic.UserControls
     {
         private string _CategoryName;
         private int _Count;
+        private Action<ItemCategory> _SetItemCategory;
 
-        public ucCategoryCard(string categoryName, int count)
+        public ucCategoryCard(string categoryName, int count, Action<ItemCategory> setItemCategory)
         {
             InitializeComponent();
 
             _CategoryName = categoryName;
             _Count = count;
+            _SetItemCategory = setItemCategory;
 
             lblCategoryName.Text = _CategoryName;
             lblCount.Text = $"{_Count} Items";
@@ -39,6 +42,11 @@ namespace ThaiTanic.UserControls
                 _color = value;
                 pnlBackground.FillColor = _color;
             }
+        }
+
+        private void pnlBackground_MouseDown(object sender, MouseEventArgs e)
+        {
+            _SetItemCategory(Items.ParseItemCategory(lblCategoryName.Text));
         }
     }
 }

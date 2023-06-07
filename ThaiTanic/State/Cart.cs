@@ -76,7 +76,7 @@ namespace ThaiTanic.State
             Entries = new List<CartEntry>();
 
             // TODO: Catch FileNotFoundException
-            var stream = File.OpenRead($"uid{User.Id}-localStorage.json");
+            FileStream stream = File.OpenRead($"uid{User.Id}-localStorage.json");
             var serde = new DataContractJsonSerializer(Entries.GetType());
 
             Entries = (List<CartEntry>) serde.ReadObject(stream);
@@ -95,6 +95,7 @@ namespace ThaiTanic.State
         public void Clear()
         {
             File.Create($"uid{User.Id}-localStorage.json").Close();
+            Entries.Clear();
         }
 
         // cart = new Cart(user)

@@ -56,6 +56,7 @@ namespace ThaiTanic.UserControls
             this.pnlBackground.Name = "pnlBackground";
             this.pnlBackground.Size = new System.Drawing.Size(180, 99);
             this.pnlBackground.TabIndex = 1;
+            this.pnlBackground.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlBackground_MouseDown);
             // 
             // lblCount
             // 

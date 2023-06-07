@@ -20,12 +20,16 @@ namespace ThaiTanic.Forms
         private int _CategoryPage;
         private ItemCategory _CurrentCategory;
         private List<Items> _CurrentItems;
+        private Action _ClearCart;
 
-        public frmMenu(Action<Items, int> addCartEntry, Action<DataGridView> addEntriesToDGV)
+        public frmMenu(Action<Items, int> addCartEntry, Action<DataGridView> addEntriesToDGV, Action clearCart)
         {
             InitializeComponent();
-            lblSubtotal.Text = "0.00";
             lblShippingCost.Text = "50.00";
+
+            addEntriesToDGV(dgvCart);
+            lblSubtotal.Text = string.Format("{0:n}", dgvCart.Rows.Cast<DataGridViewRow>().Select(e => Convert.ToDecimal(e.Cells[2].Value)).Sum());
+            lblVat.Text = string.Format("{0:n}", Convert.ToDecimal(lblSubtotal.Text) * 0.12m);
 
             // Hooking into _AddCartEntry
             _AddCartEntry = (Items items, int quantity) => {
@@ -37,6 +41,7 @@ namespace ThaiTanic.Forms
                 lblVat.Text = string.Format("{0:n}", Convert.ToDecimal(lblSubtotal.Text) * 0.12m);
             };
 
+            _ClearCart = clearCart;
             _CategoryPage = 1;
             _CurrentCategory = ItemCategory.Breakfast;
             _CurrentItems = Items.GetAllItems().Where(i => i.Category == _CurrentCategory).ToList();
@@ -51,7 +56,7 @@ namespace ThaiTanic.Forms
                 if (category == ItemCategory.Invalid)
                     continue;
 
-                ucCategoryCard categoryCard = new ucCategoryCard(category.AsString(), Items.GetAllItems().Where(e => e.Category == category).Count())
+                ucCategoryCard categoryCard = new ucCategoryCard(category.AsString(), Items.GetAllItems().Where(e => e.Category == category).Count(), SetCurrentCategory)
                 {
                     BgColor = colors[iteration++]
                 };
@@ -68,6 +73,14 @@ namespace ThaiTanic.Forms
             //dgvCart.Rows.Add("Crispy Hashbrowns", 10, 10.10);
             //dgvCart.Rows.Add("Cheesy Potatoes", 10, 10.10);
             //dgvCart.Rows.Add("Applesauce Muffins", 10, 10.10);
+        }
+
+        public void SetCurrentCategory(ItemCategory category)
+        {
+            _CurrentCategory = category;
+            _CategoryPage = 1;
+            _CurrentItems = Items.GetAllItems().Where(i => i.Category == _CurrentCategory).ToList();
+            UpdateShownMenuItems();
         }
 
         private void UpdateShownMenuItems()
@@ -116,6 +129,16 @@ namespace ThaiTanic.Forms
                 _CategoryPage--;
                 UpdateShownMenuItems();
             }
+        }
+
+        private void btnClearCart_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("Are you sure?", "Clear Cart", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+            if (result == DialogResult.No) return;
+
+            _ClearCart();
+            dgvCart.Rows.Clear();
         }
     }
 }
