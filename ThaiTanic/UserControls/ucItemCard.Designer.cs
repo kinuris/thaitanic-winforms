@@ -42,13 +42,15 @@ namespace ThaiTanic.UserControls
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.guna2Panel1.BorderColor = System.Drawing.Color.LightGray;
             this.guna2Panel1.BorderRadius = 5;
+            this.guna2Panel1.BorderThickness = 1;
             this.guna2Panel1.Controls.Add(this.guna2Panel2);
             this.guna2Panel1.Controls.Add(this.txtQuantity);
             this.guna2Panel1.Controls.Add(this.lblQuantity);
             this.guna2Panel1.Controls.Add(this.txtItemTitle);
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
-            this.guna2Panel1.Location = new System.Drawing.Point(3, 4);
+            this.guna2Panel1.Location = new System.Drawing.Point(2, 4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(180, 155);
             this.guna2Panel1.TabIndex = 0;
@@ -93,7 +95,7 @@ namespace ThaiTanic.UserControls
             this.lblQuantity.AutoSize = true;
             this.lblQuantity.Font = new System.Drawing.Font("Corbel", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.lblQuantity.Location = new System.Drawing.Point(7, 77);
+            this.lblQuantity.Location = new System.Drawing.Point(15, 77);
             this.lblQuantity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblQuantity.Name = "lblQuantity";
             this.lblQuantity.Size = new System.Drawing.Size(70, 15);
@@ -119,7 +121,7 @@ namespace ThaiTanic.UserControls
             this.txtItemTitle.ForeColor = System.Drawing.Color.White;
             this.txtItemTitle.HoverState.BorderColor = System.Drawing.Color.Transparent;
             this.txtItemTitle.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.txtItemTitle.Location = new System.Drawing.Point(0, 3);
+            this.txtItemTitle.Location = new System.Drawing.Point(3, 3);
             this.txtItemTitle.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtItemTitle.Multiline = true;
             this.txtItemTitle.Name = "txtItemTitle";
