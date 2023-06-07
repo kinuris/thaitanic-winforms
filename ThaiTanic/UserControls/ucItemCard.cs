@@ -53,6 +53,7 @@ namespace ThaiTanic.UserControls
             }
 
             AddCartEntry(Item, int.Parse(txtQuantity.Text));
+            txtQuantity.Text = "";
         }
     }
 }
