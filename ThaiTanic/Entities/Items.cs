@@ -207,7 +207,7 @@ namespace ThaiTanic.Entities
         }
 
         // Converts MySql enum to corresponding C# Enum
-        private static ItemCategory ParseItemCategory(string item)
+        public static ItemCategory ParseItemCategory(string item)
         {
             switch (item.ToLower())
             {
