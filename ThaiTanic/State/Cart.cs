@@ -109,7 +109,7 @@ namespace ThaiTanic.State
         {
             foreach (var entry in Entries)
             {
-                dgv.Rows.Add(entry.Item.Name, entry.Quantity, entry.TotalPrice);
+                dgv.Rows.Add(entry.Item.Id, entry.Item.Name, entry.Quantity, entry.TotalPrice);
             }
         }
 
