@@ -28,7 +28,7 @@ namespace ThaiTanic.Forms
             lblShippingCost.Text = "50.00";
 
             addEntriesToDGV(dgvCart);
-            lblSubtotal.Text = string.Format("{0:n}", dgvCart.Rows.Cast<DataGridViewRow>().Select(e => Convert.ToDecimal(e.Cells[2].Value)).Sum());
+            lblSubtotal.Text = string.Format("{0:n}", dgvCart.Rows.Cast<DataGridViewRow>().Select(e => Convert.ToDecimal(e.Cells[3].Value)).Sum());
             lblVat.Text = string.Format("{0:n}", Convert.ToDecimal(lblSubtotal.Text) * 0.12m);
 
             // Hooking into _AddCartEntry
@@ -37,7 +37,7 @@ namespace ThaiTanic.Forms
                 dgvCart.Rows.Clear();
                 addEntriesToDGV(dgvCart);
 
-                lblSubtotal.Text = string.Format("{0:n}", dgvCart.Rows.Cast<DataGridViewRow>().Select(e => Convert.ToDecimal(e.Cells[2].Value)).Sum());
+                lblSubtotal.Text = string.Format("{0:n}", dgvCart.Rows.Cast<DataGridViewRow>().Select(e => Convert.ToDecimal(e.Cells[3].Value)).Sum());
                 lblVat.Text = string.Format("{0:n}", Convert.ToDecimal(lblSubtotal.Text) * 0.12m);
             };
 
@@ -139,6 +139,18 @@ namespace ThaiTanic.Forms
 
             _ClearCart();
             dgvCart.Rows.Clear();
+            lblSubtotal.Text = string.Format("{0:n}", dgvCart.Rows.Cast<DataGridViewRow>().Select(el => Convert.ToDecimal(el.Cells[3].Value)).Sum());
+            lblVat.Text = string.Format("{0:n}", Convert.ToDecimal(lblSubtotal.Text) * 0.12m);
+        }
+
+        private void dgvCart_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var senderGrid = (DataGridView)sender;
+
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
+            {
+                dgvCart.Rows.RemoveAt(e.RowIndex);
+            }
         }
     }
 }

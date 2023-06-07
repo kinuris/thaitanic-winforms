@@ -39,6 +39,7 @@ namespace ThaiTanic.Forms
                 TopLevel = false,
                 Dock = DockStyle.Fill
             };
+
             pnlContainer.Controls.Add(frmMenu);
             frmMenu.Show();
         }
