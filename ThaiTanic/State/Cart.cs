@@ -48,7 +48,7 @@ namespace ThaiTanic.State
             });
         }
 
-        // If you want to remove an entry altogether (not just decrease the quantity), you will need to a negative number
+        // If you want to remove an entry altogether (not just decrease the quantity), you will need to enter a negative number
         // NOTE: SubtractCartEntry(2, 0) does NOTHING
         public void SubtractCartEntry(int itemId, int quantity)
         {

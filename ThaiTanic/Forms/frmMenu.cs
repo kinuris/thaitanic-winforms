@@ -17,12 +17,13 @@ namespace ThaiTanic.Forms
     public partial class frmMenu : Form
     {
         private readonly Action<Items, int> _AddCartEntry;
+        private readonly Action<int, int> _SubtractCartEntry;
         private int _CategoryPage;
         private ItemCategory _CurrentCategory;
         private List<Items> _CurrentItems;
         private Action _ClearCart;
 
-        public frmMenu(Action<Items, int> addCartEntry, Action<DataGridView> addEntriesToDGV, Action clearCart)
+        public frmMenu(Action<Items, int> addCartEntry, Action<int, int> subtractCartEntry, Action<DataGridView> addEntriesToDGV, Action clearCart)
         {
             InitializeComponent();
             lblShippingCost.Text = "50.00";
@@ -39,6 +40,7 @@ namespace ThaiTanic.Forms
                 UpdateLabels();
             };
 
+            _SubtractCartEntry = subtractCartEntry;
             _ClearCart = clearCart;
             _CategoryPage = 1;
             _CurrentCategory = ItemCategory.Breakfast;
@@ -152,6 +154,7 @@ namespace ThaiTanic.Forms
 
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
             {
+                _SubtractCartEntry(Convert.ToInt32(dgvCart.Rows[e.RowIndex].Cells[0].Value), -1);
                 dgvCart.Rows.RemoveAt(e.RowIndex);
                 UpdateLabels();
             }
