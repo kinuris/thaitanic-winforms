@@ -6,13 +6,13 @@ namespace ThaiTanic.UserControls
 {
     public partial class ucItemCard : UserControl
     {
-        private readonly Action<Items, int> AddCartEntry;
+        private readonly Action<Items, int> _AddCartEntry;
 
         public ucItemCard(Action<Items, int> addCartEntry)
         {
             InitializeComponent();
 
-            AddCartEntry = addCartEntry;
+            _AddCartEntry = addCartEntry;
         }
 
         private Items item;
@@ -26,14 +26,9 @@ namespace ThaiTanic.UserControls
             {
                 item = value;
                 txtItemTitle.Text = item.Name;
+                lblPrice.Text = string.Format("{0:n}", item.Price);
             }
         }
-
-        //public string ItemPrice
-        //{
-        //    get { return txtPrice.Text; }
-        //    set { txtPrice.Text = value; }
-        //}
 
         private void txtQuantity_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -52,7 +47,7 @@ namespace ThaiTanic.UserControls
                 return;
             }
 
-            AddCartEntry(Item, int.Parse(txtQuantity.Text));
+            _AddCartEntry(Item, int.Parse(txtQuantity.Text));
             txtQuantity.Text = "";
         }
     }
