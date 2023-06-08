@@ -44,6 +44,7 @@ namespace ThaiTanic.Forms
                 addEntriesToDGV(dgvCart, 5);
 
                 UpdateLabels();
+                ConsolidateDGVEntries();
             };
 
             _AddEntriesToDGV = addEntriesToDGV;
