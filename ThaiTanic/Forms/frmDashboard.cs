@@ -34,7 +34,7 @@ namespace ThaiTanic.Forms
                 // PASS
             }
 
-            frmMenu frmMenu = new frmMenu(AddCartEntry, cart.SubtractCartEntry, cart.AddEntriesToDGV, cart.Clear)
+            frmMenu frmMenu = new frmMenu(AddCartEntry, cart.SubtractCartEntry, cart.AddEntriesToDGV, cart.Clear, cart.Entries)
             {
                 TopLevel = false,
                 Dock = DockStyle.Fill

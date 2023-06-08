@@ -11,42 +11,51 @@ using ThaiTanic.UserControls;
 using Guna.UI2.WinForms;
 using ThaiTanic.Entities;
 using Org.BouncyCastle.Asn1;
+using ThaiTanic.State;
 
 namespace ThaiTanic.Forms
 {
+
+    public delegate void OptionalAction(DataGridView dgv, int count = int.MaxValue, int offset = 0);
+
     public partial class frmMenu : Form
     {
         private readonly Action<Items, int> _AddCartEntry;
         private readonly Action<int, int> _SubtractCartEntry;
+        private readonly OptionalAction _AddEntriesToDGV;
+        private readonly List<CartEntry> _CartEntries;
         private int _CategoryPage;
+        private int _CartPage;
         private ItemCategory _CurrentCategory;
         private List<Items> _CurrentItems;
         private Action _ClearCart;
 
-        public frmMenu(Action<Items, int> addCartEntry, Action<int, int> subtractCartEntry, Action<DataGridView> addEntriesToDGV, Action clearCart)
+        public frmMenu(Action<Items, int> addCartEntry, Action<int, int> subtractCartEntry, OptionalAction addEntriesToDGV, Action clearCart, List<CartEntry> cartEntries)
         {
             InitializeComponent();
             lblShippingCost.Text = "50.00";
 
-            addEntriesToDGV(dgvCart);
-            UpdateLabels();
+            addEntriesToDGV(dgvCart, 5);
 
             // Hooking into _AddCartEntry
             _AddCartEntry = (Items items, int quantity) => {
                 addCartEntry(items, quantity);
                 dgvCart.Rows.Clear();
-                addEntriesToDGV(dgvCart);
+                addEntriesToDGV(dgvCart, 5);
 
                 UpdateLabels();
             };
 
+            _AddEntriesToDGV = addEntriesToDGV;
             _SubtractCartEntry = subtractCartEntry;
+            _CartEntries = cartEntries;
             _ClearCart = clearCart;
-            _CategoryPage = 1;
+            _CategoryPage = _CartPage = 1;
             _CurrentCategory = ItemCategory.Breakfast;
             _CurrentItems = Items.GetAllItems().Where(i => i.Category == _CurrentCategory).ToList();
 
             UpdateShownMenuItems();
+            UpdateLabels();
 
             //------------------- DUMMY CATEGORIES -------------------------------------
             Color[] colors = new Color[] { Color.FromArgb(170, 216, 213), Color.FromArgb(194, 156, 156), Color.FromArgb(174, 201, 217), Color.FromArgb(255, 200, 221), Color.FromArgb(162, 210, 255), Color.FromArgb(205, 180, 219), Color.FromArgb(255, 178, 178), Color.FromArgb(246, 234, 194) };
@@ -144,7 +153,7 @@ namespace ThaiTanic.Forms
 
         private void UpdateLabels()
         {
-            lblSubtotal.Text = string.Format("{0:n}", dgvCart.Rows.Cast<DataGridViewRow>().Select(el => Convert.ToDecimal(el.Cells[3].Value)).Sum());
+            lblSubtotal.Text = string.Format("{0:n}", _CartEntries.Select(entry => entry.Item.Price * entry.Quantity).Sum());
             lblVat.Text = string.Format("{0:n}", Convert.ToDecimal(lblSubtotal.Text) * 0.12m);
             lblGrandTotal.Text = string.Format("{0:n}", Convert.ToDecimal(lblShippingCost.Text) + Convert.ToDecimal(lblSubtotal.Text) + Convert.ToDecimal(lblVat.Text));
         }
@@ -158,6 +167,26 @@ namespace ThaiTanic.Forms
                 _SubtractCartEntry(Convert.ToInt32(dgvCart.Rows[e.RowIndex].Cells[0].Value), -1);
                 dgvCart.Rows.RemoveAt(e.RowIndex);
                 UpdateLabels();
+            }
+        }
+
+        private void btnBackCart_Click(object sender, EventArgs e)
+        {
+            if (_CartPage > 1)
+            {
+                _CartPage--;
+                dgvCart.Rows.Clear();
+                _AddEntriesToDGV(dgvCart, 5, (_CartPage - 1) * 5);
+            }
+        }
+
+        private void btnForwardCart_Click(object sender, EventArgs e)
+        {
+            if (_CartEntries.Count() / 5 >= _CartPage)
+            {
+                _CartPage++;
+                dgvCart.Rows.Clear();
+                _AddEntriesToDGV(dgvCart, 5, (_CartPage - 1) * 5);
             }
         }
     }
