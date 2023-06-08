@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using ThaiTanic.Entities;
 
 namespace ThaiTanic.Forms
 {
@@ -53,6 +54,13 @@ namespace ThaiTanic.Forms
             {
                 MessageBox.Show("All fields are required if not otherwise specified", "Required", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+                return;
+            }
+
+            if (User.AssertUserExistsByUsername(txtUsername.Text))
+            {
+                MessageBox.Show("Username already exists", "Already Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
+              
                 return;
             }
 
