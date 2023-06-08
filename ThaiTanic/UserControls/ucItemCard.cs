@@ -40,7 +40,7 @@ namespace ThaiTanic.UserControls
 
         private void btnAddToCart_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtQuantity.Text) && int.Parse(txtQuantity.Text) > 0)
+            if (string.IsNullOrWhiteSpace(txtQuantity.Text) || int.Parse(txtQuantity.Text) <= 0)
             {
                 MessageBox.Show("Must specify quantity", "Required", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
