@@ -202,6 +202,9 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="DB\thaitanic_db.sql" />
+    <None Include="Resources\btn_forward.png" />
+    <None Include="Resources\right-arrow.png" />
+    <None Include="Resources\left-arrow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

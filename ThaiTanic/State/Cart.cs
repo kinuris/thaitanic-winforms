@@ -68,12 +68,12 @@ namespace ThaiTanic.State
                 item.Quantity -= quantity;
 
             if (item.Quantity <= 0)
-                Entries = Entries.Where(entry => entry.Item.Id != itemId).ToList();
+                Entries.Remove(Entries.Find(entry => entry.Item.Id == itemId));
         }
 
         public void Deserialize()
         {
-            Entries = new List<CartEntry>();
+            Entries.Clear();
 
             // TODO: Catch FileNotFoundException
             FileStream stream = File.OpenRead($"uid{User.Id}-localStorage.json");
@@ -105,9 +105,9 @@ namespace ThaiTanic.State
         // cart.Sb(id, -1) -> Remove
         // cart.Sb(id, 0) nothing
 
-        public void AddEntriesToDGV(DataGridView dgv)
+        public void AddEntriesToDGV(DataGridView dgv, int count = int.MaxValue, int offset = 0)
         {
-            foreach (var entry in Entries)
+            foreach (var entry in Entries.Skip(offset).Take(count))
             {
                 dgv.Rows.Add(entry.Item.Id, entry.Item.Name, entry.Quantity, entry.TotalPrice);
             }
@@ -120,7 +120,7 @@ namespace ThaiTanic.State
     }
 
     [DataContract]
-    class CartEntry
+    public class CartEntry
     {
         [DataMember]
         public Items Item;
