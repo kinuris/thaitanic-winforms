@@ -156,6 +156,13 @@ namespace ThaiTanic.Forms
             lblSubtotal.Text = string.Format("{0:n}", _CartEntries.Select(entry => entry.Item.Price * entry.Quantity).Sum());
             lblVat.Text = string.Format("{0:n}", Convert.ToDecimal(lblSubtotal.Text) * 0.12m);
             lblGrandTotal.Text = string.Format("{0:n}", Convert.ToDecimal(lblShippingCost.Text) + Convert.ToDecimal(lblSubtotal.Text) + Convert.ToDecimal(lblVat.Text));
+            lblCartPageIndicator.Text = $"{_CartPage} / {Math.Ceiling(_CartEntries.Count() / 5.0)}";
+        }
+
+        private void ConsolidateDGVEntries()
+        {
+            dgvCart.Rows.Clear();
+            _AddEntriesToDGV(dgvCart, 5, (_CartPage - 1) * 5);
         }
 
         private void dgvCart_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -167,6 +174,7 @@ namespace ThaiTanic.Forms
                 _SubtractCartEntry(Convert.ToInt32(dgvCart.Rows[e.RowIndex].Cells[0].Value), -1);
                 dgvCart.Rows.RemoveAt(e.RowIndex);
                 UpdateLabels();
+                ConsolidateDGVEntries();
             }
         }
 
@@ -175,18 +183,18 @@ namespace ThaiTanic.Forms
             if (_CartPage > 1)
             {
                 _CartPage--;
-                dgvCart.Rows.Clear();
-                _AddEntriesToDGV(dgvCart, 5, (_CartPage - 1) * 5);
+                ConsolidateDGVEntries();
+                lblCartPageIndicator.Text = $"{_CartPage} / {Math.Ceiling(_CartEntries.Count() / 5.0)}";
             }
         }
 
         private void btnForwardCart_Click(object sender, EventArgs e)
         {
-            if (_CartEntries.Count() / 5 >= _CartPage)
+            if (_CartEntries.Count() / 5.0 > _CartPage)
             {
                 _CartPage++;
-                dgvCart.Rows.Clear();
-                _AddEntriesToDGV(dgvCart, 5, (_CartPage - 1) * 5);
+                ConsolidateDGVEntries();
+                lblCartPageIndicator.Text = $"{_CartPage} / {Math.Ceiling(_CartEntries.Count() / 5.0)}";
             }
         }
     }
