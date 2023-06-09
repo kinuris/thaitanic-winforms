@@ -66,7 +66,7 @@ namespace ThaiTanic.Forms
                 if (category == ItemCategory.Invalid)
                     continue;
 
-                ucCategoryCard categoryCard = new ucCategoryCard(category.AsString(), Items.GetAllItems().Where(e => e.Category == category).Count(), SetCurrentCategory)
+                ucCategoryCard categoryCard = new ucCategoryCard(category.AsString(), Items.GetAllItems().Where(e => e.Category == category).Where(entry => entry.Available).Count(), SetCurrentCategory)
                 {
                     BgColor = colors[iteration++]
                 };
@@ -107,7 +107,7 @@ namespace ThaiTanic.Forms
             //     pnlContainerItems.Controls.Add(itemCard);
             // }
 
-            foreach (var item in _CurrentItems.Skip((_CategoryPage - 1) * 8).Take(_CategoryPage * 8)) 
+            foreach (var item in _CurrentItems.Skip((_CategoryPage - 1) * 8).Take(_CategoryPage * 8).Where(entry => entry.Available)) 
             {
                 ucItemCard itemCard = new ucItemCard(_AddCartEntry)
                 {
