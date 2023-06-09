@@ -40,8 +40,15 @@ namespace ThaiTanic.Forms
                 Dock = DockStyle.Fill
             };
 
-            pnlContainer.Controls.Add(frmMenu);
-            frmMenu.Show();
+            //pnlContainer.Controls.Add(frmMenu);
+            //frmMenu.Show();
+
+
+            frmDelivery frmDelivery = new frmDelivery();
+            frmDelivery.TopLevel = false;
+            frmDelivery.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Add(frmDelivery);
+            frmDelivery.Show();
         }
 
         private void AddCartEntry(Items item, int quantity)
