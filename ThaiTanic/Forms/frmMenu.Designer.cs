@@ -166,6 +166,7 @@ namespace ThaiTanic.Forms
             this.btnPlaceOrder.Size = new System.Drawing.Size(478, 98);
             this.btnPlaceOrder.TabIndex = 12;
             this.btnPlaceOrder.Text = "Place Order";
+            this.btnPlaceOrder.Click += new System.EventHandler(this.btnPlaceOrder_Click);
             // 
             // guna2Panel3
             // 

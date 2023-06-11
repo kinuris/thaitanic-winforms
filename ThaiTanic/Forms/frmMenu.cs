@@ -23,14 +23,16 @@ namespace ThaiTanic.Forms
         private readonly Action<Items, int> _AddCartEntry;
         private readonly Action<int, int> _SubtractCartEntry;
         private readonly OptionalAction _AddEntriesToDGV;
+        private readonly Action<Form> _DisplayFormHook;
         private readonly List<CartEntry> _CartEntries;
         private int _CategoryPage;
         private int _CartPage;
+        private User _User;
         private ItemCategory _CurrentCategory;
         private List<Items> _CurrentItems;
         private Action _ClearCart;
 
-        public frmMenu(Action<Items, int> addCartEntry, Action<int, int> subtractCartEntry, OptionalAction addEntriesToDGV, Action clearCart, List<CartEntry> cartEntries)
+        public frmMenu(User user, Action<Form> displayFormHook, Action<Items, int> addCartEntry, Action<int, int> subtractCartEntry, OptionalAction addEntriesToDGV, Action clearCart, List<CartEntry> cartEntries)
         {
             InitializeComponent();
             lblShippingCost.Text = "50.00";
@@ -47,8 +49,10 @@ namespace ThaiTanic.Forms
                 ConsolidateDGVEntries();
             };
 
+            _User = user;
             _AddEntriesToDGV = addEntriesToDGV;
             _SubtractCartEntry = subtractCartEntry;
+            _DisplayFormHook = displayFormHook;
             _CartEntries = cartEntries;
             _ClearCart = clearCart;
             _CategoryPage = _CartPage = 1;
@@ -157,7 +161,7 @@ namespace ThaiTanic.Forms
             lblSubtotal.Text = string.Format("{0:n}", _CartEntries.Select(entry => entry.Item.Price * entry.Quantity).Sum());
             lblVat.Text = string.Format("{0:n}", Convert.ToDecimal(lblSubtotal.Text) * 0.12m);
             lblGrandTotal.Text = string.Format("{0:n}", Convert.ToDecimal(lblShippingCost.Text) + Convert.ToDecimal(lblSubtotal.Text) + Convert.ToDecimal(lblVat.Text));
-            lblCartPageIndicator.Text = $"{_CartPage} / {Math.Ceiling(_CartEntries.Count() / 5.0)}";
+            lblCartPageIndicator.Text = $"{_CartPage} / {(Math.Ceiling(_CartEntries.Count() / 5.0) == 0.0 ? 1 : Math.Ceiling(_CartEntries.Count() / 5.0))}";
         }
 
         private void ConsolidateDGVEntries()
@@ -185,7 +189,7 @@ namespace ThaiTanic.Forms
             {
                 _CartPage--;
                 ConsolidateDGVEntries();
-                lblCartPageIndicator.Text = $"{_CartPage} / {Math.Ceiling(_CartEntries.Count() / 5.0)}";
+                lblCartPageIndicator.Text = $"{_CartPage} / {(Math.Ceiling(_CartEntries.Count() / 5.0) == 0.0 ? 1 : Math.Ceiling(_CartEntries.Count() / 5.0))}";
             }
         }
 
@@ -195,8 +199,18 @@ namespace ThaiTanic.Forms
             {
                 _CartPage++;
                 ConsolidateDGVEntries();
-                lblCartPageIndicator.Text = $"{_CartPage} / {Math.Ceiling(_CartEntries.Count() / 5.0)}";
+                lblCartPageIndicator.Text = $"{_CartPage} / {(Math.Ceiling(_CartEntries.Count() / 5.0) == 0.0 ? 1 : Math.Ceiling(_CartEntries.Count() / 5.0))}";
             }
+        }
+
+        private void btnPlaceOrder_Click(object sender, EventArgs e)
+        {
+            var frmDelivery = new frmDelivery
+            {
+                TopLevel = false
+            };
+
+            _DisplayFormHook(frmDelivery);
         }
     }
 }
