@@ -205,6 +205,12 @@ namespace ThaiTanic.Forms
 
         private void btnPlaceOrder_Click(object sender, EventArgs e)
         {
+            if (_CartEntries.Count() < 1)
+            {
+                MessageBox.Show("Cart is empty", "Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             var frmDelivery = new frmDelivery
             {
                 TopLevel = false
