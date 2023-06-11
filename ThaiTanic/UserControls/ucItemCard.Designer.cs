@@ -31,12 +31,12 @@ namespace ThaiTanic.UserControls
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblPrice = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtQuantity = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblQuantity = new System.Windows.Forms.Label();
             this.txtItemTitle = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnAddToCart = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
@@ -72,6 +72,17 @@ namespace ThaiTanic.UserControls
             this.guna2Panel2.Size = new System.Drawing.Size(94, 32);
             this.guna2Panel2.TabIndex = 3;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(4, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(21, 20);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "₱";
+            // 
             // lblPrice
             // 
             this.lblPrice.BackColor = System.Drawing.Color.Transparent;
@@ -96,10 +107,10 @@ namespace ThaiTanic.UserControls
             this.txtQuantity.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtQuantity.Location = new System.Drawing.Point(9, 113);
-            this.txtQuantity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(2);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.PasswordChar = '\0';
-            this.txtQuantity.PlaceholderText = "0";
+            this.txtQuantity.PlaceholderText = "1";
             this.txtQuantity.SelectedText = "";
             this.txtQuantity.Size = new System.Drawing.Size(57, 32);
             this.txtQuantity.TabIndex = 2;
@@ -163,17 +174,6 @@ namespace ThaiTanic.UserControls
             this.btnAddToCart.TabIndex = 1;
             this.btnAddToCart.Text = "Add to Cart";
             this.btnAddToCart.Click += new System.EventHandler(this.btnAddToCart_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(4, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 20);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "₱";
             // 
             // ucItemCard
             // 
