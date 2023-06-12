@@ -102,6 +102,8 @@ namespace ThaiTanic.Entities
             {
                 conn.Open();
 
+                cmd.Parameters.AddWithValue("@id", Id);
+
                 var reader = cmd.ExecuteReader();
                 if (!reader.Read())
                 {
@@ -243,5 +245,10 @@ namespace ThaiTanic.Entities
         }
 
         public Items(MySqlDataReader reader): this(reader, 0) {}
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }
