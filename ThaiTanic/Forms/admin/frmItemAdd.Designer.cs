@@ -77,6 +77,7 @@ namespace ThaiTanic.Forms.admin
             this.btnAddProduct.Size = new System.Drawing.Size(130, 32);
             this.btnAddProduct.TabIndex = 8;
             this.btnAddProduct.Text = "Add Product";
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
             // cbItemCategory
             // 
@@ -135,6 +136,7 @@ namespace ThaiTanic.Forms.admin
             this.txtProductPrice.SelectedText = "";
             this.txtProductPrice.Size = new System.Drawing.Size(325, 36);
             this.txtProductPrice.TabIndex = 5;
+            this.txtProductPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProductPrice_KeyPress);
             // 
             // label3
             // 
