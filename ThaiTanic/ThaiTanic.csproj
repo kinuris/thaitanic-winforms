@@ -128,6 +128,30 @@
     <Compile Include="Forms\admin\frmManageOrders.Designer.cs">
       <DependentUpon>frmManageOrders.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\admin\frmManageUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\admin\frmManageUsers.Designer.cs">
+      <DependentUpon>frmManageUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAccount.Designer.cs">
+      <DependentUpon>frmAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAccountBillingAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAccountBillingAddress.Designer.cs">
+      <DependentUpon>frmAccountBillingAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAccountProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAccountProfile.Designer.cs">
+      <DependentUpon>frmAccountProfile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmDelivery.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +229,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\admin\frmManageOrders.resx">
       <DependentUpon>frmManageOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\admin\frmManageUsers.resx">
+      <DependentUpon>frmManageUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAccount.resx">
+      <DependentUpon>frmAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAccountBillingAddress.resx">
+      <DependentUpon>frmAccountBillingAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAccountProfile.resx">
+      <DependentUpon>frmAccountProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmDelivery.resx">
       <DependentUpon>frmDelivery.cs</DependentUpon>
