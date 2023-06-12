@@ -31,8 +31,9 @@ namespace ThaiTanic.Forms
         private ItemCategory _CurrentCategory;
         private List<Items> _CurrentItems;
         private Action _ClearCart;
+        private Action<DashBoardOptions> _SetCurrentSelected;
 
-        public frmMenu(User user, Action<Form> displayFormHook, Action<Items, int> addCartEntry, Action<int, int> subtractCartEntry, OptionalAction addEntriesToDGV, Action clearCart, List<CartEntry> cartEntries)
+        public frmMenu(User user, Action<Form> displayFormHook, Action<Items, int> addCartEntry, Action<int, int> subtractCartEntry, OptionalAction addEntriesToDGV, Action clearCart, List<CartEntry> cartEntries, Action<DashBoardOptions> setCurrentSelected)
         {
             InitializeComponent();
             lblShippingCost.Text = "50.00";
@@ -57,6 +58,7 @@ namespace ThaiTanic.Forms
             _ClearCart = clearCart;
             _CategoryPage = _CartPage = 1;
             _CurrentCategory = ItemCategory.Breakfast;
+            _SetCurrentSelected = setCurrentSelected;
             _CurrentItems = Items.GetAllItems().Where(i => i.Category == _CurrentCategory).ToList();
 
             UpdateShownMenuItems();
@@ -211,12 +213,35 @@ namespace ThaiTanic.Forms
                 return;
             }
 
-            var frmDelivery = new frmDelivery
+            if (Convert.ToString(cmbBillingAddresses.SelectedItem) == "")
+            {
+                MessageBox.Show("Must select billing address", "Missing Address", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            var success = Orders.CreateOrder(_User, (BillingAddress)cmbBillingAddresses.SelectedItem, _CartEntries);
+
+            if (!success)
+            {
+                MessageBox.Show("Order failed", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            var frmDelivery = new frmDelivery(_User)
             {
                 TopLevel = false
             };
 
+            _SetCurrentSelected(DashBoardOptions.Delivery);
             _DisplayFormHook(frmDelivery);
+        }
+
+        private void frmMenu_Load(object sender, EventArgs e)
+        {
+            foreach (var address in BillingAddress.BillingAddressesOfUser(_User))
+            {
+                cmbBillingAddresses.Items.Add(address);
+            }
         }
     }
 }
