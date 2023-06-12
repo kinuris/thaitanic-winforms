@@ -30,12 +30,12 @@ namespace ThaiTanic.UserControls
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblItemName = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblItemPrice = new System.Windows.Forms.Label();
-            this.lblQuantity = new System.Windows.Forms.Label();
+            this.lblTotalPrice = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblQuantity = new System.Windows.Forms.Label();
+            this.lblItemPrice = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblItemName = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,7 +45,7 @@ namespace ThaiTanic.UserControls
             this.guna2Panel1.BorderColor = System.Drawing.Color.White;
             this.guna2Panel1.BorderRadius = 5;
             this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.label3);
+            this.guna2Panel1.Controls.Add(this.lblTotalPrice);
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Controls.Add(this.lblQuantity);
             this.guna2Panel1.Controls.Add(this.lblItemPrice);
@@ -57,48 +57,15 @@ namespace ThaiTanic.UserControls
             this.guna2Panel1.Size = new System.Drawing.Size(282, 62);
             this.guna2Panel1.TabIndex = 0;
             // 
-            // lblItemName
+            // lblTotalPrice
             // 
-            this.lblItemName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblItemName.ForeColor = System.Drawing.Color.White;
-            this.lblItemName.Location = new System.Drawing.Point(3, 5);
-            this.lblItemName.Name = "lblItemName";
-            this.lblItemName.Size = new System.Drawing.Size(232, 23);
-            this.lblItemName.TabIndex = 0;
-            this.lblItemName.Text = "Tuna Pie";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(112)))));
-            this.label1.Location = new System.Drawing.Point(5, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "ITEM PRICE";
-            // 
-            // lblItemPrice
-            // 
-            this.lblItemPrice.AutoSize = true;
-            this.lblItemPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblItemPrice.ForeColor = System.Drawing.Color.White;
-            this.lblItemPrice.Location = new System.Drawing.Point(5, 44);
-            this.lblItemPrice.Name = "lblItemPrice";
-            this.lblItemPrice.Size = new System.Drawing.Size(44, 13);
-            this.lblItemPrice.TabIndex = 2;
-            this.lblItemPrice.Text = "₱ 70.00";
-            // 
-            // lblQuantity
-            // 
-            this.lblQuantity.AutoSize = true;
-            this.lblQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(112)))));
-            this.lblQuantity.Location = new System.Drawing.Point(68, 44);
-            this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(18, 13);
-            this.lblQuantity.TabIndex = 3;
-            this.lblQuantity.Text = "x3";
+            this.lblTotalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(162)))), ((int)(((byte)(78)))));
+            this.lblTotalPrice.Location = new System.Drawing.Point(186, 38);
+            this.lblTotalPrice.Name = "lblTotalPrice";
+            this.lblTotalPrice.Size = new System.Drawing.Size(90, 17);
+            this.lblTotalPrice.TabIndex = 5;
+            this.lblTotalPrice.Text = "696,696.69";
             // 
             // label2
             // 
@@ -111,15 +78,48 @@ namespace ThaiTanic.UserControls
             this.label2.TabIndex = 4;
             this.label2.Text = "₱";
             // 
-            // label3
+            // lblQuantity
             // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(162)))), ((int)(((byte)(78)))));
-            this.label3.Location = new System.Drawing.Point(186, 38);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 17);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "696,696.69";
+            this.lblQuantity.AutoSize = true;
+            this.lblQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(112)))));
+            this.lblQuantity.Location = new System.Drawing.Point(68, 44);
+            this.lblQuantity.Name = "lblQuantity";
+            this.lblQuantity.Size = new System.Drawing.Size(18, 13);
+            this.lblQuantity.TabIndex = 3;
+            this.lblQuantity.Text = "x3";
+            // 
+            // lblItemPrice
+            // 
+            this.lblItemPrice.AutoSize = true;
+            this.lblItemPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblItemPrice.ForeColor = System.Drawing.Color.White;
+            this.lblItemPrice.Location = new System.Drawing.Point(5, 44);
+            this.lblItemPrice.Name = "lblItemPrice";
+            this.lblItemPrice.Size = new System.Drawing.Size(44, 13);
+            this.lblItemPrice.TabIndex = 2;
+            this.lblItemPrice.Text = "₱ 70.00";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(111)))), ((int)(((byte)(112)))));
+            this.label1.Location = new System.Drawing.Point(5, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "ITEM PRICE";
+            // 
+            // lblItemName
+            // 
+            this.lblItemName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblItemName.ForeColor = System.Drawing.Color.White;
+            this.lblItemName.Location = new System.Drawing.Point(3, 5);
+            this.lblItemName.Name = "lblItemName";
+            this.lblItemName.Size = new System.Drawing.Size(232, 23);
+            this.lblItemName.TabIndex = 0;
+            this.lblItemName.Text = "Tuna Pie";
             // 
             // ucOrderItemCard
             // 
@@ -138,7 +138,7 @@ namespace ThaiTanic.UserControls
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblTotalPrice;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblQuantity;
         private System.Windows.Forms.Label lblItemPrice;

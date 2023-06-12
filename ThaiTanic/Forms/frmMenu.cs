@@ -23,14 +23,17 @@ namespace ThaiTanic.Forms
         private readonly Action<Items, int> _AddCartEntry;
         private readonly Action<int, int> _SubtractCartEntry;
         private readonly OptionalAction _AddEntriesToDGV;
+        private readonly Action<Form> _DisplayFormHook;
         private readonly List<CartEntry> _CartEntries;
         private int _CategoryPage;
         private int _CartPage;
+        private User _User;
         private ItemCategory _CurrentCategory;
         private List<Items> _CurrentItems;
         private Action _ClearCart;
+        private Action<DashBoardOptions> _SetCurrentSelected;
 
-        public frmMenu(Action<Items, int> addCartEntry, Action<int, int> subtractCartEntry, OptionalAction addEntriesToDGV, Action clearCart, List<CartEntry> cartEntries)
+        public frmMenu(User user, Action<Form> displayFormHook, Action<Items, int> addCartEntry, Action<int, int> subtractCartEntry, OptionalAction addEntriesToDGV, Action clearCart, List<CartEntry> cartEntries, Action<DashBoardOptions> setCurrentSelected)
         {
             InitializeComponent();
             lblShippingCost.Text = "50.00";
@@ -47,12 +50,15 @@ namespace ThaiTanic.Forms
                 ConsolidateDGVEntries();
             };
 
+            _User = user;
             _AddEntriesToDGV = addEntriesToDGV;
             _SubtractCartEntry = subtractCartEntry;
+            _DisplayFormHook = displayFormHook;
             _CartEntries = cartEntries;
             _ClearCart = clearCart;
             _CategoryPage = _CartPage = 1;
             _CurrentCategory = ItemCategory.Breakfast;
+            _SetCurrentSelected = setCurrentSelected;
             _CurrentItems = Items.GetAllItems().Where(i => i.Category == _CurrentCategory).ToList();
 
             UpdateShownMenuItems();
@@ -107,7 +113,7 @@ namespace ThaiTanic.Forms
             //     pnlContainerItems.Controls.Add(itemCard);
             // }
 
-            foreach (var item in _CurrentItems.Skip((_CategoryPage - 1) * 8).Take(_CategoryPage * 8).Where(entry => entry.Available)) 
+            foreach (var item in _CurrentItems.Skip((_CategoryPage - 1) * 8).Where(entry => entry.Available).Take(_CategoryPage * 8)) 
             {
                 ucItemCard itemCard = new ucItemCard(_AddCartEntry)
                 {
@@ -157,7 +163,7 @@ namespace ThaiTanic.Forms
             lblSubtotal.Text = string.Format("{0:n}", _CartEntries.Select(entry => entry.Item.Price * entry.Quantity).Sum());
             lblVat.Text = string.Format("{0:n}", Convert.ToDecimal(lblSubtotal.Text) * 0.12m);
             lblGrandTotal.Text = string.Format("{0:n}", Convert.ToDecimal(lblShippingCost.Text) + Convert.ToDecimal(lblSubtotal.Text) + Convert.ToDecimal(lblVat.Text));
-            lblCartPageIndicator.Text = $"{_CartPage} / {Math.Ceiling(_CartEntries.Count() / 5.0)}";
+            lblCartPageIndicator.Text = $"{_CartPage} / {(Math.Ceiling(_CartEntries.Count() / 5.0) == 0.0 ? 1 : Math.Ceiling(_CartEntries.Count() / 5.0))}";
         }
 
         private void ConsolidateDGVEntries()
@@ -185,7 +191,7 @@ namespace ThaiTanic.Forms
             {
                 _CartPage--;
                 ConsolidateDGVEntries();
-                lblCartPageIndicator.Text = $"{_CartPage} / {Math.Ceiling(_CartEntries.Count() / 5.0)}";
+                lblCartPageIndicator.Text = $"{_CartPage} / {(Math.Ceiling(_CartEntries.Count() / 5.0) == 0.0 ? 1 : Math.Ceiling(_CartEntries.Count() / 5.0))}";
             }
         }
 
@@ -195,7 +201,46 @@ namespace ThaiTanic.Forms
             {
                 _CartPage++;
                 ConsolidateDGVEntries();
-                lblCartPageIndicator.Text = $"{_CartPage} / {Math.Ceiling(_CartEntries.Count() / 5.0)}";
+                lblCartPageIndicator.Text = $"{_CartPage} / {(Math.Ceiling(_CartEntries.Count() / 5.0) == 0.0 ? 1 : Math.Ceiling(_CartEntries.Count() / 5.0))}";
+            }
+        }
+
+        private void btnPlaceOrder_Click(object sender, EventArgs e)
+        {
+            if (_CartEntries.Count() < 1)
+            {
+                MessageBox.Show("Cart is empty", "Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (Convert.ToString(cmbBillingAddresses.SelectedItem) == "")
+            {
+                MessageBox.Show("Must select billing address", "Missing Address", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            var success = Orders.CreateOrder(_User, (BillingAddress)cmbBillingAddresses.SelectedItem, _CartEntries);
+
+            if (!success)
+            {
+                MessageBox.Show("Order failed", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            var frmDelivery = new frmDelivery(_User)
+            {
+                TopLevel = false
+            };
+
+            _SetCurrentSelected(DashBoardOptions.Delivery);
+            _DisplayFormHook(frmDelivery);
+        }
+
+        private void frmMenu_Load(object sender, EventArgs e)
+        {
+            foreach (var address in BillingAddress.BillingAddressesOfUser(_User))
+            {
+                cmbBillingAddresses.Items.Add(address);
             }
         }
     }

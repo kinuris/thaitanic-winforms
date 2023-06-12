@@ -64,7 +64,7 @@ namespace ThaiTanic.Forms
                 return;
             }
 
-            bool success = Entities.User.CreateUser(txtUsername.Text, txtPassword.Text, txtFirstName.Text, txtLastName.Text, txtMiddleName.Text, txtPhoneNumber.Text, dateTimeBirthday.Value, txtEmail.Text);
+            bool success = User.CreateUser(txtUsername.Text, txtPassword.Text, txtFirstName.Text, txtLastName.Text, txtMiddleName.Text, txtPhoneNumber.Text, dateTimeBirthday.Value, txtEmail.Text);
         
             if (!success)
             {
@@ -73,6 +73,7 @@ namespace ThaiTanic.Forms
             }
 
             MessageBox.Show("Successfully created user", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Close();
         }
     }
 }

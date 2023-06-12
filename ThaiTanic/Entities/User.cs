@@ -87,7 +87,7 @@ namespace ThaiTanic.Entities
             string middleName, string phoneNumber, DateTime birthday, string email) 
         {
             string sql = @"INSERT INTO user (username, password, first_name, last_name, middle_name, phone_number, birthday, email, role_enum) VALUES 
-                        (@username, MD5(@password), @first_name, @last_name, @middle_name, @phone_number, @birthday, @email, false)";
+                        (@username, MD5(@password), @first_name, @last_name, @middle_name, @phone_number, @birthday, @email, 'user')";
 
             if(AssertUserExistsByUsername(username))
             {

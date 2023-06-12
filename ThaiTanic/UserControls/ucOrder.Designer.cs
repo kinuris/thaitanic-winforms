@@ -59,6 +59,7 @@ namespace ThaiTanic.UserControls
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(736, 86);
             this.guna2Panel1.TabIndex = 0;
+            this.guna2Panel1.Click += new System.EventHandler(this.guna2Panel1_Click);
             // 
             // pnlOrderStatus
             // 
@@ -66,7 +67,7 @@ namespace ThaiTanic.UserControls
             this.pnlOrderStatus.BorderRadius = 5;
             this.pnlOrderStatus.Controls.Add(this.lblOrderStatus);
             this.pnlOrderStatus.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(162)))), ((int)(((byte)(78)))));
-            this.pnlOrderStatus.Location = new System.Drawing.Point(600, 43);
+            this.pnlOrderStatus.Location = new System.Drawing.Point(614, 43);
             this.pnlOrderStatus.Name = "pnlOrderStatus";
             this.pnlOrderStatus.Size = new System.Drawing.Size(110, 32);
             this.pnlOrderStatus.TabIndex = 6;
@@ -89,7 +90,7 @@ namespace ThaiTanic.UserControls
             this.lblTotalCost.BackColor = System.Drawing.Color.Transparent;
             this.lblTotalCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalCost.ForeColor = System.Drawing.Color.White;
-            this.lblTotalCost.Location = new System.Drawing.Point(609, 11);
+            this.lblTotalCost.Location = new System.Drawing.Point(617, 9);
             this.lblTotalCost.Name = "lblTotalCost";
             this.lblTotalCost.Size = new System.Drawing.Size(90, 29);
             this.lblTotalCost.TabIndex = 5;
@@ -102,7 +103,7 @@ namespace ThaiTanic.UserControls
             this.lblOrderDate.BackColor = System.Drawing.Color.Transparent;
             this.lblOrderDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOrderDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.lblOrderDate.Location = new System.Drawing.Point(26, 60);
+            this.lblOrderDate.Location = new System.Drawing.Point(11, 60);
             this.lblOrderDate.Name = "lblOrderDate";
             this.lblOrderDate.Size = new System.Drawing.Size(154, 17);
             this.lblOrderDate.TabIndex = 4;
@@ -114,7 +115,7 @@ namespace ThaiTanic.UserControls
             this.lblItemCount.BackColor = System.Drawing.Color.Transparent;
             this.lblItemCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblItemCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.lblItemCount.Location = new System.Drawing.Point(122, 41);
+            this.lblItemCount.Location = new System.Drawing.Point(110, 39);
             this.lblItemCount.Name = "lblItemCount";
             this.lblItemCount.Size = new System.Drawing.Size(16, 17);
             this.lblItemCount.TabIndex = 3;
@@ -126,7 +127,7 @@ namespace ThaiTanic.UserControls
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
-            this.label2.Location = new System.Drawing.Point(26, 38);
+            this.label2.Location = new System.Drawing.Point(11, 38);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 17);
             this.label2.TabIndex = 2;
@@ -138,7 +139,7 @@ namespace ThaiTanic.UserControls
             this.lblOrderNumber.BackColor = System.Drawing.Color.Transparent;
             this.lblOrderNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOrderNumber.ForeColor = System.Drawing.Color.White;
-            this.lblOrderNumber.Location = new System.Drawing.Point(108, 9);
+            this.lblOrderNumber.Location = new System.Drawing.Point(92, 9);
             this.lblOrderNumber.Name = "lblOrderNumber";
             this.lblOrderNumber.Size = new System.Drawing.Size(65, 24);
             this.lblOrderNumber.TabIndex = 1;
@@ -150,7 +151,7 @@ namespace ThaiTanic.UserControls
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(23, 9);
+            this.label1.Location = new System.Drawing.Point(8, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 24);
             this.label1.TabIndex = 0;

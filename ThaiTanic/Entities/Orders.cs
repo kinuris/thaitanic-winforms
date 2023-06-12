@@ -17,6 +17,41 @@ namespace ThaiTanic.Entities
         Invalid
     }
 
+    public static class OrderStatusMethods
+    {
+        public static string AsString(this OrderStatus status)
+        {
+            switch (status)
+            {
+                case OrderStatus.ToPay:
+                    return "To Pay";
+                case OrderStatus.ToShip:
+                    return "To Ship";
+                case OrderStatus.ToRecieve:
+                    return "To Recieve";
+                default:
+                    return status.ToString();
+            }
+        }
+
+        public static string CorrectedString(this OrderStatus status)
+        {
+            switch (status)
+            {
+                case OrderStatus.ToPay:
+                    return "To Pay";
+                case OrderStatus.ToShip:
+                    return "To Ship";
+                case OrderStatus.ToRecieve:
+                    return "To Receive";
+                case OrderStatus.Cancelled:
+                    return "Canceled";
+                default:
+                    return status.ToString();
+            }
+        }
+    }
+
     // TODO: Add ability to change Orders.Status
 
     internal class Orders
@@ -117,7 +152,7 @@ namespace ThaiTanic.Entities
         public static bool CreateOrder(User initiator, BillingAddress address, List<CartEntry> entries)
         {
             string insertOrderSql = "INSERT INTO orders (date_ordered, total_price, user_fid, billing_address_fid, status) VALUES (@date_ordered, @total_price, @user_fid, @billing_address_fid, @status); SELECT LAST_INSERT_ID()";
-            decimal totalPrice = entries.Select(entry => entry.Item.Price).Sum();
+            decimal totalPrice = entries.Select(entry => entry.Item.Price * entry.Quantity).Sum();
             int insertedOrderId;
 
             // TODO: Handle Errors
@@ -131,7 +166,7 @@ namespace ThaiTanic.Entities
                 cmd.Parameters.AddWithValue("@total_price", totalPrice);
                 cmd.Parameters.AddWithValue("@user_fid", initiator.Id);
                 cmd.Parameters.AddWithValue("@billing_address_fid", address.Id);
-                cmd.Parameters.AddWithValue("@status", OrderStatus.ToPay);
+                cmd.Parameters.AddWithValue("@status", OrderStatus.ToPay.AsString());
 
                 insertedOrderId = Convert.ToInt32(cmd.ExecuteScalar());
             }
@@ -169,7 +204,6 @@ namespace ThaiTanic.Entities
                     return OrderStatus.Cancelled;
                 default:
                     return OrderStatus.Invalid;
-
             }
         }
 

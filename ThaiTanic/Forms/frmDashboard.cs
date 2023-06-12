@@ -13,53 +13,99 @@ using ThaiTanic.State;
 
 namespace ThaiTanic.Forms
 {
+    public enum DashBoardOptions
+    {
+        Menu,
+        Delivery,
+        Account
+    }
+
     public partial class frmDashboard : Form
     {
-        private readonly User loggedInUser;
-        private readonly Cart cart;
+        private readonly User _LoggedInUser;
+        private readonly Cart _Cart;
+        private DashBoardOptions _CurrentSelected;
 
         public frmDashboard(User user)
         {
             InitializeComponent();
 
-            loggedInUser = user;
-            cart = new Cart(user);
+            _LoggedInUser = user;
+            _Cart = new Cart(user);
 
             try
             {
-                cart.Deserialize();
+                _Cart.Deserialize();
             }
             catch (FileNotFoundException)
             {
                 // PASS
             }
 
-            frmMenu frmMenu = new frmMenu(AddCartEntry, cart.SubtractCartEntry, cart.AddEntriesToDGV, cart.Clear, cart.Entries)
+            frmMenu frmMenu = new frmMenu(_LoggedInUser, DisplayInDashboardFormHook, AddCartEntry, _Cart.SubtractCartEntry, _Cart.AddEntriesToDGV, _Cart.Clear, _Cart.Entries, SetCurrentSelected)
             {
                 TopLevel = false,
-                Dock = DockStyle.Fill
             };
 
-            //pnlContainer.Controls.Add(frmMenu);
-            //frmMenu.Show();
-
-
-            frmDelivery frmDelivery = new frmDelivery();
-            frmDelivery.TopLevel = false;
-            frmDelivery.Dock = DockStyle.Fill;
-            pnlContainer.Controls.Add(frmDelivery);
-            frmDelivery.Show();
+            _CurrentSelected = DashBoardOptions.Menu;
+            DisplayInDashboardFormHook(frmMenu);
         }
 
         private void AddCartEntry(Items item, int quantity)
         {
-            cart.AddCartEntry(item.Id, quantity);
+            _Cart.AddCartEntry(item.Id, quantity);
         }
 
-        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        private void DisplayInDashboardFormHook(Form form)
         {
-            cart.Serialize();
-            Close();
+            pnlContainer.Controls.Clear();
+            pnlContainer.Controls.Add(form);
+            form.Dock = DockStyle.Fill;
+            form.Show();
+        }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            if (_CurrentSelected == DashBoardOptions.Menu)
+            {
+                return;
+            }
+
+            _CurrentSelected = DashBoardOptions.Menu;
+            DisplayInDashboardFormHook(new frmMenu(_LoggedInUser, DisplayInDashboardFormHook, AddCartEntry, _Cart.SubtractCartEntry, _Cart.AddEntriesToDGV, _Cart.Clear, _Cart.Entries, SetCurrentSelected)
+            {
+                TopLevel = false,
+            });
+        }
+
+        private void btnDelivery_Click(object sender, EventArgs e)
+        {
+            if (_CurrentSelected == DashBoardOptions.Delivery) 
+            {
+                return;
+            }
+
+            _CurrentSelected = DashBoardOptions.Delivery;
+            var frmDelivery = new frmDelivery(_LoggedInUser)
+            {
+                TopLevel = false
+            };
+
+            DisplayInDashboardFormHook(frmDelivery);
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure?", "Log out", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                _Cart.Serialize();
+                Close();
+            }
+        }
+
+        private void SetCurrentSelected(DashBoardOptions options)
+        {
+            _CurrentSelected = options;
         }
     }
 }

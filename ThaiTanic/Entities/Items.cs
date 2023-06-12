@@ -239,7 +239,7 @@ namespace ThaiTanic.Entities
             Category = ParseItemCategory(reader.GetFieldValue<string>(offset + 4));
             CreatedAt = reader.GetDateTime(offset + 5);
             UpdatedAt = reader.GetDateTime(offset + 6);
-            Available = reader.GetFieldValue<bool>(offset + 7);
+            Available = reader.GetBoolean(offset + 7);
         }
 
         public Items(MySqlDataReader reader): this(reader, 0) {}

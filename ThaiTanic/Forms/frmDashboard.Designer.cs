@@ -37,11 +37,9 @@ namespace ThaiTanic.Forms
             this.btnMenu = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnlContainer = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.pnlNavigationPane.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            this.pnlContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlNavigationPane
@@ -75,6 +73,7 @@ namespace ThaiTanic.Forms
             this.btnLogout.TabIndex = 4;
             this.btnLogout.Text = "Logout";
             this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnAccount
             // 
@@ -109,6 +108,7 @@ namespace ThaiTanic.Forms
             this.btnDelivery.TabIndex = 2;
             this.btnDelivery.Text = "Delivery";
             this.btnDelivery.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDelivery.Click += new System.EventHandler(this.btnDelivery_Click);
             // 
             // btnMenu
             // 
@@ -126,6 +126,7 @@ namespace ThaiTanic.Forms
             this.btnMenu.TabIndex = 1;
             this.btnMenu.Text = "Menu";
             this.btnMenu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // guna2PictureBox1
             // 
@@ -140,28 +141,11 @@ namespace ThaiTanic.Forms
             // 
             // pnlContainer
             // 
-            this.pnlContainer.Controls.Add(this.guna2ImageButton1);
             this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContainer.Location = new System.Drawing.Point(232, 0);
             this.pnlContainer.Name = "pnlContainer";
             this.pnlContainer.Size = new System.Drawing.Size(1134, 768);
             this.pnlContainer.TabIndex = 1;
-            // 
-            // guna2ImageButton1
-            // 
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.HoverState.Image = global::ThaiTanic.Properties.Resources.btn_close;
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Image = global::ThaiTanic.Properties.Resources.btn_close;
-            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(55, 55);
-            this.guna2ImageButton1.Location = new System.Drawing.Point(1081, 5);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Size = new System.Drawing.Size(49, 49);
-            this.guna2ImageButton1.TabIndex = 0;
-            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
             // 
             // guna2DragControl1
             // 
@@ -187,7 +171,6 @@ namespace ThaiTanic.Forms
             this.pnlNavigationPane.ResumeLayout(false);
             this.pnlNavigationPane.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            this.pnlContainer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -197,7 +180,6 @@ namespace ThaiTanic.Forms
         private Guna.UI2.WinForms.Guna2Panel pnlNavigationPane;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2Panel pnlContainer;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
         private Guna.UI2.WinForms.Guna2Button btnMenu;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
         private Guna.UI2.WinForms.Guna2Button btnAccount;

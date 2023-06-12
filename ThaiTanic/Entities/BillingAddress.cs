@@ -19,6 +19,14 @@ namespace ThaiTanic.Entities
         public string Barangay;
         public string PostalCode;
 
+        public string Summary
+        {
+            get
+            {
+                return $"{FullName} - {Province}, {City} {PostalCode}, {Barangay}";
+            }
+        }
+
         public static List<BillingAddress> BillingAddressesOfUser(User user)
         {
             string sql = "SELECT id, user_fid, full_name, phone_number, region, province, city, barangay, postal_code FROM `BILLING_ADDRESS` WHERE user_fid = @user_fid";
@@ -78,5 +86,10 @@ namespace ThaiTanic.Entities
         }
 
         public BillingAddress(MySqlDataReader reader): this(reader, 0) { }
+
+        public override string ToString()
+        {
+            return Summary;
+        }
     }
 }

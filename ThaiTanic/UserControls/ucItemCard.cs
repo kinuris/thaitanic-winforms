@@ -40,9 +40,18 @@ namespace ThaiTanic.UserControls
 
         private void btnAddToCart_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtQuantity.Text) || int.Parse(txtQuantity.Text) <= 0)
+            if (string.IsNullOrEmpty(txtQuantity.Text))
+            {
+                _AddCartEntry(Item, 1);
+                txtQuantity.Text = "";
+
+                return;
+            }
+
+            if (int.Parse(txtQuantity.Text) < 1)
             {
                 MessageBox.Show("Must specify quantity", "Required", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtQuantity.Text = "";
 
                 return;
             }
