@@ -12,7 +12,10 @@ namespace ThaiTanic.UserControls
 {
     public partial class ucOrder : UserControl
     {
-        public ucOrder(int orderNumber, int itemCount, DateTime orderDate, double totalCost, string orderStatus)
+        private readonly Action<int> _SetSelectedId;
+        private readonly int _OrderId;
+
+        public ucOrder(int orderNumber, int itemCount, DateTime orderDate, double totalCost, string orderStatus, Action<int> setSelectedId)
         {
             InitializeComponent();
 
@@ -21,6 +24,8 @@ namespace ThaiTanic.UserControls
             lblOrderDate.Text = orderDate.ToString("f");
             lblTotalCost.Text = totalCost.ToString("₱#,###.00");
             lblOrderStatus.Text = orderStatus;
+            _SetSelectedId = setSelectedId;
+            _OrderId = orderNumber;
 
             switch (orderStatus)
             {
@@ -40,6 +45,11 @@ namespace ThaiTanic.UserControls
                     pnlOrderStatus.FillColor = Color.FromArgb(195, 29, 29);
                     break;
             }
+        }
+
+        private void guna2Panel1_Click(object sender, EventArgs e)
+        {
+            _SetSelectedId(_OrderId);
         }
     }
 }
