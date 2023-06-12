@@ -51,7 +51,7 @@ namespace ThaiTanic.Forms.admin
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1048, 72);
+            this.guna2Panel1.Size = new System.Drawing.Size(1048, 66);
             this.guna2Panel1.TabIndex = 0;
             // 
             // guna2Panel3
@@ -80,9 +80,9 @@ namespace ThaiTanic.Forms.admin
             // 
             this.guna2Panel2.Controls.Add(this.guna2Panel4);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 72);
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 66);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1048, 88);
+            this.guna2Panel2.Size = new System.Drawing.Size(1048, 80);
             this.guna2Panel2.TabIndex = 1;
             // 
             // guna2Panel4
@@ -94,7 +94,7 @@ namespace ThaiTanic.Forms.admin
             this.guna2Panel4.Controls.Add(this.btnAdd);
             this.guna2Panel4.Controls.Add(this.label2);
             this.guna2Panel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
-            this.guna2Panel4.Location = new System.Drawing.Point(30, 7);
+            this.guna2Panel4.Location = new System.Drawing.Point(30, 3);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.Size = new System.Drawing.Size(988, 75);
             this.guna2Panel4.TabIndex = 1;
@@ -168,10 +168,10 @@ namespace ThaiTanic.Forms.admin
             // pnlManageItemsContainer
             // 
             this.pnlManageItemsContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlManageItemsContainer.Location = new System.Drawing.Point(0, 160);
+            this.pnlManageItemsContainer.Location = new System.Drawing.Point(0, 146);
             this.pnlManageItemsContainer.Name = "pnlManageItemsContainer";
             this.pnlManageItemsContainer.Padding = new System.Windows.Forms.Padding(30, 10, 30, 20);
-            this.pnlManageItemsContainer.Size = new System.Drawing.Size(1048, 560);
+            this.pnlManageItemsContainer.Size = new System.Drawing.Size(1048, 574);
             this.pnlManageItemsContainer.TabIndex = 2;
             // 
             // frmManageItems
