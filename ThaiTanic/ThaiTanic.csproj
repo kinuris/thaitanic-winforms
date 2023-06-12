@@ -98,6 +98,30 @@
     <Compile Include="Entities\OrderBatch.cs" />
     <Compile Include="Entities\Orders.cs" />
     <Compile Include="Entities\User.cs" />
+    <Compile Include="Forms\admin\frmAdminDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\admin\frmAdminDashboard.Designer.cs">
+      <DependentUpon>frmAdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\admin\frmItemAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\admin\frmItemAdd.Designer.cs">
+      <DependentUpon>frmItemAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\admin\frmItemUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\admin\frmItemUpdate.Designer.cs">
+      <DependentUpon>frmItemUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\admin\frmManageItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\admin\frmManageItems.Designer.cs">
+      <DependentUpon>frmManageItems.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmDelivery.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +179,18 @@
     <Compile Include="UserControls\ucOrderItemCard.Designer.cs">
       <DependentUpon>ucOrderItemCard.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\admin\frmAdminDashboard.resx">
+      <DependentUpon>frmAdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\admin\frmItemAdd.resx">
+      <DependentUpon>frmItemAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\admin\frmItemUpdate.resx">
+      <DependentUpon>frmItemUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\admin\frmManageItems.resx">
+      <DependentUpon>frmManageItems.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmDelivery.resx">
       <DependentUpon>frmDelivery.cs</DependentUpon>
     </EmbeddedResource>
