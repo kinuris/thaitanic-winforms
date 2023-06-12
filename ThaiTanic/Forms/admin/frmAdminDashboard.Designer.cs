@@ -34,9 +34,9 @@ namespace ThaiTanic.Forms.admin
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.btnAccount = new Guna.UI2.WinForms.Guna2Button();
             this.btnDelivery = new Guna.UI2.WinForms.Guna2Button();
-            this.btnMenu = new Guna.UI2.WinForms.Guna2Button();
-            this.pnlContainer = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnManageOrders = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pnlContainer = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlNavigation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -46,7 +46,7 @@ namespace ThaiTanic.Forms.admin
             this.pnlNavigation.Controls.Add(this.btnLogout);
             this.pnlNavigation.Controls.Add(this.btnAccount);
             this.pnlNavigation.Controls.Add(this.btnDelivery);
-            this.pnlNavigation.Controls.Add(this.btnMenu);
+            this.pnlNavigation.Controls.Add(this.btnManageOrders);
             this.pnlNavigation.Controls.Add(this.guna2PictureBox1);
             this.pnlNavigation.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlNavigation.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(51)))));
@@ -72,6 +72,7 @@ namespace ThaiTanic.Forms.admin
             this.btnLogout.TabIndex = 8;
             this.btnLogout.Text = "Logout";
             this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnAccount
             // 
@@ -109,32 +110,24 @@ namespace ThaiTanic.Forms.admin
             this.btnDelivery.Text = "Manage Item";
             this.btnDelivery.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // btnMenu
+            // btnManageOrders
             // 
-            this.btnMenu.BackColor = System.Drawing.Color.Transparent;
-            this.btnMenu.BorderRadius = 10;
-            this.btnMenu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnMenu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnMenu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnMenu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnMenu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
-            this.btnMenu.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.btnMenu.Location = new System.Drawing.Point(18, 216);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(196, 42);
-            this.btnMenu.TabIndex = 5;
-            this.btnMenu.Text = "Manage Orders";
-            this.btnMenu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // pnlContainer
-            // 
-            this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContainer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
-            this.pnlContainer.Location = new System.Drawing.Point(232, 0);
-            this.pnlContainer.Name = "pnlContainer";
-            this.pnlContainer.Size = new System.Drawing.Size(1048, 720);
-            this.pnlContainer.TabIndex = 1;
+            this.btnManageOrders.BackColor = System.Drawing.Color.Transparent;
+            this.btnManageOrders.BorderRadius = 10;
+            this.btnManageOrders.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnManageOrders.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnManageOrders.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnManageOrders.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnManageOrders.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
+            this.btnManageOrders.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnManageOrders.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.btnManageOrders.Location = new System.Drawing.Point(18, 216);
+            this.btnManageOrders.Name = "btnManageOrders";
+            this.btnManageOrders.Size = new System.Drawing.Size(196, 42);
+            this.btnManageOrders.TabIndex = 5;
+            this.btnManageOrders.Text = "Manage Orders";
+            this.btnManageOrders.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnManageOrders.Click += new System.EventHandler(this.btnManageOrders_Click);
             // 
             // guna2PictureBox1
             // 
@@ -147,6 +140,15 @@ namespace ThaiTanic.Forms.admin
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 1;
             this.guna2PictureBox1.TabStop = false;
+            // 
+            // pnlContainer
+            // 
+            this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContainer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
+            this.pnlContainer.Location = new System.Drawing.Point(232, 0);
+            this.pnlContainer.Name = "pnlContainer";
+            this.pnlContainer.Size = new System.Drawing.Size(1048, 720);
+            this.pnlContainer.TabIndex = 1;
             // 
             // frmAdminDashboard
             // 
@@ -174,6 +176,6 @@ namespace ThaiTanic.Forms.admin
         private Guna.UI2.WinForms.Guna2Button btnLogout;
         private Guna.UI2.WinForms.Guna2Button btnAccount;
         private Guna.UI2.WinForms.Guna2Button btnDelivery;
-        private Guna.UI2.WinForms.Guna2Button btnMenu;
+        private Guna.UI2.WinForms.Guna2Button btnManageOrders;
     }
 }
