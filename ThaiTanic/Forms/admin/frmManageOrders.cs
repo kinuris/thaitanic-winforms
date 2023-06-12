@@ -61,7 +61,7 @@ namespace ThaiTanic.Forms.admin
             var orders = Orders.OrdersByUser(_SelectedUser).Where(order => _FilterByStatus == null || order.Status == _FilterByStatus);
 
             pnlOrders.Controls.Clear();
-            lblOrderPage.Text = $"{_OrdersPage} / {Math.Ceiling(orders.Count() / 4m)}";
+            lblOrderPage.Text = $"{_OrdersPage} / {(Math.Ceiling(orders.Count() / 4m) == 0 ? "1" : Math.Ceiling(orders.Count() / 4m).ToString())}";
 
             var sorted = orders;
 
