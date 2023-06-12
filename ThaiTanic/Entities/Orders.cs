@@ -105,6 +105,23 @@ namespace ThaiTanic.Entities
             return resultReceipt;
         }
 
+        public void SetStatus(OrderStatus status)
+        {
+            string sql = @"UPDATE orders SET status = @status WHERE id = @id";
+
+            using (MySqlConnection conn = new MySqlConnection(Connection.ConnectionString))
+            using (MySqlCommand cmd = new MySqlCommand(sql, conn))
+            {
+                conn.Open();
+
+                cmd.Parameters.AddWithValue("@status", status.AsString());
+                cmd.Parameters.AddWithValue("@id", Id);
+
+                cmd.ExecuteNonQuery();
+                Status = status;
+            }
+        }
+
         public static List<Orders> OrdersByUser(User user)
         {
             string sql = @"SELECT id, date_ordered, total_price, user_fid, billing_address_fid, status FROM orders
