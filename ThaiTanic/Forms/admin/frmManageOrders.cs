@@ -63,7 +63,7 @@ namespace ThaiTanic.Forms.admin
             pnlOrders.Controls.Clear();
             lblOrderPage.Text = $"{_OrdersPage} / {Math.Ceiling(orders.Count() / 4m)}";
 
-            var sorted = orders.Skip((_OrdersPage - 1) * 4);
+            var sorted = orders;
 
             if (_SortBy == SortByOptions.Date)
             {
@@ -82,6 +82,8 @@ namespace ThaiTanic.Forms.admin
             {
                 sorted = sorted.Reverse();
             }
+
+            sorted = sorted.Skip((_OrdersPage - 1) * 4);
 
             foreach (var order in sorted.Take(4))
             {
