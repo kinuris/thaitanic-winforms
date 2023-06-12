@@ -13,10 +13,18 @@ using ThaiTanic.State;
 
 namespace ThaiTanic.Forms
 {
+    public enum DashBoardOptions
+    {
+        Menu,
+        Delivery,
+        Account
+    }
+
     public partial class frmDashboard : Form
     {
         private readonly User _LoggedInUser;
         private readonly Cart _Cart;
+        private DashBoardOptions _CurrentSelected;
 
         public frmDashboard(User user)
         {
@@ -34,12 +42,13 @@ namespace ThaiTanic.Forms
                 // PASS
             }
 
-            frmMenu frmMenu = new frmMenu(_LoggedInUser, DisplayInDashBoardFormHook, AddCartEntry, _Cart.SubtractCartEntry, _Cart.AddEntriesToDGV, _Cart.Clear, _Cart.Entries)
+            frmMenu frmMenu = new frmMenu(_LoggedInUser, DisplayInDashboardFormHook, AddCartEntry, _Cart.SubtractCartEntry, _Cart.AddEntriesToDGV, _Cart.Clear, _Cart.Entries, SetCurrentSelected)
             {
                 TopLevel = false,
             };
 
-            DisplayInDashBoardFormHook(frmMenu);
+            _CurrentSelected = DashBoardOptions.Menu;
+            DisplayInDashboardFormHook(frmMenu);
         }
 
         private void AddCartEntry(Items item, int quantity)
@@ -47,7 +56,7 @@ namespace ThaiTanic.Forms
             _Cart.AddCartEntry(item.Id, quantity);
         }
 
-        private void DisplayInDashBoardFormHook(Form form)
+        private void DisplayInDashboardFormHook(Form form)
         {
             pnlContainer.Controls.Clear();
             pnlContainer.Controls.Add(form);
@@ -57,7 +66,13 @@ namespace ThaiTanic.Forms
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
-            DisplayInDashBoardFormHook(new frmMenu(_LoggedInUser, DisplayInDashBoardFormHook, AddCartEntry, _Cart.SubtractCartEntry, _Cart.AddEntriesToDGV, _Cart.Clear, _Cart.Entries)
+            if (_CurrentSelected == DashBoardOptions.Menu)
+            {
+                return;
+            }
+
+            _CurrentSelected = DashBoardOptions.Menu;
+            DisplayInDashboardFormHook(new frmMenu(_LoggedInUser, DisplayInDashboardFormHook, AddCartEntry, _Cart.SubtractCartEntry, _Cart.AddEntriesToDGV, _Cart.Clear, _Cart.Entries, SetCurrentSelected)
             {
                 TopLevel = false,
             });
@@ -65,12 +80,18 @@ namespace ThaiTanic.Forms
 
         private void btnDelivery_Click(object sender, EventArgs e)
         {
-            var frmDelivery = new frmDelivery
+            if (_CurrentSelected == DashBoardOptions.Delivery) 
+            {
+                return;
+            }
+
+            _CurrentSelected = DashBoardOptions.Delivery;
+            var frmDelivery = new frmDelivery(_LoggedInUser)
             {
                 TopLevel = false
             };
 
-            DisplayInDashBoardFormHook(frmDelivery);
+            DisplayInDashboardFormHook(frmDelivery);
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -80,6 +101,11 @@ namespace ThaiTanic.Forms
                 _Cart.Serialize();
                 Close();
             }
+        }
+
+        private void SetCurrentSelected(DashBoardOptions options)
+        {
+            _CurrentSelected = options;
         }
     }
 }
