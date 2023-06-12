@@ -16,7 +16,7 @@ namespace ThaiTanic.Forms
     {
         private readonly List<Orders> _Orders;
         private readonly User _User;
-        private OrderStatus? _SortByStatus;
+        private OrderStatus? _FilterByStatus;
         private int _CurrentItemPage;
         private int _CurrentOrderPage;
         private int? _SelectedId;
@@ -28,7 +28,7 @@ namespace ThaiTanic.Forms
             _User = user;
             _CurrentItemPage = 1;
             _CurrentOrderPage = 1;
-            _SortByStatus = null;
+            _FilterByStatus = null;
             _SelectedId = null;
             _Orders = Orders.OrdersByUser(_User);
         }
@@ -70,14 +70,14 @@ namespace ThaiTanic.Forms
         private void UpdateOrderList()
         {
             pnlOrders.Controls.Clear();
-            foreach (var order in _Orders.Where(order => _SortByStatus == null || order.Status == _SortByStatus).Reverse().Skip((_CurrentOrderPage - 1) * 4).Take(_CurrentOrderPage * 4))
+            foreach (var order in _Orders.Where(order => _FilterByStatus == null || order.Status == _FilterByStatus).Reverse().Skip((_CurrentOrderPage - 1) * 4).Take(4))
             {
                 ucOrder ucOrder = new ucOrder(orderNumber: order.Id, itemCount: order.GetBatch().Count(), order.DateOrdered, totalCost: (double)order.TotalPrice, orderStatus: order.Status.CorrectedString(), SetSelectedId);
 
                 pnlOrders.Controls.Add(ucOrder);
             }
 
-            lblOrderPage.Text = $"{_CurrentOrderPage} / {(Math.Ceiling(_Orders.Where(order => _SortByStatus == null || order.Status == _SortByStatus).Count() / 4m) == 0m ? "1" :  Math.Ceiling(_Orders.Where(order => _SortByStatus == null || order.Status == _SortByStatus).Count() / 4m).ToString())}";
+            lblOrderPage.Text = $"{_CurrentOrderPage} / {(Math.Ceiling(_Orders.Where(order => _FilterByStatus == null || order.Status == _FilterByStatus).Count() / 4m) == 0m ? "1" :  Math.Ceiling(_Orders.Where(order => _FilterByStatus == null || order.Status == _FilterByStatus).Count() / 4m).ToString())}";
         }
 
         private void UpdateOrderItemsList()
@@ -88,7 +88,7 @@ namespace ThaiTanic.Forms
 
             pnlOrderedBatch.Controls.Clear();
 
-            foreach (var batch in selectedOrder.GetBatch().Skip((_CurrentItemPage - 1) * 4).Take(_CurrentItemPage * 4))
+            foreach (var batch in selectedOrder.GetBatch().Skip((_CurrentItemPage - 1) * 4).Take(4))
             {
                 ucOrderItemCard card = new ucOrderItemCard(batch.AssociatedItem.Name, batch.AssociatedItem.Price, batch.Quantity);
                 pnlOrderedBatch.Controls.Add(card);
@@ -132,7 +132,7 @@ namespace ThaiTanic.Forms
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if (_CurrentOrderPage < Math.Ceiling(_Orders.Where(order => _SortByStatus == null || order.Status == _SortByStatus).Count() / 4m))
+            if (_CurrentOrderPage < Math.Ceiling(_Orders.Where(order => _FilterByStatus == null || order.Status == _FilterByStatus).Count() / 4m))
             {
                 _CurrentOrderPage++;
                 UpdateOrderList();
@@ -150,54 +150,54 @@ namespace ThaiTanic.Forms
 
         private void btnAll_Click(object sender, EventArgs e)
         {
-            if (_SortByStatus == null) return;
+            if (_FilterByStatus == null) return;
 
-            _SortByStatus = null;
+            _FilterByStatus = null;
             _CurrentOrderPage = 1;
             UpdateOrderList();
         }
 
         private void btnToPay_Click(object sender, EventArgs e)
         {
-            if (_SortByStatus == OrderStatus.ToPay) return;
+            if (_FilterByStatus == OrderStatus.ToPay) return;
 
-            _SortByStatus = OrderStatus.ToPay;
+            _FilterByStatus = OrderStatus.ToPay;
             _CurrentOrderPage = 1;
             UpdateOrderList();
         }
 
         private void btnToShip_Click(object sender, EventArgs e)
         {
-            if (_SortByStatus == OrderStatus.ToShip) return;
+            if (_FilterByStatus == OrderStatus.ToShip) return;
 
-            _SortByStatus = OrderStatus.ToShip;
+            _FilterByStatus = OrderStatus.ToShip;
             _CurrentOrderPage = 1;
             UpdateOrderList();
         }
 
         private void btnToReceive_Click(object sender, EventArgs e)
         {
-            if (_SortByStatus == OrderStatus.ToRecieve) return;
+            if (_FilterByStatus == OrderStatus.ToRecieve) return;
 
-            _SortByStatus = OrderStatus.ToRecieve;
+            _FilterByStatus = OrderStatus.ToRecieve;
             _CurrentOrderPage = 1;
             UpdateOrderList();
         }
 
         private void btnCompleted_Click(object sender, EventArgs e)
         {
-            if (_SortByStatus == OrderStatus.Completed) return;
+            if (_FilterByStatus == OrderStatus.Completed) return;
 
-            _SortByStatus = OrderStatus.Completed;
+            _FilterByStatus = OrderStatus.Completed;
             _CurrentOrderPage = 1;
             UpdateOrderList();
         }
 
         private void btnCanceled_Click(object sender, EventArgs e)
         {
-            if (_SortByStatus == OrderStatus.Cancelled) return;
+            if (_FilterByStatus == OrderStatus.Cancelled) return;
          
-            _SortByStatus = OrderStatus.Cancelled;
+            _FilterByStatus = OrderStatus.Cancelled;
             _CurrentOrderPage = 1;
             UpdateOrderList();
         }

@@ -24,7 +24,7 @@ namespace ThaiTanic.Forms
     {
         private readonly User _LoggedInUser;
         private readonly Cart _Cart;
-        private DashBoardOptions _CurrentSelected;
+        private DashBoardOptions _SelectedOption;
 
         public frmDashboard(User user)
         {
@@ -47,7 +47,7 @@ namespace ThaiTanic.Forms
                 TopLevel = false,
             };
 
-            _CurrentSelected = DashBoardOptions.Menu;
+            _SelectedOption = DashBoardOptions.Menu;
             DisplayInDashboardFormHook(frmMenu);
         }
 
@@ -66,12 +66,12 @@ namespace ThaiTanic.Forms
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
-            if (_CurrentSelected == DashBoardOptions.Menu)
+            if (_SelectedOption == DashBoardOptions.Menu)
             {
                 return;
             }
 
-            _CurrentSelected = DashBoardOptions.Menu;
+            _SelectedOption = DashBoardOptions.Menu;
             DisplayInDashboardFormHook(new frmMenu(_LoggedInUser, DisplayInDashboardFormHook, AddCartEntry, _Cart.SubtractCartEntry, _Cart.AddEntriesToDGV, _Cart.Clear, _Cart.Entries, SetCurrentSelected)
             {
                 TopLevel = false,
@@ -80,12 +80,12 @@ namespace ThaiTanic.Forms
 
         private void btnDelivery_Click(object sender, EventArgs e)
         {
-            if (_CurrentSelected == DashBoardOptions.Delivery) 
+            if (_SelectedOption == DashBoardOptions.Delivery) 
             {
                 return;
             }
 
-            _CurrentSelected = DashBoardOptions.Delivery;
+            _SelectedOption = DashBoardOptions.Delivery;
             var frmDelivery = new frmDelivery(_LoggedInUser)
             {
                 TopLevel = false
@@ -105,7 +105,7 @@ namespace ThaiTanic.Forms
 
         private void SetCurrentSelected(DashBoardOptions options)
         {
-            _CurrentSelected = options;
+            _SelectedOption = options;
         }
     }
 }
