@@ -113,7 +113,7 @@ namespace ThaiTanic.Forms
             //     pnlContainerItems.Controls.Add(itemCard);
             // }
 
-            foreach (var item in _CurrentItems.Skip((_CategoryPage - 1) * 8).Where(entry => entry.Available).Take(_CategoryPage * 8)) 
+            foreach (var item in _CurrentItems.Skip((_CategoryPage - 1) * 8).Where(entry => entry.Available).Take(8)) 
             {
                 ucItemCard itemCard = new ucItemCard(_AddCartEntry)
                 {
