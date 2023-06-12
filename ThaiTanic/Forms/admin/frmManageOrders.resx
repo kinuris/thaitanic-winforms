@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="txtSearch.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtSearchUsers.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAAAj9JREFUWEftlj1oFFEUhRdJLFJoICDYmC2UEAgRK9s0gpWFWIhVitSWQoqQLUyq
+        DAAACwwBP0AiyAAAAj9JREFUWEftlj1oFFEUhRdJLFJoICDYmC2UEAgRK9s0gpWFWIhVitSWQoqQLUyq
         RNKksAhpLaztZBph///CFjYy2gSSEAWrkB/G7w5nIW6SyUzmOQGZA4c3c+a9e8+7e+fNFnLkyAKNRmMY
         Pm42m7OtVus113P1en2m1+vd1JRsUKlUbmFgAe7C4Bx+h8twXEv+HdrtdpFEPSX+BVepzCurTK1We0q1
         1tB8Pfcx/0BL3UNmwmSWmPtRPToDni8y74RxH05KdgsSfJGZkqRIULUXzD+GfpT5K6Hb7b40MwTelBQL
