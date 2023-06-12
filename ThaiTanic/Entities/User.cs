@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 public enum UserRole
@@ -50,6 +51,25 @@ namespace ThaiTanic.Entities
                     return new User(reader);
                 else
                     return null;
+            }
+        }
+
+        public static List<User> GetAllUsers()
+        {
+            string sql = @"SELECT id, username, first_name, last_name, middle_name, phone_number, birthday, email, role_enum, created_at, updated_at FROM user";
+
+            using (MySqlConnection conn = new MySqlConnection(Connection.ConnectionString))
+            using (MySqlCommand cmd = new MySqlCommand(sql, conn))
+            {
+                conn.Open();
+
+                var result = new List<User>();
+                var reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                    result.Add(new User(reader));
+
+                return result;
             }
         }
 
@@ -161,5 +181,10 @@ namespace ThaiTanic.Entities
         }
 
         public User(MySqlDataReader reader) : this(reader, 0) {}
+
+        public override string ToString()
+        {
+            return $"#{Id} - {FullName}";
+        }
     }
 }
