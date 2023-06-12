@@ -30,19 +30,19 @@ namespace ThaiTanic.Forms.admin
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnUpdateProduct = new Guna.UI2.WinForms.Guna2Button();
+            this.txtProductName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtProductPrice = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbItems = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbItemCategory = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbAvailable = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtDescription = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbAvailable = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cbItemCategory = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cbItems = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtProductPrice = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtProductName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnAddProduct = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +50,7 @@ namespace ThaiTanic.Forms.admin
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.BorderRadius = 10;
-            this.guna2Panel1.Controls.Add(this.btnAddProduct);
+            this.guna2Panel1.Controls.Add(this.btnUpdateProduct);
             this.guna2Panel1.Controls.Add(this.txtProductName);
             this.guna2Panel1.Controls.Add(this.txtProductPrice);
             this.guna2Panel1.Controls.Add(this.label6);
@@ -69,6 +69,165 @@ namespace ThaiTanic.Forms.admin
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(988, 560);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // btnUpdateProduct
+            // 
+            this.btnUpdateProduct.BorderRadius = 5;
+            this.btnUpdateProduct.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdateProduct.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdateProduct.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUpdateProduct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUpdateProduct.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(162)))), ((int)(((byte)(78)))));
+            this.btnUpdateProduct.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnUpdateProduct.ForeColor = System.Drawing.Color.White;
+            this.btnUpdateProduct.Location = new System.Drawing.Point(431, 420);
+            this.btnUpdateProduct.Name = "btnUpdateProduct";
+            this.btnUpdateProduct.Size = new System.Drawing.Size(156, 32);
+            this.btnUpdateProduct.TabIndex = 21;
+            this.btnUpdateProduct.Text = "Update Product";
+            this.btnUpdateProduct.Click += new System.EventHandler(this.btnUpdateProduct_Click);
+            // 
+            // txtProductName
+            // 
+            this.txtProductName.BorderRadius = 10;
+            this.txtProductName.BorderThickness = 0;
+            this.txtProductName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtProductName.DefaultText = "";
+            this.txtProductName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtProductName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtProductName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtProductName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtProductName.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
+            this.txtProductName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtProductName.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtProductName.ForeColor = System.Drawing.Color.White;
+            this.txtProductName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtProductName.Location = new System.Drawing.Point(628, 276);
+            this.txtProductName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtProductName.Name = "txtProductName";
+            this.txtProductName.PasswordChar = '\0';
+            this.txtProductName.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.txtProductName.PlaceholderText = "";
+            this.txtProductName.SelectedText = "";
+            this.txtProductName.Size = new System.Drawing.Size(325, 36);
+            this.txtProductName.TabIndex = 20;
+            // 
+            // txtProductPrice
+            // 
+            this.txtProductPrice.BorderRadius = 10;
+            this.txtProductPrice.BorderThickness = 0;
+            this.txtProductPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtProductPrice.DefaultText = "";
+            this.txtProductPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtProductPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtProductPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtProductPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtProductPrice.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
+            this.txtProductPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtProductPrice.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtProductPrice.ForeColor = System.Drawing.Color.White;
+            this.txtProductPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtProductPrice.Location = new System.Drawing.Point(628, 351);
+            this.txtProductPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtProductPrice.Name = "txtProductPrice";
+            this.txtProductPrice.PasswordChar = '\0';
+            this.txtProductPrice.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.txtProductPrice.PlaceholderText = "";
+            this.txtProductPrice.SelectedText = "";
+            this.txtProductPrice.Size = new System.Drawing.Size(325, 36);
+            this.txtProductPrice.TabIndex = 19;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.label6.Location = new System.Drawing.Point(623, 327);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(107, 20);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Product Price:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.label5.Location = new System.Drawing.Point(623, 252);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(114, 20);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "Product Name:";
+            // 
+            // cbItems
+            // 
+            this.cbItems.BackColor = System.Drawing.Color.Transparent;
+            this.cbItems.BorderRadius = 10;
+            this.cbItems.BorderThickness = 0;
+            this.cbItems.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbItems.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbItems.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
+            this.cbItems.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbItems.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbItems.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbItems.ForeColor = System.Drawing.Color.White;
+            this.cbItems.ItemHeight = 30;
+            this.cbItems.ItemsAppearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
+            this.cbItems.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.cbItems.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
+            this.cbItems.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
+            this.cbItems.Location = new System.Drawing.Point(628, 41);
+            this.cbItems.Name = "cbItems";
+            this.cbItems.Size = new System.Drawing.Size(325, 36);
+            this.cbItems.TabIndex = 16;
+            this.cbItems.SelectedValueChanged += new System.EventHandler(this.cbItems_SelectedValueChanged);
+            // 
+            // cbItemCategory
+            // 
+            this.cbItemCategory.BackColor = System.Drawing.Color.Transparent;
+            this.cbItemCategory.BorderRadius = 10;
+            this.cbItemCategory.BorderThickness = 0;
+            this.cbItemCategory.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbItemCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbItemCategory.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
+            this.cbItemCategory.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbItemCategory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbItemCategory.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbItemCategory.ForeColor = System.Drawing.Color.White;
+            this.cbItemCategory.ItemHeight = 30;
+            this.cbItemCategory.ItemsAppearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
+            this.cbItemCategory.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.cbItemCategory.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
+            this.cbItemCategory.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
+            this.cbItemCategory.Location = new System.Drawing.Point(34, 41);
+            this.cbItemCategory.Name = "cbItemCategory";
+            this.cbItemCategory.Size = new System.Drawing.Size(325, 36);
+            this.cbItemCategory.TabIndex = 15;
+            this.cbItemCategory.SelectedValueChanged += new System.EventHandler(this.cbItemCategory_SelectedValueChanged);
+            // 
+            // cbAvailable
+            // 
+            this.cbAvailable.BackColor = System.Drawing.Color.Transparent;
+            this.cbAvailable.BorderRadius = 10;
+            this.cbAvailable.BorderThickness = 0;
+            this.cbAvailable.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbAvailable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbAvailable.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
+            this.cbAvailable.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbAvailable.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbAvailable.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbAvailable.ForeColor = System.Drawing.Color.White;
+            this.cbAvailable.ItemHeight = 30;
+            this.cbAvailable.ItemsAppearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
+            this.cbAvailable.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.cbAvailable.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
+            this.cbAvailable.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
+            this.cbAvailable.Location = new System.Drawing.Point(628, 139);
+            this.cbAvailable.Name = "cbAvailable";
+            this.cbAvailable.Size = new System.Drawing.Size(325, 36);
+            this.cbAvailable.TabIndex = 14;
             // 
             // label4
             // 
@@ -145,162 +304,6 @@ namespace ThaiTanic.Forms.admin
             this.label1.TabIndex = 7;
             this.label1.Text = "Item Category:";
             // 
-            // cbAvailable
-            // 
-            this.cbAvailable.BackColor = System.Drawing.Color.Transparent;
-            this.cbAvailable.BorderRadius = 10;
-            this.cbAvailable.BorderThickness = 0;
-            this.cbAvailable.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbAvailable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbAvailable.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
-            this.cbAvailable.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbAvailable.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbAvailable.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbAvailable.ForeColor = System.Drawing.Color.White;
-            this.cbAvailable.ItemHeight = 30;
-            this.cbAvailable.ItemsAppearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
-            this.cbAvailable.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.cbAvailable.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
-            this.cbAvailable.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
-            this.cbAvailable.Location = new System.Drawing.Point(628, 139);
-            this.cbAvailable.Name = "cbAvailable";
-            this.cbAvailable.Size = new System.Drawing.Size(325, 36);
-            this.cbAvailable.TabIndex = 14;
-            // 
-            // cbItemCategory
-            // 
-            this.cbItemCategory.BackColor = System.Drawing.Color.Transparent;
-            this.cbItemCategory.BorderRadius = 10;
-            this.cbItemCategory.BorderThickness = 0;
-            this.cbItemCategory.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbItemCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbItemCategory.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
-            this.cbItemCategory.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbItemCategory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbItemCategory.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbItemCategory.ForeColor = System.Drawing.Color.White;
-            this.cbItemCategory.ItemHeight = 30;
-            this.cbItemCategory.ItemsAppearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
-            this.cbItemCategory.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.cbItemCategory.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
-            this.cbItemCategory.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
-            this.cbItemCategory.Location = new System.Drawing.Point(34, 41);
-            this.cbItemCategory.Name = "cbItemCategory";
-            this.cbItemCategory.Size = new System.Drawing.Size(325, 36);
-            this.cbItemCategory.TabIndex = 15;
-            // 
-            // cbItems
-            // 
-            this.cbItems.BackColor = System.Drawing.Color.Transparent;
-            this.cbItems.BorderRadius = 10;
-            this.cbItems.BorderThickness = 0;
-            this.cbItems.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbItems.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbItems.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
-            this.cbItems.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbItems.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbItems.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbItems.ForeColor = System.Drawing.Color.White;
-            this.cbItems.ItemHeight = 30;
-            this.cbItems.ItemsAppearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
-            this.cbItems.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.cbItems.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
-            this.cbItems.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
-            this.cbItems.Location = new System.Drawing.Point(628, 41);
-            this.cbItems.Name = "cbItems";
-            this.cbItems.Size = new System.Drawing.Size(325, 36);
-            this.cbItems.TabIndex = 16;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.label5.Location = new System.Drawing.Point(623, 252);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(114, 20);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "Product Name:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.label6.Location = new System.Drawing.Point(623, 327);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(107, 20);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "Product Price:";
-            // 
-            // txtProductPrice
-            // 
-            this.txtProductPrice.BorderRadius = 10;
-            this.txtProductPrice.BorderThickness = 0;
-            this.txtProductPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtProductPrice.DefaultText = "";
-            this.txtProductPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtProductPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtProductPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtProductPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtProductPrice.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
-            this.txtProductPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtProductPrice.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtProductPrice.ForeColor = System.Drawing.Color.White;
-            this.txtProductPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtProductPrice.Location = new System.Drawing.Point(628, 351);
-            this.txtProductPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtProductPrice.Name = "txtProductPrice";
-            this.txtProductPrice.PasswordChar = '\0';
-            this.txtProductPrice.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.txtProductPrice.PlaceholderText = "";
-            this.txtProductPrice.SelectedText = "";
-            this.txtProductPrice.Size = new System.Drawing.Size(325, 36);
-            this.txtProductPrice.TabIndex = 19;
-            // 
-            // txtProductName
-            // 
-            this.txtProductName.BorderRadius = 10;
-            this.txtProductName.BorderThickness = 0;
-            this.txtProductName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtProductName.DefaultText = "";
-            this.txtProductName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtProductName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtProductName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtProductName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtProductName.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
-            this.txtProductName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtProductName.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtProductName.ForeColor = System.Drawing.Color.White;
-            this.txtProductName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtProductName.Location = new System.Drawing.Point(628, 276);
-            this.txtProductName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtProductName.Name = "txtProductName";
-            this.txtProductName.PasswordChar = '\0';
-            this.txtProductName.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.txtProductName.PlaceholderText = "";
-            this.txtProductName.SelectedText = "";
-            this.txtProductName.Size = new System.Drawing.Size(325, 36);
-            this.txtProductName.TabIndex = 20;
-            // 
-            // btnAddProduct
-            // 
-            this.btnAddProduct.BorderRadius = 5;
-            this.btnAddProduct.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddProduct.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddProduct.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddProduct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddProduct.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(162)))), ((int)(((byte)(78)))));
-            this.btnAddProduct.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnAddProduct.ForeColor = System.Drawing.Color.White;
-            this.btnAddProduct.Location = new System.Drawing.Point(457, 406);
-            this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(130, 32);
-            this.btnAddProduct.TabIndex = 21;
-            this.btnAddProduct.Text = "Add Product";
-            // 
             // frmItemUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -332,6 +335,6 @@ namespace ThaiTanic.Forms.admin
         private Guna.UI2.WinForms.Guna2ComboBox cbAvailable;
         private Guna.UI2.WinForms.Guna2TextBox txtProductName;
         private Guna.UI2.WinForms.Guna2TextBox txtProductPrice;
-        private Guna.UI2.WinForms.Guna2Button btnAddProduct;
+        private Guna.UI2.WinForms.Guna2Button btnUpdateProduct;
     }
 }

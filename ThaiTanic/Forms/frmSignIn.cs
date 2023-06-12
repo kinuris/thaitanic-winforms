@@ -3,6 +3,7 @@ using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using ThaiTanic.Entities;
 using ThaiTanic.Forms;
+using ThaiTanic.Forms.admin;
 
 namespace ThaiTanic
 {
@@ -54,15 +55,17 @@ namespace ThaiTanic
 
             if (user.Role == UserRole.Admin)
             {
-                MessageBox.Show("Redirect to non-existent admin page");
+                frmAdminDashboard adminDashboard = new frmAdminDashboard(txtUsername.Text, txtPassword.Text);
+
+                adminDashboard.Show();
+                MessageBox.Show($"Welcome {user.FullName}");
                 return;
             }
-
-            MessageBox.Show($"Welcome {user.FullName}");
 
             frmDashboard dashboard = new frmDashboard(user);
 
             dashboard.Show();
+            MessageBox.Show($"Welcome {user.FullName}");
         }
     }
 }

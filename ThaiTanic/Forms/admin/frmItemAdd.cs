@@ -14,8 +14,8 @@ namespace ThaiTanic.Forms.admin
 {
     public partial class frmItemAdd : Form
     {
-        private string _Username;
-        private string _Password;
+        private readonly string _Username;
+        private readonly string _Password;
 
         public frmItemAdd(string username, string password)
         {

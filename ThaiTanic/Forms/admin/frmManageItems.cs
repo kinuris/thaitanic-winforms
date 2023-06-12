@@ -12,14 +12,20 @@ namespace ThaiTanic.Forms.admin
 {
     public partial class frmManageItems : Form
     {
-        public frmManageItems()
+        private readonly string _Username;
+        private readonly string _Password;
+
+        public frmManageItems(string username, string password)
         {
             InitializeComponent();
+
+            _Username = username;
+            _Password = password;
         }
 
         private void frmManageItems_Load(object sender, EventArgs e)
         {
-            frmItemAdd frmItemAdd = new frmItemAdd();
+            frmItemAdd frmItemAdd = new frmItemAdd(_Username, _Password);
             frmItemAdd.TopLevel = false;
             frmItemAdd.Dock = DockStyle.Fill;
             pnlManageItemsContainer.Controls.Add(frmItemAdd);
@@ -30,7 +36,7 @@ namespace ThaiTanic.Forms.admin
         {
             pnlManageItemsContainer.Controls.Clear();
 
-            frmItemAdd frmItemAdd = new frmItemAdd();
+            frmItemAdd frmItemAdd = new frmItemAdd(_Username, _Password);
             frmItemAdd.TopLevel = false;
             frmItemAdd.Dock = DockStyle.Fill;
             pnlManageItemsContainer.Controls.Add(frmItemAdd);
@@ -41,7 +47,7 @@ namespace ThaiTanic.Forms.admin
         {
             pnlManageItemsContainer.Controls.Clear();
 
-            frmItemUpdate frmItemUpdate = new frmItemUpdate();
+            frmItemUpdate frmItemUpdate = new frmItemUpdate(_Username, _Password);
             frmItemUpdate.TopLevel = false;
             frmItemUpdate.Dock = DockStyle.Fill;
             pnlManageItemsContainer.Controls.Add(frmItemUpdate);
