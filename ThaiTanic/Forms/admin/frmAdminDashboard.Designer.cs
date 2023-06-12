@@ -33,7 +33,7 @@ namespace ThaiTanic.Forms.admin
             this.pnlNavigation = new Guna.UI2.WinForms.Guna2Panel();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.btnAccount = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDelivery = new Guna.UI2.WinForms.Guna2Button();
+            this.btnManageItems = new Guna.UI2.WinForms.Guna2Button();
             this.btnManageOrders = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnlContainer = new Guna.UI2.WinForms.Guna2Panel();
@@ -45,7 +45,7 @@ namespace ThaiTanic.Forms.admin
             // 
             this.pnlNavigation.Controls.Add(this.btnLogout);
             this.pnlNavigation.Controls.Add(this.btnAccount);
-            this.pnlNavigation.Controls.Add(this.btnDelivery);
+            this.pnlNavigation.Controls.Add(this.btnManageItems);
             this.pnlNavigation.Controls.Add(this.btnManageOrders);
             this.pnlNavigation.Controls.Add(this.guna2PictureBox1);
             this.pnlNavigation.Dock = System.Windows.Forms.DockStyle.Left;
@@ -92,23 +92,24 @@ namespace ThaiTanic.Forms.admin
             this.btnAccount.Text = "Manage Users";
             this.btnAccount.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // btnDelivery
+            // btnManageItems
             // 
-            this.btnDelivery.BackColor = System.Drawing.Color.Transparent;
-            this.btnDelivery.BorderRadius = 10;
-            this.btnDelivery.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDelivery.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDelivery.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDelivery.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDelivery.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
-            this.btnDelivery.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnDelivery.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.btnDelivery.Location = new System.Drawing.Point(18, 264);
-            this.btnDelivery.Name = "btnDelivery";
-            this.btnDelivery.Size = new System.Drawing.Size(196, 42);
-            this.btnDelivery.TabIndex = 6;
-            this.btnDelivery.Text = "Manage Item";
-            this.btnDelivery.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnManageItems.BackColor = System.Drawing.Color.Transparent;
+            this.btnManageItems.BorderRadius = 10;
+            this.btnManageItems.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnManageItems.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnManageItems.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnManageItems.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnManageItems.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
+            this.btnManageItems.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnManageItems.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.btnManageItems.Location = new System.Drawing.Point(18, 264);
+            this.btnManageItems.Name = "btnManageItems";
+            this.btnManageItems.Size = new System.Drawing.Size(196, 42);
+            this.btnManageItems.TabIndex = 6;
+            this.btnManageItems.Text = "Manage Items";
+            this.btnManageItems.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnManageItems.Click += new System.EventHandler(this.btnManageItems_Click);
             // 
             // btnManageOrders
             // 
@@ -175,7 +176,7 @@ namespace ThaiTanic.Forms.admin
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
         private Guna.UI2.WinForms.Guna2Button btnAccount;
-        private Guna.UI2.WinForms.Guna2Button btnDelivery;
+        private Guna.UI2.WinForms.Guna2Button btnManageItems;
         private Guna.UI2.WinForms.Guna2Button btnManageOrders;
     }
 }
