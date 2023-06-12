@@ -122,6 +122,12 @@
     <Compile Include="Forms\admin\frmManageItems.Designer.cs">
       <DependentUpon>frmManageItems.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\admin\frmManageOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\admin\frmManageOrders.Designer.cs">
+      <DependentUpon>frmManageOrders.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmDelivery.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,12 @@
     <Compile Include="UserControls\ucItemCard.Designer.cs">
       <DependentUpon>ucItemCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ucManageOrderCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucManageOrderCard.Designer.cs">
+      <DependentUpon>ucManageOrderCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucOrder.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -190,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\admin\frmManageItems.resx">
       <DependentUpon>frmManageItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\admin\frmManageOrders.resx">
+      <DependentUpon>frmManageOrders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmDelivery.resx">
       <DependentUpon>frmDelivery.cs</DependentUpon>
@@ -221,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucItemCard.resx">
       <DependentUpon>ucItemCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucManageOrderCard.resx">
+      <DependentUpon>ucManageOrderCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucOrder.resx">
       <DependentUpon>ucOrder.cs</DependentUpon>
