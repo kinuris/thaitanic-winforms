@@ -50,6 +50,20 @@ namespace ThaiTanic.Forms
             this.btnPrevious = new Guna.UI2.WinForms.Guna2Button();
             this.btnNext = new Guna.UI2.WinForms.Guna2Button();
             this.pnlCustomerDetails = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.lblCreditCardNumber = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblPostalCodeBrgyProvince = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblCity = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblCountry = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblCreditCard = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblPhoneNumber = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblEmail = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblCustomerName = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2Shapes1 = new Guna.UI2.WinForms.Guna2Shapes();
+            this.label7 = new System.Windows.Forms.Label();
             this.pnlOrderSummary = new Guna.UI2.WinForms.Guna2Panel();
             this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
@@ -66,6 +80,11 @@ namespace ThaiTanic.Forms
             this.pnlButtonTabs.SuspendLayout();
             this.pnlSearch.SuspendLayout();
             this.pnlOrderItems.SuspendLayout();
+            this.pnlCustomerDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.pnlOrderSummary.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
@@ -227,7 +246,7 @@ namespace ThaiTanic.Forms
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(139)))), ((int)(((byte)(139)))));
-            this.txtSearch.PlaceholderText = "Look for your Orders here by searching the Order ID or Product name";
+            this.txtSearch.PlaceholderText = "Look for your Orders here by searching the Order ID or Product name. Charles Gay";
             this.txtSearch.SelectedText = "";
             this.txtSearch.Size = new System.Drawing.Size(1072, 42);
             this.txtSearch.TabIndex = 0;
@@ -278,7 +297,8 @@ namespace ThaiTanic.Forms
             this.btnItemsPageForward.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnItemsPageForward.ForeColor = System.Drawing.Color.White;
             this.btnItemsPageForward.Image = global::ThaiTanic.Properties.Resources.btn_forward;
-            this.btnItemsPageForward.Location = new System.Drawing.Point(123, 318);
+            this.btnItemsPageForward.ImageSize = new System.Drawing.Size(15, 15);
+            this.btnItemsPageForward.Location = new System.Drawing.Point(121, 318);
             this.btnItemsPageForward.Name = "btnItemsPageForward";
             this.btnItemsPageForward.Size = new System.Drawing.Size(26, 26);
             this.btnItemsPageForward.TabIndex = 4;
@@ -294,7 +314,8 @@ namespace ThaiTanic.Forms
             this.btnItemsPageBackward.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnItemsPageBackward.ForeColor = System.Drawing.Color.White;
             this.btnItemsPageBackward.Image = global::ThaiTanic.Properties.Resources.btn_back;
-            this.btnItemsPageBackward.Location = new System.Drawing.Point(11, 318);
+            this.btnItemsPageBackward.ImageSize = new System.Drawing.Size(15, 15);
+            this.btnItemsPageBackward.Location = new System.Drawing.Point(14, 318);
             this.btnItemsPageBackward.Name = "btnItemsPageBackward";
             this.btnItemsPageBackward.Size = new System.Drawing.Size(26, 26);
             this.btnItemsPageBackward.TabIndex = 3;
@@ -343,7 +364,7 @@ namespace ThaiTanic.Forms
             this.btnPrevious.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(140)))), ((int)(((byte)(233)))));
             this.btnPrevious.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnPrevious.ForeColor = System.Drawing.Color.White;
-            this.btnPrevious.Location = new System.Drawing.Point(31, 506);
+            this.btnPrevious.Location = new System.Drawing.Point(31, 513);
             this.btnPrevious.Name = "btnPrevious";
             this.btnPrevious.Size = new System.Drawing.Size(100, 35);
             this.btnPrevious.TabIndex = 5;
@@ -361,7 +382,7 @@ namespace ThaiTanic.Forms
             this.btnNext.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(140)))), ((int)(((byte)(233)))));
             this.btnNext.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnNext.ForeColor = System.Drawing.Color.White;
-            this.btnNext.Location = new System.Drawing.Point(667, 506);
+            this.btnNext.Location = new System.Drawing.Point(667, 513);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(100, 35);
             this.btnNext.TabIndex = 6;
@@ -372,11 +393,183 @@ namespace ThaiTanic.Forms
             // 
             this.pnlCustomerDetails.BackColor = System.Drawing.Color.Transparent;
             this.pnlCustomerDetails.BorderRadius = 10;
+            this.pnlCustomerDetails.Controls.Add(this.guna2PictureBox4);
+            this.pnlCustomerDetails.Controls.Add(this.guna2PictureBox3);
+            this.pnlCustomerDetails.Controls.Add(this.guna2PictureBox2);
+            this.pnlCustomerDetails.Controls.Add(this.guna2PictureBox1);
+            this.pnlCustomerDetails.Controls.Add(this.lblCreditCardNumber);
+            this.pnlCustomerDetails.Controls.Add(this.lblPostalCodeBrgyProvince);
+            this.pnlCustomerDetails.Controls.Add(this.lblCity);
+            this.pnlCustomerDetails.Controls.Add(this.lblCountry);
+            this.pnlCustomerDetails.Controls.Add(this.lblCreditCard);
+            this.pnlCustomerDetails.Controls.Add(this.lblPhoneNumber);
+            this.pnlCustomerDetails.Controls.Add(this.lblEmail);
+            this.pnlCustomerDetails.Controls.Add(this.lblCustomerName);
+            this.pnlCustomerDetails.Controls.Add(this.guna2Shapes1);
+            this.pnlCustomerDetails.Controls.Add(this.label7);
             this.pnlCustomerDetails.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
-            this.pnlCustomerDetails.Location = new System.Drawing.Point(31, 547);
+            this.pnlCustomerDetails.Location = new System.Drawing.Point(31, 558);
             this.pnlCustomerDetails.Name = "pnlCustomerDetails";
-            this.pnlCustomerDetails.Size = new System.Drawing.Size(736, 209);
+            this.pnlCustomerDetails.Size = new System.Drawing.Size(736, 196);
             this.pnlCustomerDetails.TabIndex = 7;
+            // 
+            // guna2PictureBox4
+            // 
+            this.guna2PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox4.Image")));
+            this.guna2PictureBox4.ImageRotate = 0F;
+            this.guna2PictureBox4.Location = new System.Drawing.Point(36, 154);
+            this.guna2PictureBox4.Name = "guna2PictureBox4";
+            this.guna2PictureBox4.Size = new System.Drawing.Size(21, 21);
+            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox4.TabIndex = 16;
+            this.guna2PictureBox4.TabStop = false;
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(34, 123);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(20, 20);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox3.TabIndex = 15;
+            this.guna2PictureBox3.TabStop = false;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(35, 90);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(20, 20);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 14;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(36, 57);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 13;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // lblCreditCardNumber
+            // 
+            this.lblCreditCardNumber.BackColor = System.Drawing.Color.Transparent;
+            this.lblCreditCardNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCreditCardNumber.ForeColor = System.Drawing.Color.White;
+            this.lblCreditCardNumber.Location = new System.Drawing.Point(427, 154);
+            this.lblCreditCardNumber.Name = "lblCreditCardNumber";
+            this.lblCreditCardNumber.Size = new System.Drawing.Size(38, 18);
+            this.lblCreditCardNumber.TabIndex = 12;
+            this.lblCreditCardNumber.Text = "09281";
+            // 
+            // lblPostalCodeBrgyProvince
+            // 
+            this.lblPostalCodeBrgyProvince.BackColor = System.Drawing.Color.Transparent;
+            this.lblPostalCodeBrgyProvince.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPostalCodeBrgyProvince.ForeColor = System.Drawing.Color.White;
+            this.lblPostalCodeBrgyProvince.Location = new System.Drawing.Point(428, 124);
+            this.lblPostalCodeBrgyProvince.Name = "lblPostalCodeBrgyProvince";
+            this.lblPostalCodeBrgyProvince.Size = new System.Drawing.Size(191, 18);
+            this.lblPostalCodeBrgyProvince.TabIndex = 9;
+            this.lblPostalCodeBrgyProvince.Text = "5800 Post, Brgy. Lawaan, Capiz.";
+            // 
+            // lblCity
+            // 
+            this.lblCity.BackColor = System.Drawing.Color.Transparent;
+            this.lblCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCity.ForeColor = System.Drawing.Color.White;
+            this.lblCity.Location = new System.Drawing.Point(428, 91);
+            this.lblCity.Name = "lblCity";
+            this.lblCity.Size = new System.Drawing.Size(67, 18);
+            this.lblCity.TabIndex = 8;
+            this.lblCity.Text = "Roxas City";
+            // 
+            // lblCountry
+            // 
+            this.lblCountry.BackColor = System.Drawing.Color.Transparent;
+            this.lblCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCountry.ForeColor = System.Drawing.Color.White;
+            this.lblCountry.Location = new System.Drawing.Point(428, 60);
+            this.lblCountry.Name = "lblCountry";
+            this.lblCountry.Size = new System.Drawing.Size(69, 18);
+            this.lblCountry.TabIndex = 7;
+            this.lblCountry.Text = "Philippines";
+            // 
+            // lblCreditCard
+            // 
+            this.lblCreditCard.BackColor = System.Drawing.Color.Transparent;
+            this.lblCreditCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCreditCard.ForeColor = System.Drawing.Color.White;
+            this.lblCreditCard.Location = new System.Drawing.Point(64, 154);
+            this.lblCreditCard.Name = "lblCreditCard";
+            this.lblCreditCard.Size = new System.Drawing.Size(70, 18);
+            this.lblCreditCard.TabIndex = 6;
+            this.lblCreditCard.Text = "Credit Card";
+            // 
+            // lblPhoneNumber
+            // 
+            this.lblPhoneNumber.BackColor = System.Drawing.Color.Transparent;
+            this.lblPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhoneNumber.ForeColor = System.Drawing.Color.White;
+            this.lblPhoneNumber.Location = new System.Drawing.Point(61, 124);
+            this.lblPhoneNumber.Name = "lblPhoneNumber";
+            this.lblPhoneNumber.Size = new System.Drawing.Size(97, 18);
+            this.lblPhoneNumber.TabIndex = 5;
+            this.lblPhoneNumber.Text = "+63 9661564480";
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.BackColor = System.Drawing.Color.Transparent;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.ForeColor = System.Drawing.Color.White;
+            this.lblEmail.Location = new System.Drawing.Point(63, 91);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(148, 18);
+            this.lblEmail.TabIndex = 4;
+            this.lblEmail.Text = "Charlesgay@gmail.com";
+            // 
+            // lblCustomerName
+            // 
+            this.lblCustomerName.BackColor = System.Drawing.Color.Transparent;
+            this.lblCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerName.ForeColor = System.Drawing.Color.White;
+            this.lblCustomerName.Location = new System.Drawing.Point(63, 60);
+            this.lblCustomerName.Name = "lblCustomerName";
+            this.lblCustomerName.Size = new System.Drawing.Size(138, 18);
+            this.lblCustomerName.TabIndex = 3;
+            this.lblCustomerName.Text = "Charles Gay Cayetano";
+            // 
+            // guna2Shapes1
+            // 
+            this.guna2Shapes1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(76)))), ((int)(((byte)(81)))));
+            this.guna2Shapes1.LineThickness = 2;
+            this.guna2Shapes1.Location = new System.Drawing.Point(-57, 41);
+            this.guna2Shapes1.Name = "guna2Shapes1";
+            this.guna2Shapes1.PolygonSkip = 1;
+            this.guna2Shapes1.Rotate = 0F;
+            this.guna2Shapes1.Shape = Guna.UI2.WinForms.Enums.ShapeType.Line;
+            this.guna2Shapes1.Size = new System.Drawing.Size(849, 10);
+            this.guna2Shapes1.TabIndex = 2;
+            this.guna2Shapes1.Text = "guna2Shapes1";
+            this.guna2Shapes1.Zoom = 80;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(30, 10);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(213, 29);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Customer Details";
             // 
             // pnlOrderSummary
             // 
@@ -544,7 +737,7 @@ namespace ThaiTanic.Forms
             this.lblOrderPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
             this.lblOrderPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOrderPage.ForeColor = System.Drawing.Color.White;
-            this.lblOrderPage.Location = new System.Drawing.Point(374, 515);
+            this.lblOrderPage.Location = new System.Drawing.Point(374, 518);
             this.lblOrderPage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblOrderPage.Name = "lblOrderPage";
             this.lblOrderPage.Size = new System.Drawing.Size(45, 24);
@@ -574,6 +767,12 @@ namespace ThaiTanic.Forms
             this.pnlSearch.ResumeLayout(false);
             this.pnlOrderItems.ResumeLayout(false);
             this.pnlOrderItems.PerformLayout();
+            this.pnlCustomerDetails.ResumeLayout(false);
+            this.pnlCustomerDetails.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.pnlOrderSummary.ResumeLayout(false);
             this.pnlOrderSummary.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
@@ -618,5 +817,19 @@ namespace ThaiTanic.Forms
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblItemPageIndicator;
         private System.Windows.Forms.Label lblOrderPage;
+        private Guna.UI2.WinForms.Guna2Shapes guna2Shapes1;
+        private System.Windows.Forms.Label label7;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblCreditCard;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblPhoneNumber;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblEmail;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblCustomerName;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblCreditCardNumber;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblPostalCodeBrgyProvince;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblCity;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblCountry;
     }
 }
