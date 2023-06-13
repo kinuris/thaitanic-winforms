@@ -15,6 +15,6 @@ namespace ThaiTanic.Forms
         public frmAccountBillingAddress()
         {
             InitializeComponent();
-        }        
+        }
     }
 }
