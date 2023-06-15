@@ -29,6 +29,7 @@ namespace ThaiTanic.Forms.admin
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdminDashboard));
             this.pnlNavigation = new Guna.UI2.WinForms.Guna2Panel();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
@@ -37,6 +38,7 @@ namespace ThaiTanic.Forms.admin
             this.btnManageOrders = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnlContainer = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.pnlNavigation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -152,6 +154,12 @@ namespace ThaiTanic.Forms.admin
             this.pnlContainer.Size = new System.Drawing.Size(1048, 720);
             this.pnlContainer.TabIndex = 1;
             // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.TargetControl = this.pnlNavigation;
+            this.guna2DragControl1.UseTransparentDrag = true;
+            // 
             // frmAdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -179,5 +187,6 @@ namespace ThaiTanic.Forms.admin
         private Guna.UI2.WinForms.Guna2Button btnManageUsers;
         private Guna.UI2.WinForms.Guna2Button btnManageItems;
         private Guna.UI2.WinForms.Guna2Button btnManageOrders;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }

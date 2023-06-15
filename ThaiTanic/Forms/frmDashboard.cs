@@ -107,7 +107,7 @@ namespace ThaiTanic.Forms
             if (_SelectedOption == DashBoardOptions.Account) return;
 
             _SelectedOption = DashBoardOptions.Account;
-            var frmAccount = new frmAccount(_LoggedInUser)
+            var frmAccount = new frmAccount(_LoggedInUser, DisplayInDashboardFormHook)
             {
                 TopLevel = false,
             };

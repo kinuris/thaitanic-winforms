@@ -23,15 +23,17 @@ namespace ThaiTanic.Forms
     {
         private User _LoggedInUser;
         private readonly List<BillingAddress> _BillingAddresses;
+        private readonly Action<Form> _DisplayInDashboardFormHook;
 
         private AddressSlots _SelectedSlot;
 
-        public frmAccountBillingAddress(User loggedInUser)
+        public frmAccountBillingAddress(User loggedInUser, Action<Form> displayInDashboardFormHook)
         {
             InitializeComponent();
             _LoggedInUser = loggedInUser;
             _BillingAddresses = BillingAddress.BillingAddressesOfUser(loggedInUser);
             _SelectedSlot = AddressSlots.First;
+            _DisplayInDashboardFormHook = displayInDashboardFormHook;
         }
 
         private void frmAccountBillingAddress_Load(object sender, EventArgs e)
@@ -88,13 +90,16 @@ namespace ThaiTanic.Forms
 
             EnableTextboxes();
 
-            txtAddressLabel.Text = _BillingAddresses[0].FullName;
-            txtRegion.Text = _BillingAddresses[0].Region;
-            txtPostalCode.Text = _BillingAddresses[0].PostalCode;
-            txtPhoneNumber.Text = _BillingAddresses[0].PhoneNumber;
-            txtProvince.Text = _BillingAddresses[0].Province;
-            txtBarangay.Text = _BillingAddresses[0].Barangay;
-            txtCity.Text = _BillingAddresses[0].City;
+            if (_BillingAddresses.Count() >= 1)
+            {
+                txtAddressLabel.Text = _BillingAddresses[0].FullName;
+                txtRegion.Text = _BillingAddresses[0].Region;
+                txtPostalCode.Text = _BillingAddresses[0].PostalCode;
+                txtPhoneNumber.Text = _BillingAddresses[0].PhoneNumber;
+                txtProvince.Text = _BillingAddresses[0].Province;
+                txtBarangay.Text = _BillingAddresses[0].Barangay;
+                txtCity.Text = _BillingAddresses[0].City;
+            }
         }
 
         private void pnlBillingAddress1_Click(object sender, EventArgs e)
@@ -105,13 +110,16 @@ namespace ThaiTanic.Forms
 
             ResetTextboxes();
 
-            txtAddressLabel.Text = _BillingAddresses[0].FullName;
-            txtRegion.Text = _BillingAddresses[0].Region;
-            txtPostalCode.Text = _BillingAddresses[0].PostalCode;
-            txtPhoneNumber.Text = _BillingAddresses[0].PhoneNumber;
-            txtProvince.Text = _BillingAddresses[0].Province;
-            txtBarangay.Text = _BillingAddresses[0].Barangay;
-            txtCity.Text = _BillingAddresses[0].City;
+            if (_BillingAddresses.Count() >= 1)
+            {
+                txtAddressLabel.Text = _BillingAddresses[0].FullName;
+                txtRegion.Text = _BillingAddresses[0].Region;
+                txtPostalCode.Text = _BillingAddresses[0].PostalCode;
+                txtPhoneNumber.Text = _BillingAddresses[0].PhoneNumber;
+                txtProvince.Text = _BillingAddresses[0].Province;
+                txtBarangay.Text = _BillingAddresses[0].Barangay;
+                txtCity.Text = _BillingAddresses[0].City;
+            }
 
             EnableTextboxes();
             MessageBox.Show("Selected 1st slot", "1st Slot", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -119,7 +127,7 @@ namespace ThaiTanic.Forms
 
         private void pnlBillingAddress2_Click(object sender, EventArgs e)
         {
-            if (_BillingAddresses.Count < 1)
+            if (_BillingAddresses.Count() < 1)
             {
                 MessageBox.Show("Must fill 1st address slot first");
 
@@ -273,6 +281,19 @@ namespace ThaiTanic.Forms
 
                     break;
             }
+
+            frmAccount frmAccount = new frmAccount(_LoggedInUser, _DisplayInDashboardFormHook) 
+            {
+                TopLevel = false
+            };
+            frmAccountProfile frmAccountProfile = new frmAccountProfile(_LoggedInUser)
+            {
+                TopLevel = false
+            };
+
+            frmAccount.Controls["pnlContainer"].Controls.Add(frmAccountProfile);
+
+            _DisplayInDashboardFormHook(frmAccount);
         }
 
         private void EnableTextboxes()
