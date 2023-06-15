@@ -32,8 +32,11 @@ namespace ThaiTanic.Forms.admin
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManageUsers));
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
+            this.cbUserRole = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.cbUsers = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.txtSearchUsers = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,9 +44,6 @@ namespace ThaiTanic.Forms.admin
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtSearchUsers = new Guna.UI2.WinForms.Guna2TextBox();
-            this.cbUserRole = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.guna2Panel5.SuspendLayout();
             this.guna2Panel6.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -76,6 +76,40 @@ namespace ThaiTanic.Forms.admin
             this.guna2Panel6.Size = new System.Drawing.Size(988, 336);
             this.guna2Panel6.TabIndex = 11;
             // 
+            // cbUserRole
+            // 
+            this.cbUserRole.BackColor = System.Drawing.Color.Transparent;
+            this.cbUserRole.BorderRadius = 10;
+            this.cbUserRole.BorderThickness = 0;
+            this.cbUserRole.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbUserRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbUserRole.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
+            this.cbUserRole.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbUserRole.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbUserRole.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbUserRole.ForeColor = System.Drawing.Color.White;
+            this.cbUserRole.ItemHeight = 30;
+            this.cbUserRole.ItemsAppearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
+            this.cbUserRole.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.cbUserRole.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
+            this.cbUserRole.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
+            this.cbUserRole.Location = new System.Drawing.Point(37, 184);
+            this.cbUserRole.Name = "cbUserRole";
+            this.cbUserRole.Size = new System.Drawing.Size(325, 36);
+            this.cbUserRole.TabIndex = 19;
+            this.cbUserRole.SelectedValueChanged += new System.EventHandler(this.cbUserRole_SelectedValueChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.label3.Location = new System.Drawing.Point(36, 165);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(79, 18);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "User Role:";
+            // 
             // cbUsers
             // 
             this.cbUsers.BackColor = System.Drawing.Color.Transparent;
@@ -97,6 +131,7 @@ namespace ThaiTanic.Forms.admin
             this.cbUsers.Name = "cbUsers";
             this.cbUsers.Size = new System.Drawing.Size(325, 36);
             this.cbUsers.TabIndex = 17;
+            this.cbUsers.SelectedValueChanged += new System.EventHandler(this.cbUsers_SelectedValueChanged);
             // 
             // label8
             // 
@@ -108,6 +143,35 @@ namespace ThaiTanic.Forms.admin
             this.label8.Size = new System.Drawing.Size(52, 18);
             this.label8.TabIndex = 2;
             this.label8.Text = "Users:";
+            // 
+            // txtSearchUsers
+            // 
+            this.txtSearchUsers.BackColor = System.Drawing.Color.Transparent;
+            this.txtSearchUsers.BorderRadius = 10;
+            this.txtSearchUsers.BorderThickness = 0;
+            this.txtSearchUsers.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearchUsers.DefaultText = "";
+            this.txtSearchUsers.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearchUsers.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearchUsers.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchUsers.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchUsers.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
+            this.txtSearchUsers.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchUsers.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtSearchUsers.ForeColor = System.Drawing.Color.White;
+            this.txtSearchUsers.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchUsers.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtSearchUsers.IconLeft")));
+            this.txtSearchUsers.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtSearchUsers.IconLeftSize = new System.Drawing.Size(28, 28);
+            this.txtSearchUsers.Location = new System.Drawing.Point(35, 9);
+            this.txtSearchUsers.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSearchUsers.Name = "txtSearchUsers";
+            this.txtSearchUsers.PasswordChar = '\0';
+            this.txtSearchUsers.PlaceholderText = "Look for the user here.";
+            this.txtSearchUsers.SelectedText = "";
+            this.txtSearchUsers.Size = new System.Drawing.Size(555, 36);
+            this.txtSearchUsers.TabIndex = 1;
+            this.txtSearchUsers.TextOffset = new System.Drawing.Point(5, 0);
             // 
             // guna2Panel2
             // 
@@ -193,68 +257,6 @@ namespace ThaiTanic.Forms.admin
             this.label1.TabIndex = 0;
             this.label1.Text = "Thai-Tanic Admin Page";
             // 
-            // txtSearchUsers
-            // 
-            this.txtSearchUsers.BackColor = System.Drawing.Color.Transparent;
-            this.txtSearchUsers.BorderRadius = 10;
-            this.txtSearchUsers.BorderThickness = 0;
-            this.txtSearchUsers.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearchUsers.DefaultText = "";
-            this.txtSearchUsers.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearchUsers.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearchUsers.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearchUsers.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearchUsers.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
-            this.txtSearchUsers.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchUsers.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtSearchUsers.ForeColor = System.Drawing.Color.White;
-            this.txtSearchUsers.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchUsers.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtSearchUsers.IconLeft")));
-            this.txtSearchUsers.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txtSearchUsers.IconLeftSize = new System.Drawing.Size(28, 28);
-            this.txtSearchUsers.Location = new System.Drawing.Point(35, 9);
-            this.txtSearchUsers.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtSearchUsers.Name = "txtSearchUsers";
-            this.txtSearchUsers.PasswordChar = '\0';
-            this.txtSearchUsers.PlaceholderText = "Look for the user here.";
-            this.txtSearchUsers.SelectedText = "";
-            this.txtSearchUsers.Size = new System.Drawing.Size(555, 36);
-            this.txtSearchUsers.TabIndex = 1;
-            this.txtSearchUsers.TextOffset = new System.Drawing.Point(5, 0);
-            // 
-            // cbUserRole
-            // 
-            this.cbUserRole.BackColor = System.Drawing.Color.Transparent;
-            this.cbUserRole.BorderRadius = 10;
-            this.cbUserRole.BorderThickness = 0;
-            this.cbUserRole.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbUserRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbUserRole.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
-            this.cbUserRole.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbUserRole.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbUserRole.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbUserRole.ForeColor = System.Drawing.Color.White;
-            this.cbUserRole.ItemHeight = 30;
-            this.cbUserRole.ItemsAppearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
-            this.cbUserRole.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.cbUserRole.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
-            this.cbUserRole.ItemsAppearance.SelectedForeColor = System.Drawing.Color.White;
-            this.cbUserRole.Location = new System.Drawing.Point(37, 184);
-            this.cbUserRole.Name = "cbUserRole";
-            this.cbUserRole.Size = new System.Drawing.Size(325, 36);
-            this.cbUserRole.TabIndex = 19;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.label3.Location = new System.Drawing.Point(36, 165);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 18);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "User Role:";
-            // 
             // frmManageUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,6 +269,7 @@ namespace ThaiTanic.Forms.admin
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmManageUsers";
             this.Text = "frmManageUsers";
+            this.Load += new System.EventHandler(this.frmManageUsers_Load);
             this.guna2Panel5.ResumeLayout(false);
             this.guna2Panel6.ResumeLayout(false);
             this.guna2Panel6.PerformLayout();

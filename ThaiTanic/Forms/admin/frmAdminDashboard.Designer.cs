@@ -32,7 +32,7 @@ namespace ThaiTanic.Forms.admin
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdminDashboard));
             this.pnlNavigation = new Guna.UI2.WinForms.Guna2Panel();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAccount = new Guna.UI2.WinForms.Guna2Button();
+            this.btnManageUsers = new Guna.UI2.WinForms.Guna2Button();
             this.btnManageItems = new Guna.UI2.WinForms.Guna2Button();
             this.btnManageOrders = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -44,7 +44,7 @@ namespace ThaiTanic.Forms.admin
             // pnlNavigation
             // 
             this.pnlNavigation.Controls.Add(this.btnLogout);
-            this.pnlNavigation.Controls.Add(this.btnAccount);
+            this.pnlNavigation.Controls.Add(this.btnManageUsers);
             this.pnlNavigation.Controls.Add(this.btnManageItems);
             this.pnlNavigation.Controls.Add(this.btnManageOrders);
             this.pnlNavigation.Controls.Add(this.guna2PictureBox1);
@@ -74,23 +74,24 @@ namespace ThaiTanic.Forms.admin
             this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // btnAccount
+            // btnManageUsers
             // 
-            this.btnAccount.BackColor = System.Drawing.Color.Transparent;
-            this.btnAccount.BorderRadius = 10;
-            this.btnAccount.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAccount.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAccount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAccount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAccount.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
-            this.btnAccount.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.btnAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.btnAccount.Location = new System.Drawing.Point(18, 315);
-            this.btnAccount.Name = "btnAccount";
-            this.btnAccount.Size = new System.Drawing.Size(196, 42);
-            this.btnAccount.TabIndex = 7;
-            this.btnAccount.Text = "Manage Users";
-            this.btnAccount.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnManageUsers.BackColor = System.Drawing.Color.Transparent;
+            this.btnManageUsers.BorderRadius = 10;
+            this.btnManageUsers.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnManageUsers.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnManageUsers.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnManageUsers.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnManageUsers.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
+            this.btnManageUsers.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnManageUsers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.btnManageUsers.Location = new System.Drawing.Point(18, 315);
+            this.btnManageUsers.Name = "btnManageUsers";
+            this.btnManageUsers.Size = new System.Drawing.Size(196, 42);
+            this.btnManageUsers.TabIndex = 7;
+            this.btnManageUsers.Text = "Manage Users";
+            this.btnManageUsers.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnManageUsers.Click += new System.EventHandler(this.btnManageUsers_Click);
             // 
             // btnManageItems
             // 
@@ -175,7 +176,7 @@ namespace ThaiTanic.Forms.admin
         private Guna.UI2.WinForms.Guna2Panel pnlContainer;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
-        private Guna.UI2.WinForms.Guna2Button btnAccount;
+        private Guna.UI2.WinForms.Guna2Button btnManageUsers;
         private Guna.UI2.WinForms.Guna2Button btnManageItems;
         private Guna.UI2.WinForms.Guna2Button btnManageOrders;
     }

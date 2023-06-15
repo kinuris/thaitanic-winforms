@@ -70,5 +70,20 @@ namespace ThaiTanic.Forms.admin
             pnlContainer.Controls.Add(frmManageItems);
             frmManageItems.Show();
         }
+
+        private void btnManageUsers_Click(object sender, EventArgs e)
+        {
+            if (_SelectedOption == AdminDashboardOptions.ManageUsers) return;
+
+            _SelectedOption = AdminDashboardOptions.ManageUsers;
+
+            frmManageUsers frmManageUsers = new frmManageUsers(_Username, _Password);
+            frmManageUsers.TopLevel = false;
+            frmManageUsers.Dock = DockStyle.Fill;
+
+            pnlContainer.Controls.Clear();
+            pnlContainer.Controls.Add(frmManageUsers);
+            frmManageUsers.Show();
+        }
     }
 }
