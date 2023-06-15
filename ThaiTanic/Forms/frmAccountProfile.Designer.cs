@@ -342,9 +342,9 @@ namespace ThaiTanic.Forms
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
             this.label17.Location = new System.Drawing.Point(548, 18);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(82, 20);
+            this.label17.Size = new System.Drawing.Size(117, 20);
             this.label17.TabIndex = 22;
-            this.label17.Text = "Password:";
+            this.label17.Text = "New Password:";
             // 
             // txtUsername
             // 
@@ -392,6 +392,7 @@ namespace ThaiTanic.Forms
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAccountProfile";
             this.Text = "frmAccountProfile";
+            this.Load += new System.EventHandler(this.frmAccountProfile_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);

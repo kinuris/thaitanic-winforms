@@ -66,10 +66,7 @@ namespace ThaiTanic.Forms
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
-            if (_SelectedOption == DashBoardOptions.Menu)
-            {
-                return;
-            }
+            if (_SelectedOption == DashBoardOptions.Menu) return;
 
             _SelectedOption = DashBoardOptions.Menu;
             DisplayInDashboardFormHook(new frmMenu(_LoggedInUser, DisplayInDashboardFormHook, AddCartEntry, _Cart.SubtractCartEntry, _Cart.AddEntriesToDGV, _Cart.Clear, _Cart.Entries, SetCurrentSelected)
@@ -80,10 +77,7 @@ namespace ThaiTanic.Forms
 
         private void btnDelivery_Click(object sender, EventArgs e)
         {
-            if (_SelectedOption == DashBoardOptions.Delivery) 
-            {
-                return;
-            }
+            if (_SelectedOption == DashBoardOptions.Delivery) return;
 
             _SelectedOption = DashBoardOptions.Delivery;
             var frmDelivery = new frmDelivery(_LoggedInUser)
@@ -106,6 +100,19 @@ namespace ThaiTanic.Forms
         private void SetCurrentSelected(DashBoardOptions options)
         {
             _SelectedOption = options;
+        }
+
+        private void btnAccount_Click(object sender, EventArgs e)
+        {
+            if (_SelectedOption == DashBoardOptions.Account) return;
+
+            _SelectedOption = DashBoardOptions.Account;
+            var frmAccount = new frmAccount(_LoggedInUser)
+            {
+                TopLevel = false,
+            };
+
+            DisplayInDashboardFormHook(frmAccount);
         }
     }
 }

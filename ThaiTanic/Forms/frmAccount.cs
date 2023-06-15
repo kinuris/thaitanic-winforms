@@ -7,19 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ThaiTanic.Entities;
 
 namespace ThaiTanic.Forms
 {
     public partial class frmAccount : Form
     {
-        public frmAccount()
+        private readonly User _LoggedInUser;
+
+        public frmAccount(User loggedInUser)
         {
             InitializeComponent();
+
+            _LoggedInUser = loggedInUser;
         }
 
         private void frmAccount_Load(object sender, EventArgs e)
         {
-            frmAccountProfile frmAccountProfile = new frmAccountProfile();
+            frmAccountProfile frmAccountProfile = new frmAccountProfile(_LoggedInUser);
             frmAccountProfile.TopLevel = false;
             frmAccountProfile.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(frmAccountProfile);
@@ -30,7 +35,7 @@ namespace ThaiTanic.Forms
         {
             pnlContainer.Controls.Clear();
 
-            frmAccountProfile frmAccountProfile = new frmAccountProfile();
+            frmAccountProfile frmAccountProfile = new frmAccountProfile(_LoggedInUser);
             frmAccountProfile.TopLevel = false;
             frmAccountProfile.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(frmAccountProfile);
@@ -43,7 +48,7 @@ namespace ThaiTanic.Forms
         {
             pnlContainer.Controls.Clear();
 
-            frmAccountBillingAddress frmAccountBillingAddress = new frmAccountBillingAddress();
+            frmAccountBillingAddress frmAccountBillingAddress = new frmAccountBillingAddress(_LoggedInUser);
             frmAccountBillingAddress.TopLevel = false;
             frmAccountBillingAddress.Dock = DockStyle.Fill;
             pnlContainer.Controls.Add(frmAccountBillingAddress);

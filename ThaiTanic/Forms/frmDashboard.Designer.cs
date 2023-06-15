@@ -91,6 +91,7 @@ namespace ThaiTanic.Forms
             this.btnAccount.TabIndex = 3;
             this.btnAccount.Text = "Account";
             this.btnAccount.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
             // 
             // btnDelivery
             // 

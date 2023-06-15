@@ -280,7 +280,7 @@ namespace ThaiTanic.Forms
             this.lblItemPageIndicator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
             this.lblItemPageIndicator.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblItemPageIndicator.ForeColor = System.Drawing.Color.White;
-            this.lblItemPageIndicator.Location = new System.Drawing.Point(59, 320);
+            this.lblItemPageIndicator.Location = new System.Drawing.Point(44, 320);
             this.lblItemPageIndicator.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblItemPageIndicator.Name = "lblItemPageIndicator";
             this.lblItemPageIndicator.Size = new System.Drawing.Size(45, 24);
@@ -294,11 +294,12 @@ namespace ThaiTanic.Forms
             this.btnItemsPageForward.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnItemsPageForward.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnItemsPageForward.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnItemsPageForward.FillColor = System.Drawing.Color.Gray;
             this.btnItemsPageForward.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnItemsPageForward.ForeColor = System.Drawing.Color.White;
             this.btnItemsPageForward.Image = global::ThaiTanic.Properties.Resources.btn_forward;
             this.btnItemsPageForward.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnItemsPageForward.Location = new System.Drawing.Point(121, 318);
+            this.btnItemsPageForward.Location = new System.Drawing.Point(93, 318);
             this.btnItemsPageForward.Name = "btnItemsPageForward";
             this.btnItemsPageForward.Size = new System.Drawing.Size(26, 26);
             this.btnItemsPageForward.TabIndex = 4;
@@ -311,6 +312,7 @@ namespace ThaiTanic.Forms
             this.btnItemsPageBackward.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnItemsPageBackward.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnItemsPageBackward.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnItemsPageBackward.FillColor = System.Drawing.Color.Gray;
             this.btnItemsPageBackward.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnItemsPageBackward.ForeColor = System.Drawing.Color.White;
             this.btnItemsPageBackward.Image = global::ThaiTanic.Properties.Resources.btn_back;

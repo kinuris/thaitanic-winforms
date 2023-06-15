@@ -46,38 +46,38 @@ namespace ThaiTanic.Forms
             this.txtAddressLabel = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pnlBillingAddress1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.pnlBillingAddress2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.pnlBillingAddress3 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.pnlBillingAddress4 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblAddressLabel = new System.Windows.Forms.Label();
-            this.lblRegion = new System.Windows.Forms.Label();
-            this.lblCity = new System.Windows.Forms.Label();
-            this.lblPostalCode = new System.Windows.Forms.Label();
-            this.lblPhoneNumber = new System.Windows.Forms.Label();
-            this.lblProvince = new System.Windows.Forms.Label();
             this.lblBarangay = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
+            this.lblProvince = new System.Windows.Forms.Label();
+            this.lblPhoneNumber = new System.Windows.Forms.Label();
+            this.lblPostalCode = new System.Windows.Forms.Label();
+            this.lblCity = new System.Windows.Forms.Label();
+            this.lblRegion = new System.Windows.Forms.Label();
+            this.lblAddressLabel = new System.Windows.Forms.Label();
+            this.pnlBillingAddress2 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.lblBarangay2 = new System.Windows.Forms.Label();
+            this.lblProvince2 = new System.Windows.Forms.Label();
+            this.lblPhoneNumber2 = new System.Windows.Forms.Label();
+            this.lblPostalCode2 = new System.Windows.Forms.Label();
+            this.lblCity2 = new System.Windows.Forms.Label();
+            this.lblRegion2 = new System.Windows.Forms.Label();
+            this.lblAddressLabel2 = new System.Windows.Forms.Label();
+            this.pnlBillingAddress3 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.lblBarangay3 = new System.Windows.Forms.Label();
+            this.lblProvince3 = new System.Windows.Forms.Label();
+            this.lblPhoneNumber3 = new System.Windows.Forms.Label();
+            this.lblPostalCode3 = new System.Windows.Forms.Label();
+            this.lblCity3 = new System.Windows.Forms.Label();
+            this.lblRegion3 = new System.Windows.Forms.Label();
+            this.lblAddressLabel3 = new System.Windows.Forms.Label();
+            this.pnlBillingAddress4 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.lblBarangay4 = new System.Windows.Forms.Label();
+            this.lblProvince4 = new System.Windows.Forms.Label();
+            this.lblPhoneNumber4 = new System.Windows.Forms.Label();
+            this.lblPostalCode4 = new System.Windows.Forms.Label();
+            this.lblCity4 = new System.Windows.Forms.Label();
+            this.lblRegion4 = new System.Windows.Forms.Label();
+            this.lblAddressLabel4 = new System.Windows.Forms.Label();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1.SuspendLayout();
             this.pnlBillingAddress1.SuspendLayout();
             this.pnlBillingAddress2.SuspendLayout();
@@ -126,6 +126,7 @@ namespace ThaiTanic.Forms
             this.btnSave.Size = new System.Drawing.Size(78, 32);
             this.btnSave.TabIndex = 49;
             this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtPostalCode
             // 
@@ -411,147 +412,7 @@ namespace ThaiTanic.Forms
             this.pnlBillingAddress1.Name = "pnlBillingAddress1";
             this.pnlBillingAddress1.Size = new System.Drawing.Size(244, 217);
             this.pnlBillingAddress1.TabIndex = 1;
-            // 
-            // pnlBillingAddress2
-            // 
-            this.pnlBillingAddress2.BackColor = System.Drawing.Color.Transparent;
-            this.pnlBillingAddress2.BorderRadius = 10;
-            this.pnlBillingAddress2.Controls.Add(this.label1);
-            this.pnlBillingAddress2.Controls.Add(this.label2);
-            this.pnlBillingAddress2.Controls.Add(this.label4);
-            this.pnlBillingAddress2.Controls.Add(this.label10);
-            this.pnlBillingAddress2.Controls.Add(this.label12);
-            this.pnlBillingAddress2.Controls.Add(this.label13);
-            this.pnlBillingAddress2.Controls.Add(this.label14);
-            this.pnlBillingAddress2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(58)))), ((int)(((byte)(68)))));
-            this.pnlBillingAddress2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(40)))), ((int)(((byte)(73)))));
-            this.pnlBillingAddress2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.pnlBillingAddress2.Location = new System.Drawing.Point(276, 14);
-            this.pnlBillingAddress2.Name = "pnlBillingAddress2";
-            this.pnlBillingAddress2.Size = new System.Drawing.Size(244, 217);
-            this.pnlBillingAddress2.TabIndex = 2;
-            // 
-            // pnlBillingAddress3
-            // 
-            this.pnlBillingAddress3.BackColor = System.Drawing.Color.Transparent;
-            this.pnlBillingAddress3.BorderRadius = 10;
-            this.pnlBillingAddress3.Controls.Add(this.label15);
-            this.pnlBillingAddress3.Controls.Add(this.label16);
-            this.pnlBillingAddress3.Controls.Add(this.label17);
-            this.pnlBillingAddress3.Controls.Add(this.label18);
-            this.pnlBillingAddress3.Controls.Add(this.label19);
-            this.pnlBillingAddress3.Controls.Add(this.label20);
-            this.pnlBillingAddress3.Controls.Add(this.label21);
-            this.pnlBillingAddress3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(77)))), ((int)(((byte)(92)))));
-            this.pnlBillingAddress3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(40)))), ((int)(((byte)(73)))));
-            this.pnlBillingAddress3.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.pnlBillingAddress3.Location = new System.Drawing.Point(549, 14);
-            this.pnlBillingAddress3.Name = "pnlBillingAddress3";
-            this.pnlBillingAddress3.Size = new System.Drawing.Size(244, 217);
-            this.pnlBillingAddress3.TabIndex = 2;
-            // 
-            // pnlBillingAddress4
-            // 
-            this.pnlBillingAddress4.BackColor = System.Drawing.Color.Transparent;
-            this.pnlBillingAddress4.BorderRadius = 10;
-            this.pnlBillingAddress4.Controls.Add(this.label22);
-            this.pnlBillingAddress4.Controls.Add(this.label23);
-            this.pnlBillingAddress4.Controls.Add(this.label24);
-            this.pnlBillingAddress4.Controls.Add(this.label25);
-            this.pnlBillingAddress4.Controls.Add(this.label26);
-            this.pnlBillingAddress4.Controls.Add(this.label27);
-            this.pnlBillingAddress4.Controls.Add(this.label28);
-            this.pnlBillingAddress4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
-            this.pnlBillingAddress4.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(40)))), ((int)(((byte)(73)))));
-            this.pnlBillingAddress4.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.pnlBillingAddress4.Location = new System.Drawing.Point(822, 14);
-            this.pnlBillingAddress4.Name = "pnlBillingAddress4";
-            this.pnlBillingAddress4.Size = new System.Drawing.Size(251, 217);
-            this.pnlBillingAddress4.TabIndex = 2;
-            // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.Controls.Add(this.pnlBillingAddress1);
-            this.guna2Panel2.Controls.Add(this.pnlBillingAddress4);
-            this.guna2Panel2.Controls.Add(this.pnlBillingAddress2);
-            this.guna2Panel2.Controls.Add(this.pnlBillingAddress3);
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 377);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1074, 245);
-            this.guna2Panel2.TabIndex = 3;
-            // 
-            // lblAddressLabel
-            // 
-            this.lblAddressLabel.BackColor = System.Drawing.Color.Transparent;
-            this.lblAddressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddressLabel.ForeColor = System.Drawing.Color.White;
-            this.lblAddressLabel.Location = new System.Drawing.Point(-3, 11);
-            this.lblAddressLabel.Name = "lblAddressLabel";
-            this.lblAddressLabel.Size = new System.Drawing.Size(247, 20);
-            this.lblAddressLabel.TabIndex = 36;
-            this.lblAddressLabel.Text = "Address Label";
-            this.lblAddressLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblRegion
-            // 
-            this.lblRegion.AutoSize = true;
-            this.lblRegion.BackColor = System.Drawing.Color.Transparent;
-            this.lblRegion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegion.ForeColor = System.Drawing.Color.White;
-            this.lblRegion.Location = new System.Drawing.Point(25, 50);
-            this.lblRegion.Name = "lblRegion";
-            this.lblRegion.Size = new System.Drawing.Size(60, 20);
-            this.lblRegion.TabIndex = 50;
-            this.lblRegion.Text = "Region";
-            // 
-            // lblCity
-            // 
-            this.lblCity.AutoSize = true;
-            this.lblCity.BackColor = System.Drawing.Color.Transparent;
-            this.lblCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCity.ForeColor = System.Drawing.Color.White;
-            this.lblCity.Location = new System.Drawing.Point(25, 77);
-            this.lblCity.Name = "lblCity";
-            this.lblCity.Size = new System.Drawing.Size(35, 20);
-            this.lblCity.TabIndex = 51;
-            this.lblCity.Text = "City";
-            // 
-            // lblPostalCode
-            // 
-            this.lblPostalCode.AutoSize = true;
-            this.lblPostalCode.BackColor = System.Drawing.Color.Transparent;
-            this.lblPostalCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPostalCode.ForeColor = System.Drawing.Color.White;
-            this.lblPostalCode.Location = new System.Drawing.Point(25, 104);
-            this.lblPostalCode.Name = "lblPostalCode";
-            this.lblPostalCode.Size = new System.Drawing.Size(95, 20);
-            this.lblPostalCode.TabIndex = 52;
-            this.lblPostalCode.Text = "Postal Code";
-            // 
-            // lblPhoneNumber
-            // 
-            this.lblPhoneNumber.AutoSize = true;
-            this.lblPhoneNumber.BackColor = System.Drawing.Color.Transparent;
-            this.lblPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhoneNumber.ForeColor = System.Drawing.Color.White;
-            this.lblPhoneNumber.Location = new System.Drawing.Point(25, 131);
-            this.lblPhoneNumber.Name = "lblPhoneNumber";
-            this.lblPhoneNumber.Size = new System.Drawing.Size(115, 20);
-            this.lblPhoneNumber.TabIndex = 53;
-            this.lblPhoneNumber.Text = "Phone Number";
-            // 
-            // lblProvince
-            // 
-            this.lblProvince.AutoSize = true;
-            this.lblProvince.BackColor = System.Drawing.Color.Transparent;
-            this.lblProvince.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProvince.ForeColor = System.Drawing.Color.White;
-            this.lblProvince.Location = new System.Drawing.Point(25, 158);
-            this.lblProvince.Name = "lblProvince";
-            this.lblProvince.Size = new System.Drawing.Size(69, 20);
-            this.lblProvince.TabIndex = 54;
-            this.lblProvince.Text = "Province";
+            this.pnlBillingAddress1.Click += new System.EventHandler(this.pnlBillingAddress1_Click);
             // 
             // lblBarangay
             // 
@@ -565,257 +426,401 @@ namespace ThaiTanic.Forms
             this.lblBarangay.TabIndex = 55;
             this.lblBarangay.Text = "Barangay";
             // 
-            // label1
+            // lblProvince
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(27, 185);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 20);
-            this.label1.TabIndex = 62;
-            this.label1.Text = "Barangay";
+            this.lblProvince.AutoSize = true;
+            this.lblProvince.BackColor = System.Drawing.Color.Transparent;
+            this.lblProvince.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProvince.ForeColor = System.Drawing.Color.White;
+            this.lblProvince.Location = new System.Drawing.Point(25, 158);
+            this.lblProvince.Name = "lblProvince";
+            this.lblProvince.Size = new System.Drawing.Size(69, 20);
+            this.lblProvince.TabIndex = 54;
+            this.lblProvince.Text = "Province";
             // 
-            // label2
+            // lblPhoneNumber
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(27, 158);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 20);
-            this.label2.TabIndex = 61;
-            this.label2.Text = "Province";
+            this.lblPhoneNumber.AutoSize = true;
+            this.lblPhoneNumber.BackColor = System.Drawing.Color.Transparent;
+            this.lblPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhoneNumber.ForeColor = System.Drawing.Color.White;
+            this.lblPhoneNumber.Location = new System.Drawing.Point(25, 131);
+            this.lblPhoneNumber.Name = "lblPhoneNumber";
+            this.lblPhoneNumber.Size = new System.Drawing.Size(115, 20);
+            this.lblPhoneNumber.TabIndex = 53;
+            this.lblPhoneNumber.Text = "Phone Number";
             // 
-            // label4
+            // lblPostalCode
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(27, 131);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 20);
-            this.label4.TabIndex = 60;
-            this.label4.Text = "Phone Number";
+            this.lblPostalCode.AutoSize = true;
+            this.lblPostalCode.BackColor = System.Drawing.Color.Transparent;
+            this.lblPostalCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPostalCode.ForeColor = System.Drawing.Color.White;
+            this.lblPostalCode.Location = new System.Drawing.Point(25, 104);
+            this.lblPostalCode.Name = "lblPostalCode";
+            this.lblPostalCode.Size = new System.Drawing.Size(95, 20);
+            this.lblPostalCode.TabIndex = 52;
+            this.lblPostalCode.Text = "Postal Code";
             // 
-            // label10
+            // lblCity
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(27, 104);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(95, 20);
-            this.label10.TabIndex = 59;
-            this.label10.Text = "Postal Code";
+            this.lblCity.AutoSize = true;
+            this.lblCity.BackColor = System.Drawing.Color.Transparent;
+            this.lblCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCity.ForeColor = System.Drawing.Color.White;
+            this.lblCity.Location = new System.Drawing.Point(25, 77);
+            this.lblCity.Name = "lblCity";
+            this.lblCity.Size = new System.Drawing.Size(35, 20);
+            this.lblCity.TabIndex = 51;
+            this.lblCity.Text = "City";
             // 
-            // label12
+            // lblRegion
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(27, 77);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(35, 20);
-            this.label12.TabIndex = 58;
-            this.label12.Text = "City";
+            this.lblRegion.AutoSize = true;
+            this.lblRegion.BackColor = System.Drawing.Color.Transparent;
+            this.lblRegion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegion.ForeColor = System.Drawing.Color.White;
+            this.lblRegion.Location = new System.Drawing.Point(25, 50);
+            this.lblRegion.Name = "lblRegion";
+            this.lblRegion.Size = new System.Drawing.Size(60, 20);
+            this.lblRegion.TabIndex = 50;
+            this.lblRegion.Text = "Region";
             // 
-            // label13
+            // lblAddressLabel
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(27, 50);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(60, 20);
-            this.label13.TabIndex = 57;
-            this.label13.Text = "Region";
+            this.lblAddressLabel.BackColor = System.Drawing.Color.Transparent;
+            this.lblAddressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddressLabel.ForeColor = System.Drawing.Color.White;
+            this.lblAddressLabel.Location = new System.Drawing.Point(-3, 11);
+            this.lblAddressLabel.Name = "lblAddressLabel";
+            this.lblAddressLabel.Size = new System.Drawing.Size(247, 20);
+            this.lblAddressLabel.TabIndex = 36;
+            this.lblAddressLabel.Text = "Address Label";
+            this.lblAddressLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label14
+            // pnlBillingAddress2
             // 
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(-1, 11);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(247, 20);
-            this.label14.TabIndex = 56;
-            this.label14.Text = "Address Label";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pnlBillingAddress2.BackColor = System.Drawing.Color.Transparent;
+            this.pnlBillingAddress2.BorderRadius = 10;
+            this.pnlBillingAddress2.Controls.Add(this.lblBarangay2);
+            this.pnlBillingAddress2.Controls.Add(this.lblProvince2);
+            this.pnlBillingAddress2.Controls.Add(this.lblPhoneNumber2);
+            this.pnlBillingAddress2.Controls.Add(this.lblPostalCode2);
+            this.pnlBillingAddress2.Controls.Add(this.lblCity2);
+            this.pnlBillingAddress2.Controls.Add(this.lblRegion2);
+            this.pnlBillingAddress2.Controls.Add(this.lblAddressLabel2);
+            this.pnlBillingAddress2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(58)))), ((int)(((byte)(68)))));
+            this.pnlBillingAddress2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(40)))), ((int)(((byte)(73)))));
+            this.pnlBillingAddress2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.pnlBillingAddress2.Location = new System.Drawing.Point(276, 14);
+            this.pnlBillingAddress2.Name = "pnlBillingAddress2";
+            this.pnlBillingAddress2.Size = new System.Drawing.Size(244, 217);
+            this.pnlBillingAddress2.TabIndex = 2;
+            this.pnlBillingAddress2.Click += new System.EventHandler(this.pnlBillingAddress2_Click);
             // 
-            // label15
+            // lblBarangay2
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(27, 185);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(77, 20);
-            this.label15.TabIndex = 62;
-            this.label15.Text = "Barangay";
+            this.lblBarangay2.AutoSize = true;
+            this.lblBarangay2.BackColor = System.Drawing.Color.Transparent;
+            this.lblBarangay2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBarangay2.ForeColor = System.Drawing.Color.White;
+            this.lblBarangay2.Location = new System.Drawing.Point(27, 185);
+            this.lblBarangay2.Name = "lblBarangay2";
+            this.lblBarangay2.Size = new System.Drawing.Size(77, 20);
+            this.lblBarangay2.TabIndex = 62;
+            this.lblBarangay2.Text = "Barangay";
             // 
-            // label16
+            // lblProvince2
             // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(27, 158);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(69, 20);
-            this.label16.TabIndex = 61;
-            this.label16.Text = "Province";
+            this.lblProvince2.AutoSize = true;
+            this.lblProvince2.BackColor = System.Drawing.Color.Transparent;
+            this.lblProvince2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProvince2.ForeColor = System.Drawing.Color.White;
+            this.lblProvince2.Location = new System.Drawing.Point(27, 158);
+            this.lblProvince2.Name = "lblProvince2";
+            this.lblProvince2.Size = new System.Drawing.Size(69, 20);
+            this.lblProvince2.TabIndex = 61;
+            this.lblProvince2.Text = "Province";
             // 
-            // label17
+            // lblPhoneNumber2
             // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(27, 131);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(115, 20);
-            this.label17.TabIndex = 60;
-            this.label17.Text = "Phone Number";
+            this.lblPhoneNumber2.AutoSize = true;
+            this.lblPhoneNumber2.BackColor = System.Drawing.Color.Transparent;
+            this.lblPhoneNumber2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhoneNumber2.ForeColor = System.Drawing.Color.White;
+            this.lblPhoneNumber2.Location = new System.Drawing.Point(27, 131);
+            this.lblPhoneNumber2.Name = "lblPhoneNumber2";
+            this.lblPhoneNumber2.Size = new System.Drawing.Size(115, 20);
+            this.lblPhoneNumber2.TabIndex = 60;
+            this.lblPhoneNumber2.Text = "Phone Number";
             // 
-            // label18
+            // lblPostalCode2
             // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(27, 104);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(95, 20);
-            this.label18.TabIndex = 59;
-            this.label18.Text = "Postal Code";
+            this.lblPostalCode2.AutoSize = true;
+            this.lblPostalCode2.BackColor = System.Drawing.Color.Transparent;
+            this.lblPostalCode2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPostalCode2.ForeColor = System.Drawing.Color.White;
+            this.lblPostalCode2.Location = new System.Drawing.Point(27, 104);
+            this.lblPostalCode2.Name = "lblPostalCode2";
+            this.lblPostalCode2.Size = new System.Drawing.Size(95, 20);
+            this.lblPostalCode2.TabIndex = 59;
+            this.lblPostalCode2.Text = "Postal Code";
             // 
-            // label19
+            // lblCity2
             // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(27, 77);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(35, 20);
-            this.label19.TabIndex = 58;
-            this.label19.Text = "City";
+            this.lblCity2.AutoSize = true;
+            this.lblCity2.BackColor = System.Drawing.Color.Transparent;
+            this.lblCity2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCity2.ForeColor = System.Drawing.Color.White;
+            this.lblCity2.Location = new System.Drawing.Point(27, 77);
+            this.lblCity2.Name = "lblCity2";
+            this.lblCity2.Size = new System.Drawing.Size(35, 20);
+            this.lblCity2.TabIndex = 58;
+            this.lblCity2.Text = "City";
             // 
-            // label20
+            // lblRegion2
             // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(27, 50);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(60, 20);
-            this.label20.TabIndex = 57;
-            this.label20.Text = "Region";
+            this.lblRegion2.AutoSize = true;
+            this.lblRegion2.BackColor = System.Drawing.Color.Transparent;
+            this.lblRegion2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegion2.ForeColor = System.Drawing.Color.White;
+            this.lblRegion2.Location = new System.Drawing.Point(27, 50);
+            this.lblRegion2.Name = "lblRegion2";
+            this.lblRegion2.Size = new System.Drawing.Size(60, 20);
+            this.lblRegion2.TabIndex = 57;
+            this.lblRegion2.Text = "Region";
             // 
-            // label21
+            // lblAddressLabel2
             // 
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(-1, 11);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(247, 20);
-            this.label21.TabIndex = 56;
-            this.label21.Text = "Address Label";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblAddressLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.lblAddressLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddressLabel2.ForeColor = System.Drawing.Color.White;
+            this.lblAddressLabel2.Location = new System.Drawing.Point(-1, 11);
+            this.lblAddressLabel2.Name = "lblAddressLabel2";
+            this.lblAddressLabel2.Size = new System.Drawing.Size(247, 20);
+            this.lblAddressLabel2.TabIndex = 56;
+            this.lblAddressLabel2.Text = "Address Label";
+            this.lblAddressLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label22
+            // pnlBillingAddress3
             // 
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.Transparent;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.White;
-            this.label22.Location = new System.Drawing.Point(30, 185);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(77, 20);
-            this.label22.TabIndex = 62;
-            this.label22.Text = "Barangay";
+            this.pnlBillingAddress3.BackColor = System.Drawing.Color.Transparent;
+            this.pnlBillingAddress3.BorderRadius = 10;
+            this.pnlBillingAddress3.Controls.Add(this.lblBarangay3);
+            this.pnlBillingAddress3.Controls.Add(this.lblProvince3);
+            this.pnlBillingAddress3.Controls.Add(this.lblPhoneNumber3);
+            this.pnlBillingAddress3.Controls.Add(this.lblPostalCode3);
+            this.pnlBillingAddress3.Controls.Add(this.lblCity3);
+            this.pnlBillingAddress3.Controls.Add(this.lblRegion3);
+            this.pnlBillingAddress3.Controls.Add(this.lblAddressLabel3);
+            this.pnlBillingAddress3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(77)))), ((int)(((byte)(92)))));
+            this.pnlBillingAddress3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(40)))), ((int)(((byte)(73)))));
+            this.pnlBillingAddress3.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.pnlBillingAddress3.Location = new System.Drawing.Point(549, 14);
+            this.pnlBillingAddress3.Name = "pnlBillingAddress3";
+            this.pnlBillingAddress3.Size = new System.Drawing.Size(244, 217);
+            this.pnlBillingAddress3.TabIndex = 2;
+            this.pnlBillingAddress3.Click += new System.EventHandler(this.pnlBillingAddress3_Click);
             // 
-            // label23
+            // lblBarangay3
             // 
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.White;
-            this.label23.Location = new System.Drawing.Point(30, 158);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(69, 20);
-            this.label23.TabIndex = 61;
-            this.label23.Text = "Province";
+            this.lblBarangay3.AutoSize = true;
+            this.lblBarangay3.BackColor = System.Drawing.Color.Transparent;
+            this.lblBarangay3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBarangay3.ForeColor = System.Drawing.Color.White;
+            this.lblBarangay3.Location = new System.Drawing.Point(27, 185);
+            this.lblBarangay3.Name = "lblBarangay3";
+            this.lblBarangay3.Size = new System.Drawing.Size(77, 20);
+            this.lblBarangay3.TabIndex = 62;
+            this.lblBarangay3.Text = "Barangay";
             // 
-            // label24
+            // lblProvince3
             // 
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.Transparent;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.White;
-            this.label24.Location = new System.Drawing.Point(30, 131);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(115, 20);
-            this.label24.TabIndex = 60;
-            this.label24.Text = "Phone Number";
+            this.lblProvince3.AutoSize = true;
+            this.lblProvince3.BackColor = System.Drawing.Color.Transparent;
+            this.lblProvince3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProvince3.ForeColor = System.Drawing.Color.White;
+            this.lblProvince3.Location = new System.Drawing.Point(27, 158);
+            this.lblProvince3.Name = "lblProvince3";
+            this.lblProvince3.Size = new System.Drawing.Size(69, 20);
+            this.lblProvince3.TabIndex = 61;
+            this.lblProvince3.Text = "Province";
             // 
-            // label25
+            // lblPhoneNumber3
             // 
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.White;
-            this.label25.Location = new System.Drawing.Point(30, 104);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(95, 20);
-            this.label25.TabIndex = 59;
-            this.label25.Text = "Postal Code";
+            this.lblPhoneNumber3.AutoSize = true;
+            this.lblPhoneNumber3.BackColor = System.Drawing.Color.Transparent;
+            this.lblPhoneNumber3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhoneNumber3.ForeColor = System.Drawing.Color.White;
+            this.lblPhoneNumber3.Location = new System.Drawing.Point(27, 131);
+            this.lblPhoneNumber3.Name = "lblPhoneNumber3";
+            this.lblPhoneNumber3.Size = new System.Drawing.Size(115, 20);
+            this.lblPhoneNumber3.TabIndex = 60;
+            this.lblPhoneNumber3.Text = "Phone Number";
             // 
-            // label26
+            // lblPostalCode3
             // 
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.Color.Transparent;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.Color.White;
-            this.label26.Location = new System.Drawing.Point(30, 77);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(35, 20);
-            this.label26.TabIndex = 58;
-            this.label26.Text = "City";
+            this.lblPostalCode3.AutoSize = true;
+            this.lblPostalCode3.BackColor = System.Drawing.Color.Transparent;
+            this.lblPostalCode3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPostalCode3.ForeColor = System.Drawing.Color.White;
+            this.lblPostalCode3.Location = new System.Drawing.Point(27, 104);
+            this.lblPostalCode3.Name = "lblPostalCode3";
+            this.lblPostalCode3.Size = new System.Drawing.Size(95, 20);
+            this.lblPostalCode3.TabIndex = 59;
+            this.lblPostalCode3.Text = "Postal Code";
             // 
-            // label27
+            // lblCity3
             // 
-            this.label27.AutoSize = true;
-            this.label27.BackColor = System.Drawing.Color.Transparent;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.Color.White;
-            this.label27.Location = new System.Drawing.Point(30, 50);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(60, 20);
-            this.label27.TabIndex = 57;
-            this.label27.Text = "Region";
+            this.lblCity3.AutoSize = true;
+            this.lblCity3.BackColor = System.Drawing.Color.Transparent;
+            this.lblCity3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCity3.ForeColor = System.Drawing.Color.White;
+            this.lblCity3.Location = new System.Drawing.Point(27, 77);
+            this.lblCity3.Name = "lblCity3";
+            this.lblCity3.Size = new System.Drawing.Size(35, 20);
+            this.lblCity3.TabIndex = 58;
+            this.lblCity3.Text = "City";
             // 
-            // label28
+            // lblRegion3
             // 
-            this.label28.BackColor = System.Drawing.Color.Transparent;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.Color.White;
-            this.label28.Location = new System.Drawing.Point(2, 11);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(247, 20);
-            this.label28.TabIndex = 56;
-            this.label28.Text = "Address Label";
-            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblRegion3.AutoSize = true;
+            this.lblRegion3.BackColor = System.Drawing.Color.Transparent;
+            this.lblRegion3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegion3.ForeColor = System.Drawing.Color.White;
+            this.lblRegion3.Location = new System.Drawing.Point(27, 50);
+            this.lblRegion3.Name = "lblRegion3";
+            this.lblRegion3.Size = new System.Drawing.Size(60, 20);
+            this.lblRegion3.TabIndex = 57;
+            this.lblRegion3.Text = "Region";
+            // 
+            // lblAddressLabel3
+            // 
+            this.lblAddressLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.lblAddressLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddressLabel3.ForeColor = System.Drawing.Color.White;
+            this.lblAddressLabel3.Location = new System.Drawing.Point(-1, 11);
+            this.lblAddressLabel3.Name = "lblAddressLabel3";
+            this.lblAddressLabel3.Size = new System.Drawing.Size(247, 20);
+            this.lblAddressLabel3.TabIndex = 56;
+            this.lblAddressLabel3.Text = "Address Label";
+            this.lblAddressLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pnlBillingAddress4
+            // 
+            this.pnlBillingAddress4.BackColor = System.Drawing.Color.Transparent;
+            this.pnlBillingAddress4.BorderRadius = 10;
+            this.pnlBillingAddress4.Controls.Add(this.lblBarangay4);
+            this.pnlBillingAddress4.Controls.Add(this.lblProvince4);
+            this.pnlBillingAddress4.Controls.Add(this.lblPhoneNumber4);
+            this.pnlBillingAddress4.Controls.Add(this.lblPostalCode4);
+            this.pnlBillingAddress4.Controls.Add(this.lblCity4);
+            this.pnlBillingAddress4.Controls.Add(this.lblRegion4);
+            this.pnlBillingAddress4.Controls.Add(this.lblAddressLabel4);
+            this.pnlBillingAddress4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(85)))), ((int)(((byte)(76)))));
+            this.pnlBillingAddress4.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(40)))), ((int)(((byte)(73)))));
+            this.pnlBillingAddress4.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.pnlBillingAddress4.Location = new System.Drawing.Point(822, 14);
+            this.pnlBillingAddress4.Name = "pnlBillingAddress4";
+            this.pnlBillingAddress4.Size = new System.Drawing.Size(251, 217);
+            this.pnlBillingAddress4.TabIndex = 2;
+            this.pnlBillingAddress4.Click += new System.EventHandler(this.pnlBillingAddress4_Click);
+            // 
+            // lblBarangay4
+            // 
+            this.lblBarangay4.AutoSize = true;
+            this.lblBarangay4.BackColor = System.Drawing.Color.Transparent;
+            this.lblBarangay4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBarangay4.ForeColor = System.Drawing.Color.White;
+            this.lblBarangay4.Location = new System.Drawing.Point(30, 185);
+            this.lblBarangay4.Name = "lblBarangay4";
+            this.lblBarangay4.Size = new System.Drawing.Size(77, 20);
+            this.lblBarangay4.TabIndex = 62;
+            this.lblBarangay4.Text = "Barangay";
+            // 
+            // lblProvince4
+            // 
+            this.lblProvince4.AutoSize = true;
+            this.lblProvince4.BackColor = System.Drawing.Color.Transparent;
+            this.lblProvince4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProvince4.ForeColor = System.Drawing.Color.White;
+            this.lblProvince4.Location = new System.Drawing.Point(30, 158);
+            this.lblProvince4.Name = "lblProvince4";
+            this.lblProvince4.Size = new System.Drawing.Size(69, 20);
+            this.lblProvince4.TabIndex = 61;
+            this.lblProvince4.Text = "Province";
+            // 
+            // lblPhoneNumber4
+            // 
+            this.lblPhoneNumber4.AutoSize = true;
+            this.lblPhoneNumber4.BackColor = System.Drawing.Color.Transparent;
+            this.lblPhoneNumber4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhoneNumber4.ForeColor = System.Drawing.Color.White;
+            this.lblPhoneNumber4.Location = new System.Drawing.Point(30, 131);
+            this.lblPhoneNumber4.Name = "lblPhoneNumber4";
+            this.lblPhoneNumber4.Size = new System.Drawing.Size(115, 20);
+            this.lblPhoneNumber4.TabIndex = 60;
+            this.lblPhoneNumber4.Text = "Phone Number";
+            // 
+            // lblPostalCode4
+            // 
+            this.lblPostalCode4.AutoSize = true;
+            this.lblPostalCode4.BackColor = System.Drawing.Color.Transparent;
+            this.lblPostalCode4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPostalCode4.ForeColor = System.Drawing.Color.White;
+            this.lblPostalCode4.Location = new System.Drawing.Point(30, 104);
+            this.lblPostalCode4.Name = "lblPostalCode4";
+            this.lblPostalCode4.Size = new System.Drawing.Size(95, 20);
+            this.lblPostalCode4.TabIndex = 59;
+            this.lblPostalCode4.Text = "Postal Code";
+            // 
+            // lblCity4
+            // 
+            this.lblCity4.AutoSize = true;
+            this.lblCity4.BackColor = System.Drawing.Color.Transparent;
+            this.lblCity4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCity4.ForeColor = System.Drawing.Color.White;
+            this.lblCity4.Location = new System.Drawing.Point(30, 77);
+            this.lblCity4.Name = "lblCity4";
+            this.lblCity4.Size = new System.Drawing.Size(35, 20);
+            this.lblCity4.TabIndex = 58;
+            this.lblCity4.Text = "City";
+            // 
+            // lblRegion4
+            // 
+            this.lblRegion4.AutoSize = true;
+            this.lblRegion4.BackColor = System.Drawing.Color.Transparent;
+            this.lblRegion4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegion4.ForeColor = System.Drawing.Color.White;
+            this.lblRegion4.Location = new System.Drawing.Point(30, 50);
+            this.lblRegion4.Name = "lblRegion4";
+            this.lblRegion4.Size = new System.Drawing.Size(60, 20);
+            this.lblRegion4.TabIndex = 57;
+            this.lblRegion4.Text = "Region";
+            // 
+            // lblAddressLabel4
+            // 
+            this.lblAddressLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.lblAddressLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddressLabel4.ForeColor = System.Drawing.Color.White;
+            this.lblAddressLabel4.Location = new System.Drawing.Point(2, 11);
+            this.lblAddressLabel4.Name = "lblAddressLabel4";
+            this.lblAddressLabel4.Size = new System.Drawing.Size(247, 20);
+            this.lblAddressLabel4.TabIndex = 56;
+            this.lblAddressLabel4.Text = "Address Label";
+            this.lblAddressLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.Controls.Add(this.pnlBillingAddress1);
+            this.guna2Panel2.Controls.Add(this.pnlBillingAddress4);
+            this.guna2Panel2.Controls.Add(this.pnlBillingAddress2);
+            this.guna2Panel2.Controls.Add(this.pnlBillingAddress3);
+            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 377);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(1074, 245);
+            this.guna2Panel2.TabIndex = 3;
             // 
             // frmAccountBillingAddress
             // 
@@ -828,6 +833,7 @@ namespace ThaiTanic.Forms
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAccountBillingAddress";
             this.Text = "frmAccountBillingAddress";
+            this.Load += new System.EventHandler(this.frmAccountBillingAddress_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.pnlBillingAddress1.ResumeLayout(false);
@@ -873,26 +879,26 @@ namespace ThaiTanic.Forms
         private System.Windows.Forms.Label lblCity;
         private System.Windows.Forms.Label lblRegion;
         private System.Windows.Forms.Label lblAddressLabel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label lblBarangay2;
+        private System.Windows.Forms.Label lblProvince2;
+        private System.Windows.Forms.Label lblPhoneNumber2;
+        private System.Windows.Forms.Label lblPostalCode2;
+        private System.Windows.Forms.Label lblCity2;
+        private System.Windows.Forms.Label lblRegion2;
+        private System.Windows.Forms.Label lblAddressLabel2;
+        private System.Windows.Forms.Label lblBarangay3;
+        private System.Windows.Forms.Label lblProvince3;
+        private System.Windows.Forms.Label lblPhoneNumber3;
+        private System.Windows.Forms.Label lblPostalCode3;
+        private System.Windows.Forms.Label lblCity3;
+        private System.Windows.Forms.Label lblRegion3;
+        private System.Windows.Forms.Label lblAddressLabel3;
+        private System.Windows.Forms.Label lblBarangay4;
+        private System.Windows.Forms.Label lblProvince4;
+        private System.Windows.Forms.Label lblPhoneNumber4;
+        private System.Windows.Forms.Label lblPostalCode4;
+        private System.Windows.Forms.Label lblCity4;
+        private System.Windows.Forms.Label lblRegion4;
+        private System.Windows.Forms.Label lblAddressLabel4;
     }
 }
