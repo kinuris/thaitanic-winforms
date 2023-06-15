@@ -83,7 +83,7 @@ namespace ThaiTanic.Entities
                 cmd.Parameters.AddWithValue("@name", name);
                 cmd.Parameters.AddWithValue("@description", description);
                 cmd.Parameters.AddWithValue("@price", price);
-                cmd.Parameters.AddWithValue("@category", category.AsString());
+                cmd.Parameters.AddWithValue("@category", category.DBString());
                 cmd.Parameters.AddWithValue("@available", available);
                 cmd.Parameters.AddWithValue("@id", Id);
 
