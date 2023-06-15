@@ -72,7 +72,7 @@ namespace ThaiTanic.Forms
                 if (category == ItemCategory.Invalid)
                     continue;
 
-                ucCategoryCard categoryCard = new ucCategoryCard(category.AsString(), Items.GetAllItems().Where(e => e.Category == category).Where(entry => entry.Available).Count(), SetCurrentCategory)
+                ucCategoryCard categoryCard = new ucCategoryCard(category.DBString(), Items.GetAllItems().Where(e => e.Category == category).Where(entry => entry.Available).Count(), SetCurrentCategory)
                 {
                     BgColor = colors[iteration++]
                 };

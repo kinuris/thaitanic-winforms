@@ -21,7 +21,7 @@ namespace ThaiTanic.Entities
 
     public static class ItemCategoryMethods
     {
-        public static string AsString(this ItemCategory category)
+        public static string DBString(this ItemCategory category)
         {
             switch (category)
             {
