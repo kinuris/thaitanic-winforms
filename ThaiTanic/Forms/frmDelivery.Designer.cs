@@ -245,7 +245,7 @@ namespace ThaiTanic.Forms
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(139)))), ((int)(((byte)(139)))));
-            this.txtSearch.PlaceholderText = "Look for your Orders here by searching the Order ID or Product name. Charles Gay";
+            this.txtSearch.PlaceholderText = "Look for your Orders here by searching the Order ID or Product name";
             this.txtSearch.SelectedText = "";
             this.txtSearch.Size = new System.Drawing.Size(1072, 42);
             this.txtSearch.TabIndex = 0;
@@ -530,9 +530,9 @@ namespace ThaiTanic.Forms
             this.lblCustomerName.ForeColor = System.Drawing.Color.White;
             this.lblCustomerName.Location = new System.Drawing.Point(63, 60);
             this.lblCustomerName.Name = "lblCustomerName";
-            this.lblCustomerName.Size = new System.Drawing.Size(138, 18);
+            this.lblCustomerName.Size = new System.Drawing.Size(111, 18);
             this.lblCustomerName.TabIndex = 3;
-            this.lblCustomerName.Text = "Charles Gay Cayetano";
+            this.lblCustomerName.Text = "Charles Gayetano";
             // 
             // guna2Shapes1
             // 

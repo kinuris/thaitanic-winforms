@@ -52,6 +52,7 @@ namespace ThaiTanic.Forms.admin
 
             var selectedUser = (User)cbUsers.SelectedItem;
             _SelectedUser = selectedUser;
+            _OrdersPage = 1;
 
             UpdateOrderItems();
         }
