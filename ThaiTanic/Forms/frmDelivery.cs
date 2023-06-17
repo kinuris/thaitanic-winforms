@@ -52,6 +52,11 @@ namespace ThaiTanic.Forms
 
             pnlOrderedBatch.Controls.Clear();
 
+            lblCustomerName.Text = _User.FullName;
+            lblEmail.Text = _User.Email;
+            lblPhoneNumber.Text = "(Selected Order Contact No.)";
+            lblPaymentMethod.Text = "Cash On Delivery";
+
             lblOrderNumber.Text = "(Select An Order)"; 
             lblSubtotal.Text = "";
             lblVat.Text = "";
@@ -85,6 +90,12 @@ namespace ThaiTanic.Forms
             var selectedOrder = _Orders.Find(order => order.Id == _SelectedId);
 
             lblOrderNumber.Text = selectedOrder.Id.ToString();
+
+            var associatedAddress = selectedOrder.AssociatedAddress;
+
+            lblCity.Text = associatedAddress.City;
+            lblPhoneNumber.Text = associatedAddress.PhoneNumber;
+            lblPostalCodeBrgyProvince.Text = $"{associatedAddress.PostalCode} Brgy. {associatedAddress.Barangay}, {associatedAddress.City}, {associatedAddress.Province}";
 
             pnlOrderedBatch.Controls.Clear();
 
