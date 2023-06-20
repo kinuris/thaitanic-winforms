@@ -27,7 +27,7 @@ namespace ThaiTanic.Forms.admin
             string[] itemsCategory = Enum.GetValues(typeof(ItemCategory))
                 .Cast<ItemCategory>()
                 .Where(cat => cat != ItemCategory.Invalid)
-                .Select(cat => cat.AsString())
+                .Select(cat => cat.DBString())
                 .ToArray();
 
             cbItemCategory.Items.AddRange(itemsCategory);

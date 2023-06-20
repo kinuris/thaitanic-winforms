@@ -29,16 +29,18 @@ namespace ThaiTanic.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.pnlContainerCart = new Guna.UI2.WinForms.Guna2Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cmbBillingAddresses = new Guna.UI2.WinForms.Guna2ComboBox();
             this.lblCartPageIndicator = new System.Windows.Forms.Label();
             this.btnForwardCart = new Guna.UI2.WinForms.Guna2Button();
             this.btnBackCart = new Guna.UI2.WinForms.Guna2Button();
@@ -70,8 +72,6 @@ namespace ThaiTanic.Forms
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnlContainerCategories = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlContainerItems = new System.Windows.Forms.FlowLayoutPanel();
-            this.cmbBillingAddresses = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.pnlContainerCart.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).BeginInit();
@@ -108,12 +108,40 @@ namespace ThaiTanic.Forms
             this.pnlContainerCart.Size = new System.Drawing.Size(325, 758);
             this.pnlContainerCart.TabIndex = 2;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(8, 580);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(121, 17);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Billing Address:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // cmbBillingAddresses
+            // 
+            this.cmbBillingAddresses.BackColor = System.Drawing.Color.Transparent;
+            this.cmbBillingAddresses.BorderRadius = 5;
+            this.cmbBillingAddresses.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbBillingAddresses.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBillingAddresses.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbBillingAddresses.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbBillingAddresses.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbBillingAddresses.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbBillingAddresses.ItemHeight = 30;
+            this.cmbBillingAddresses.Location = new System.Drawing.Point(11, 602);
+            this.cmbBillingAddresses.Name = "cmbBillingAddresses";
+            this.cmbBillingAddresses.Size = new System.Drawing.Size(167, 36);
+            this.cmbBillingAddresses.TabIndex = 17;
+            // 
             // lblCartPageIndicator
             // 
             this.lblCartPageIndicator.AutoSize = true;
             this.lblCartPageIndicator.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCartPageIndicator.ForeColor = System.Drawing.Color.White;
-            this.lblCartPageIndicator.Location = new System.Drawing.Point(67, 352);
+            this.lblCartPageIndicator.Location = new System.Drawing.Point(41, 354);
             this.lblCartPageIndicator.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCartPageIndicator.Name = "lblCartPageIndicator";
             this.lblCartPageIndicator.Size = new System.Drawing.Size(45, 24);
@@ -128,11 +156,12 @@ namespace ThaiTanic.Forms
             this.btnForwardCart.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnForwardCart.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnForwardCart.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnForwardCart.FillColor = System.Drawing.Color.DimGray;
             this.btnForwardCart.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.btnForwardCart.ForeColor = System.Drawing.Color.White;
             this.btnForwardCart.Image = global::ThaiTanic.Properties.Resources.btn_forward;
-            this.btnForwardCart.Location = new System.Drawing.Point(140, 352);
-            this.btnForwardCart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnForwardCart.Location = new System.Drawing.Point(91, 352);
+            this.btnForwardCart.Margin = new System.Windows.Forms.Padding(2);
             this.btnForwardCart.Name = "btnForwardCart";
             this.btnForwardCart.Size = new System.Drawing.Size(27, 28);
             this.btnForwardCart.TabIndex = 15;
@@ -145,11 +174,12 @@ namespace ThaiTanic.Forms
             this.btnBackCart.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnBackCart.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnBackCart.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBackCart.FillColor = System.Drawing.Color.DimGray;
             this.btnBackCart.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(1)), true);
             this.btnBackCart.ForeColor = System.Drawing.Color.White;
             this.btnBackCart.Image = global::ThaiTanic.Properties.Resources.btn_back;
             this.btnBackCart.Location = new System.Drawing.Point(8, 352);
-            this.btnBackCart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBackCart.Margin = new System.Windows.Forms.Padding(2);
             this.btnBackCart.Name = "btnBackCart";
             this.btnBackCart.Size = new System.Drawing.Size(27, 28);
             this.btnBackCart.TabIndex = 13;
@@ -305,20 +335,20 @@ namespace ThaiTanic.Forms
             this.dgvCart.AllowUserToDeleteRows = false;
             this.dgvCart.AllowUserToResizeColumns = false;
             this.dgvCart.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvCart.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvCart.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvCart.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCart.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCart.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvCart.ColumnHeadersHeight = 35;
             this.dgvCart.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -326,28 +356,28 @@ namespace ThaiTanic.Forms
             this.clmQuantity,
             this.clmCost,
             this.clmRemove});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCart.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCart.DefaultCellStyle = dataGridViewCellStyle15;
             this.dgvCart.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(77)))));
             this.dgvCart.Location = new System.Drawing.Point(10, 62);
             this.dgvCart.MultiSelect = false;
             this.dgvCart.Name = "dgvCart";
             this.dgvCart.ReadOnly = true;
             this.dgvCart.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCart.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCart.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvCart.RowHeadersVisible = false;
             this.dgvCart.RowHeadersWidth = 82;
             this.dgvCart.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
@@ -390,9 +420,9 @@ namespace ThaiTanic.Forms
             // 
             // clmItem
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clmItem.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clmItem.DefaultCellStyle = dataGridViewCellStyle11;
             this.clmItem.FillWeight = 179.8761F;
             this.clmItem.HeaderText = "ITEM";
             this.clmItem.MinimumWidth = 10;
@@ -401,8 +431,8 @@ namespace ThaiTanic.Forms
             // 
             // clmQuantity
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.clmQuantity.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.clmQuantity.DefaultCellStyle = dataGridViewCellStyle12;
             this.clmQuantity.FillWeight = 64.37671F;
             this.clmQuantity.HeaderText = "QTY";
             this.clmQuantity.MinimumWidth = 10;
@@ -411,10 +441,10 @@ namespace ThaiTanic.Forms
             // 
             // clmCost
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.Format = "₱ #,###.00";
-            dataGridViewCellStyle5.NullValue = null;
-            this.clmCost.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.Format = "₱ #,###.00";
+            dataGridViewCellStyle13.NullValue = null;
+            this.clmCost.DefaultCellStyle = dataGridViewCellStyle13;
             this.clmCost.FillWeight = 91.37057F;
             this.clmCost.HeaderText = "COST";
             this.clmCost.MinimumWidth = 10;
@@ -423,9 +453,9 @@ namespace ThaiTanic.Forms
             // 
             // clmRemove
             // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clmRemove.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clmRemove.DefaultCellStyle = dataGridViewCellStyle14;
             this.clmRemove.FillWeight = 64.37671F;
             this.clmRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clmRemove.HeaderText = "";
@@ -580,34 +610,6 @@ namespace ThaiTanic.Forms
             this.pnlContainerItems.Padding = new System.Windows.Forms.Padding(20, 5, 0, 0);
             this.pnlContainerItems.Size = new System.Drawing.Size(955, 420);
             this.pnlContainerItems.TabIndex = 5;
-            // 
-            // cmbBillingAddresses
-            // 
-            this.cmbBillingAddresses.BackColor = System.Drawing.Color.Transparent;
-            this.cmbBillingAddresses.BorderRadius = 5;
-            this.cmbBillingAddresses.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbBillingAddresses.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbBillingAddresses.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbBillingAddresses.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbBillingAddresses.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmbBillingAddresses.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbBillingAddresses.ItemHeight = 30;
-            this.cmbBillingAddresses.Location = new System.Drawing.Point(11, 602);
-            this.cmbBillingAddresses.Name = "cmbBillingAddresses";
-            this.cmbBillingAddresses.Size = new System.Drawing.Size(167, 36);
-            this.cmbBillingAddresses.TabIndex = 17;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(8, 580);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(121, 17);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "Billing Address:";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // frmMenu
             // 

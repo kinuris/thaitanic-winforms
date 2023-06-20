@@ -34,6 +34,29 @@ namespace ThaiTanic.Entities
             }
         }
 
+        public void UpdateRole(UserRole role, string username, string password)
+        {
+            var user = AuthUser(username, password);
+
+            if (user == null || user.Role != UserRole.Admin)
+            {
+                // TODO: 
+                return;
+            }
+
+            string sql = "UPDATE user SET role_enum = @role WHERE id = @id";
+
+            using (MySqlConnection conn = new MySqlConnection(Connection.ConnectionString))
+            using (MySqlCommand cmd = new MySqlCommand(sql, conn))
+            {
+                conn.Open();
+                cmd.Parameters.AddWithValue("@role", role.ToString());
+                cmd.Parameters.AddWithValue("@id", Id);
+
+                cmd.ExecuteNonQuery();
+            }
+        }
+
         public static User GetUserById(int id)
         {
             string sql = @"SELECT id, username, first_name, last_name, middle_name, phone_number, birthday, email, role_enum, created_at, updated_at 

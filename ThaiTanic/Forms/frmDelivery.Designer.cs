@@ -54,11 +54,10 @@ namespace ThaiTanic.Forms
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.lblCreditCardNumber = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblPostalCodeBrgyProvince = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblCity = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblCountry = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblCreditCard = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblPaymentMethod = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblPhoneNumber = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblEmail = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblCustomerName = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -246,7 +245,7 @@ namespace ThaiTanic.Forms
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(139)))), ((int)(((byte)(139)))));
-            this.txtSearch.PlaceholderText = "Look for your Orders here by searching the Order ID or Product name. Charles Gay";
+            this.txtSearch.PlaceholderText = "Look for your Orders here by searching the Order ID or Product name";
             this.txtSearch.SelectedText = "";
             this.txtSearch.Size = new System.Drawing.Size(1072, 42);
             this.txtSearch.TabIndex = 0;
@@ -280,7 +279,7 @@ namespace ThaiTanic.Forms
             this.lblItemPageIndicator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
             this.lblItemPageIndicator.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblItemPageIndicator.ForeColor = System.Drawing.Color.White;
-            this.lblItemPageIndicator.Location = new System.Drawing.Point(59, 320);
+            this.lblItemPageIndicator.Location = new System.Drawing.Point(44, 320);
             this.lblItemPageIndicator.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblItemPageIndicator.Name = "lblItemPageIndicator";
             this.lblItemPageIndicator.Size = new System.Drawing.Size(45, 24);
@@ -294,11 +293,12 @@ namespace ThaiTanic.Forms
             this.btnItemsPageForward.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnItemsPageForward.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnItemsPageForward.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnItemsPageForward.FillColor = System.Drawing.Color.Gray;
             this.btnItemsPageForward.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnItemsPageForward.ForeColor = System.Drawing.Color.White;
             this.btnItemsPageForward.Image = global::ThaiTanic.Properties.Resources.btn_forward;
             this.btnItemsPageForward.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnItemsPageForward.Location = new System.Drawing.Point(121, 318);
+            this.btnItemsPageForward.Location = new System.Drawing.Point(93, 318);
             this.btnItemsPageForward.Name = "btnItemsPageForward";
             this.btnItemsPageForward.Size = new System.Drawing.Size(26, 26);
             this.btnItemsPageForward.TabIndex = 4;
@@ -311,6 +311,7 @@ namespace ThaiTanic.Forms
             this.btnItemsPageBackward.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnItemsPageBackward.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnItemsPageBackward.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnItemsPageBackward.FillColor = System.Drawing.Color.Gray;
             this.btnItemsPageBackward.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnItemsPageBackward.ForeColor = System.Drawing.Color.White;
             this.btnItemsPageBackward.Image = global::ThaiTanic.Properties.Resources.btn_back;
@@ -397,11 +398,10 @@ namespace ThaiTanic.Forms
             this.pnlCustomerDetails.Controls.Add(this.guna2PictureBox3);
             this.pnlCustomerDetails.Controls.Add(this.guna2PictureBox2);
             this.pnlCustomerDetails.Controls.Add(this.guna2PictureBox1);
-            this.pnlCustomerDetails.Controls.Add(this.lblCreditCardNumber);
             this.pnlCustomerDetails.Controls.Add(this.lblPostalCodeBrgyProvince);
             this.pnlCustomerDetails.Controls.Add(this.lblCity);
             this.pnlCustomerDetails.Controls.Add(this.lblCountry);
-            this.pnlCustomerDetails.Controls.Add(this.lblCreditCard);
+            this.pnlCustomerDetails.Controls.Add(this.lblPaymentMethod);
             this.pnlCustomerDetails.Controls.Add(this.lblPhoneNumber);
             this.pnlCustomerDetails.Controls.Add(this.lblEmail);
             this.pnlCustomerDetails.Controls.Add(this.lblCustomerName);
@@ -457,17 +457,6 @@ namespace ThaiTanic.Forms
             this.guna2PictureBox1.TabIndex = 13;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // lblCreditCardNumber
-            // 
-            this.lblCreditCardNumber.BackColor = System.Drawing.Color.Transparent;
-            this.lblCreditCardNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCreditCardNumber.ForeColor = System.Drawing.Color.White;
-            this.lblCreditCardNumber.Location = new System.Drawing.Point(427, 154);
-            this.lblCreditCardNumber.Name = "lblCreditCardNumber";
-            this.lblCreditCardNumber.Size = new System.Drawing.Size(38, 18);
-            this.lblCreditCardNumber.TabIndex = 12;
-            this.lblCreditCardNumber.Text = "09281";
-            // 
             // lblPostalCodeBrgyProvince
             // 
             this.lblPostalCodeBrgyProvince.BackColor = System.Drawing.Color.Transparent;
@@ -475,9 +464,9 @@ namespace ThaiTanic.Forms
             this.lblPostalCodeBrgyProvince.ForeColor = System.Drawing.Color.White;
             this.lblPostalCodeBrgyProvince.Location = new System.Drawing.Point(428, 124);
             this.lblPostalCodeBrgyProvince.Name = "lblPostalCodeBrgyProvince";
-            this.lblPostalCodeBrgyProvince.Size = new System.Drawing.Size(191, 18);
+            this.lblPostalCodeBrgyProvince.Size = new System.Drawing.Size(3, 2);
             this.lblPostalCodeBrgyProvince.TabIndex = 9;
-            this.lblPostalCodeBrgyProvince.Text = "5800 Post, Brgy. Lawaan, Capiz.";
+            this.lblPostalCodeBrgyProvince.Text = null;
             // 
             // lblCity
             // 
@@ -486,9 +475,9 @@ namespace ThaiTanic.Forms
             this.lblCity.ForeColor = System.Drawing.Color.White;
             this.lblCity.Location = new System.Drawing.Point(428, 91);
             this.lblCity.Name = "lblCity";
-            this.lblCity.Size = new System.Drawing.Size(67, 18);
+            this.lblCity.Size = new System.Drawing.Size(3, 2);
             this.lblCity.TabIndex = 8;
-            this.lblCity.Text = "Roxas City";
+            this.lblCity.Text = null;
             // 
             // lblCountry
             // 
@@ -501,16 +490,16 @@ namespace ThaiTanic.Forms
             this.lblCountry.TabIndex = 7;
             this.lblCountry.Text = "Philippines";
             // 
-            // lblCreditCard
+            // lblPaymentMethod
             // 
-            this.lblCreditCard.BackColor = System.Drawing.Color.Transparent;
-            this.lblCreditCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCreditCard.ForeColor = System.Drawing.Color.White;
-            this.lblCreditCard.Location = new System.Drawing.Point(64, 154);
-            this.lblCreditCard.Name = "lblCreditCard";
-            this.lblCreditCard.Size = new System.Drawing.Size(70, 18);
-            this.lblCreditCard.TabIndex = 6;
-            this.lblCreditCard.Text = "Credit Card";
+            this.lblPaymentMethod.BackColor = System.Drawing.Color.Transparent;
+            this.lblPaymentMethod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPaymentMethod.ForeColor = System.Drawing.Color.White;
+            this.lblPaymentMethod.Location = new System.Drawing.Point(64, 154);
+            this.lblPaymentMethod.Name = "lblPaymentMethod";
+            this.lblPaymentMethod.Size = new System.Drawing.Size(70, 18);
+            this.lblPaymentMethod.TabIndex = 6;
+            this.lblPaymentMethod.Text = "Credit Card";
             // 
             // lblPhoneNumber
             // 
@@ -541,9 +530,9 @@ namespace ThaiTanic.Forms
             this.lblCustomerName.ForeColor = System.Drawing.Color.White;
             this.lblCustomerName.Location = new System.Drawing.Point(63, 60);
             this.lblCustomerName.Name = "lblCustomerName";
-            this.lblCustomerName.Size = new System.Drawing.Size(138, 18);
+            this.lblCustomerName.Size = new System.Drawing.Size(111, 18);
             this.lblCustomerName.TabIndex = 3;
-            this.lblCustomerName.Text = "Charles Gay Cayetano";
+            this.lblCustomerName.Text = "Charles Gayetano";
             // 
             // guna2Shapes1
             // 
@@ -585,6 +574,7 @@ namespace ThaiTanic.Forms
             // 
             // btnPrint
             // 
+            this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
             this.btnPrint.BorderRadius = 20;
             this.btnPrint.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnPrint.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -819,7 +809,7 @@ namespace ThaiTanic.Forms
         private System.Windows.Forms.Label lblOrderPage;
         private Guna.UI2.WinForms.Guna2Shapes guna2Shapes1;
         private System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblCreditCard;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblPaymentMethod;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblPhoneNumber;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblEmail;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblCustomerName;
@@ -827,7 +817,6 @@ namespace ThaiTanic.Forms
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblCreditCardNumber;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblPostalCodeBrgyProvince;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblCity;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblCountry;
