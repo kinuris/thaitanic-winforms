@@ -35,7 +35,6 @@ namespace ThaiTanic.Forms
             this.label10 = new System.Windows.Forms.Label();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtBirthday = new Guna.UI2.WinForms.Guna2TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtMiddleName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -47,6 +46,7 @@ namespace ThaiTanic.Forms
             this.label17 = new System.Windows.Forms.Label();
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.label18 = new System.Windows.Forms.Label();
+            this.dtpBirthday = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,12 +54,12 @@ namespace ThaiTanic.Forms
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.BorderRadius = 10;
+            this.guna2Panel1.Controls.Add(this.dtpBirthday);
             this.guna2Panel1.Controls.Add(this.btnSave);
             this.guna2Panel1.Controls.Add(this.txtPhoneNumber);
             this.guna2Panel1.Controls.Add(this.label10);
             this.guna2Panel1.Controls.Add(this.txtEmail);
             this.guna2Panel1.Controls.Add(this.label12);
-            this.guna2Panel1.Controls.Add(this.txtBirthday);
             this.guna2Panel1.Controls.Add(this.label13);
             this.guna2Panel1.Controls.Add(this.txtMiddleName);
             this.guna2Panel1.Controls.Add(this.label14);
@@ -165,31 +165,6 @@ namespace ThaiTanic.Forms
             this.label12.Size = new System.Drawing.Size(52, 20);
             this.label12.TabIndex = 32;
             this.label12.Text = "Email:";
-            // 
-            // txtBirthday
-            // 
-            this.txtBirthday.BorderRadius = 10;
-            this.txtBirthday.BorderThickness = 0;
-            this.txtBirthday.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBirthday.DefaultText = "";
-            this.txtBirthday.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtBirthday.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtBirthday.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBirthday.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBirthday.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
-            this.txtBirthday.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBirthday.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtBirthday.ForeColor = System.Drawing.Color.White;
-            this.txtBirthday.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBirthday.Location = new System.Drawing.Point(550, 206);
-            this.txtBirthday.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtBirthday.Name = "txtBirthday";
-            this.txtBirthday.PasswordChar = '\0';
-            this.txtBirthday.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.txtBirthday.PlaceholderText = "";
-            this.txtBirthday.SelectedText = "";
-            this.txtBirthday.Size = new System.Drawing.Size(494, 36);
-            this.txtBirthday.TabIndex = 31;
             // 
             // label13
             // 
@@ -382,6 +357,25 @@ namespace ThaiTanic.Forms
             this.label18.TabIndex = 20;
             this.label18.Text = "Username:";
             // 
+            // dtpBirthday
+            // 
+            this.dtpBirthday.BackColor = System.Drawing.Color.Transparent;
+            this.dtpBirthday.BorderRadius = 10;
+            this.dtpBirthday.Checked = true;
+            this.dtpBirthday.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
+            this.dtpBirthday.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.dtpBirthday.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
+            this.dtpBirthday.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.dtpBirthday.ForeColor = System.Drawing.Color.White;
+            this.dtpBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpBirthday.Location = new System.Drawing.Point(550, 206);
+            this.dtpBirthday.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpBirthday.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpBirthday.Name = "dtpBirthday";
+            this.dtpBirthday.Size = new System.Drawing.Size(494, 36);
+            this.dtpBirthday.TabIndex = 37;
+            this.dtpBirthday.Value = new System.DateTime(2023, 6, 21, 1, 30, 40, 870);
+            // 
             // frmAccountProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -406,7 +400,6 @@ namespace ThaiTanic.Forms
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private System.Windows.Forms.Label label12;
-        private Guna.UI2.WinForms.Guna2TextBox txtBirthday;
         private System.Windows.Forms.Label label13;
         private Guna.UI2.WinForms.Guna2TextBox txtMiddleName;
         private System.Windows.Forms.Label label14;
@@ -418,5 +411,6 @@ namespace ThaiTanic.Forms
         private System.Windows.Forms.Label label17;
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
         private System.Windows.Forms.Label label18;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpBirthday;
     }
 }
