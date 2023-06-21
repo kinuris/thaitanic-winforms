@@ -1,7 +1,9 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Guna.UI2.WinForms.Suite;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Xml.Linq;
 
 public enum UserRole
 {
@@ -19,7 +21,6 @@ namespace ThaiTanic.Entities
         public string LastName;
         public string MiddleName;
         public DateTime Birthday;
-        public int Age;
         public string Email;
         public string PhoneNumber;
         public UserRole Role;
@@ -75,6 +76,85 @@ namespace ThaiTanic.Entities
                 else
                     return null;
             }
+        }
+
+        public void UpdatePassword(string oldPass, string newPass)
+        {
+            string sql = "UPDATE user SET password = MD5(@password) WHERE id = @id";
+
+            if (AuthUser(Username, oldPass) == null)
+            {
+                throw new Exception("Wrong Password");
+            }
+
+            using (MySqlConnection conn = new MySqlConnection(Connection.ConnectionString))
+            using (MySqlCommand cmd = new MySqlCommand(sql, conn))
+            {
+                conn.Open();
+
+                cmd.Parameters.AddWithValue("@password", newPass);
+                cmd.Parameters.AddWithValue("@id", Id);
+
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public void Fetch()
+        {
+            string sql = "SELECT id, username, first_name, last_name, middle_name, phone_number, birthday, email, role_enum, created_at, updated_at FROM user WHERE id = @id";
+
+            using (MySqlConnection conn = new MySqlConnection(Connection.ConnectionString))
+            using (MySqlCommand cmd = new MySqlCommand(sql, conn))
+            {
+                conn.Open();
+
+                cmd.Parameters.AddWithValue("@id", Id);
+
+                var reader = cmd.ExecuteReader();
+                if (!reader.Read())
+                {
+                    // TODO: Handle error when item is already deleted from database
+                    return;
+                }
+
+                var user = new User(reader);
+
+                Username = user.Username;
+                FirstName = user.FirstName;
+                MiddleName = user.MiddleName;
+                LastName = user.LastName;
+                PhoneNumber = user.PhoneNumber;
+                Email = user.Email;
+                Birthday = user.Birthday;
+                CreatedAt = user.CreatedAt;
+                UpdatedAt = user.UpdatedAt;
+            }
+        }
+
+
+        public void Update(string username, string firstName, string middleName, string lastName, string email, string phoneNumber, DateTime birthday)
+        {
+            string sql = @"UPDATE user SET username = @username, first_name = @first_name, middle_name = @middle_name, last_name = @last_name, email = @email, 
+                    phone_number = @phone_number, birthday = @birthday WHERE id = @id";
+
+            using (MySqlConnection conn = new MySqlConnection(Connection.ConnectionString))
+            using (MySqlCommand cmd = new MySqlCommand(sql, conn))
+            {
+                conn.Open();
+
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@first_name", firstName);
+                cmd.Parameters.AddWithValue("@middle_name", middleName);
+                cmd.Parameters.AddWithValue("@last_name", lastName);
+                cmd.Parameters.AddWithValue("@email", email);
+                cmd.Parameters.AddWithValue("@phone_number", phoneNumber);
+                cmd.Parameters.AddWithValue("@birthday", birthday);
+                cmd.Parameters.AddWithValue("@id", Id);
+
+                cmd.ExecuteNonQuery();
+            }
+
+            Fetch();
         }
 
         public static List<User> GetAllUsers()
