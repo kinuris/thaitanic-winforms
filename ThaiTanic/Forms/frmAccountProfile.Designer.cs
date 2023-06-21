@@ -30,6 +30,7 @@ namespace ThaiTanic.Forms
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.dtpBirthday = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.txtPhoneNumber = new Guna.UI2.WinForms.Guna2TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -42,11 +43,10 @@ namespace ThaiTanic.Forms
             this.label15 = new System.Windows.Forms.Label();
             this.txtFirstName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtNewPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.dtpBirthday = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,7 +67,7 @@ namespace ThaiTanic.Forms
             this.guna2Panel1.Controls.Add(this.label15);
             this.guna2Panel1.Controls.Add(this.txtFirstName);
             this.guna2Panel1.Controls.Add(this.label16);
-            this.guna2Panel1.Controls.Add(this.txtPassword);
+            this.guna2Panel1.Controls.Add(this.txtNewPassword);
             this.guna2Panel1.Controls.Add(this.label17);
             this.guna2Panel1.Controls.Add(this.txtUsername);
             this.guna2Panel1.Controls.Add(this.label18);
@@ -77,6 +77,25 @@ namespace ThaiTanic.Forms
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1074, 524);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // dtpBirthday
+            // 
+            this.dtpBirthday.BackColor = System.Drawing.Color.Transparent;
+            this.dtpBirthday.BorderRadius = 10;
+            this.dtpBirthday.Checked = true;
+            this.dtpBirthday.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
+            this.dtpBirthday.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.dtpBirthday.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
+            this.dtpBirthday.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.dtpBirthday.ForeColor = System.Drawing.Color.White;
+            this.dtpBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpBirthday.Location = new System.Drawing.Point(550, 206);
+            this.dtpBirthday.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpBirthday.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpBirthday.Name = "dtpBirthday";
+            this.dtpBirthday.Size = new System.Drawing.Size(494, 36);
+            this.dtpBirthday.TabIndex = 37;
+            this.dtpBirthday.Value = new System.DateTime(2023, 6, 21, 1, 30, 40, 870);
             // 
             // btnSave
             // 
@@ -93,6 +112,7 @@ namespace ThaiTanic.Forms
             this.btnSave.Size = new System.Drawing.Size(78, 32);
             this.btnSave.TabIndex = 36;
             this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtPhoneNumber
             // 
@@ -285,30 +305,31 @@ namespace ThaiTanic.Forms
             this.label16.TabIndex = 24;
             this.label16.Text = "First Name:";
             // 
-            // txtPassword
+            // txtNewPassword
             // 
-            this.txtPassword.BorderRadius = 10;
-            this.txtPassword.BorderThickness = 0;
-            this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPassword.DefaultText = "";
-            this.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
-            this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtPassword.ForeColor = System.Drawing.Color.White;
-            this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassword.Location = new System.Drawing.Point(550, 42);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '\0';
-            this.txtPassword.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.txtPassword.PlaceholderText = "";
-            this.txtPassword.SelectedText = "";
-            this.txtPassword.Size = new System.Drawing.Size(494, 36);
-            this.txtPassword.TabIndex = 23;
+            this.txtNewPassword.BorderRadius = 10;
+            this.txtNewPassword.BorderThickness = 0;
+            this.txtNewPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNewPassword.DefaultText = "";
+            this.txtNewPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNewPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNewPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNewPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNewPassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
+            this.txtNewPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNewPassword.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtNewPassword.ForeColor = System.Drawing.Color.White;
+            this.txtNewPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNewPassword.Location = new System.Drawing.Point(550, 42);
+            this.txtNewPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNewPassword.Name = "txtNewPassword";
+            this.txtNewPassword.PasswordChar = '●';
+            this.txtNewPassword.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.txtNewPassword.PlaceholderText = "";
+            this.txtNewPassword.SelectedText = "";
+            this.txtNewPassword.Size = new System.Drawing.Size(494, 36);
+            this.txtNewPassword.TabIndex = 23;
+            this.txtNewPassword.UseSystemPasswordChar = true;
             // 
             // label17
             // 
@@ -357,25 +378,6 @@ namespace ThaiTanic.Forms
             this.label18.TabIndex = 20;
             this.label18.Text = "Username:";
             // 
-            // dtpBirthday
-            // 
-            this.dtpBirthday.BackColor = System.Drawing.Color.Transparent;
-            this.dtpBirthday.BorderRadius = 10;
-            this.dtpBirthday.Checked = true;
-            this.dtpBirthday.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
-            this.dtpBirthday.CheckedState.ForeColor = System.Drawing.Color.White;
-            this.dtpBirthday.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
-            this.dtpBirthday.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.dtpBirthday.ForeColor = System.Drawing.Color.White;
-            this.dtpBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpBirthday.Location = new System.Drawing.Point(550, 206);
-            this.dtpBirthday.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpBirthday.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtpBirthday.Name = "dtpBirthday";
-            this.dtpBirthday.Size = new System.Drawing.Size(494, 36);
-            this.dtpBirthday.TabIndex = 37;
-            this.dtpBirthday.Value = new System.DateTime(2023, 6, 21, 1, 30, 40, 870);
-            // 
             // frmAccountProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -408,7 +410,7 @@ namespace ThaiTanic.Forms
         private System.Windows.Forms.Label label15;
         private Guna.UI2.WinForms.Guna2TextBox txtFirstName;
         private System.Windows.Forms.Label label16;
-        private Guna.UI2.WinForms.Guna2TextBox txtPassword;
+        private Guna.UI2.WinForms.Guna2TextBox txtNewPassword;
         private System.Windows.Forms.Label label17;
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
         private System.Windows.Forms.Label label18;

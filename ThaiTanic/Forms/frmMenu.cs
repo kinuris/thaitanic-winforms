@@ -160,6 +160,11 @@ namespace ThaiTanic.Forms
 
         private void UpdateLabels()
         {
+            if ((Math.Ceiling(_CartEntries.Count() / 5.0) == 0.0 ? 1 : Math.Ceiling(_CartEntries.Count() / 5.0)) < _CartPage)
+            {
+                _CartPage = (int)(Math.Ceiling(_CartEntries.Count() / 5.0) == 0.0 ? 1 : Math.Ceiling(_CartEntries.Count() / 5.0));
+            }
+
             lblSubtotal.Text = string.Format("{0:n}", _CartEntries.Select(entry => entry.Item.Price * entry.Quantity).Sum());
             lblVat.Text = string.Format("{0:n}", Convert.ToDecimal(lblSubtotal.Text) * 0.12m);
             lblGrandTotal.Text = string.Format("{0:n}", Convert.ToDecimal(lblShippingCost.Text) + Convert.ToDecimal(lblSubtotal.Text) + Convert.ToDecimal(lblVat.Text));
