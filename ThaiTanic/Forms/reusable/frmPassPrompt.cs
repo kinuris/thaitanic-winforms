@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ThaiTanic.Entities;
 
-namespace ThaiTanic.Forms.reusable
+namespace ThaiTanic.Forms.Reusable
 {
     public partial class frmPassPrompt : Form
     {

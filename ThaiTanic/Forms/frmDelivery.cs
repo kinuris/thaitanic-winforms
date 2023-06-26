@@ -5,9 +5,9 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ThaiTanic.Entities;
+using ThaiTanic.Forms.Reusable;
 using ThaiTanic.UserControls;
 
 namespace ThaiTanic.Forms
@@ -211,6 +211,17 @@ namespace ThaiTanic.Forms
             _FilterByStatus = OrderStatus.Cancelled;
             _CurrentOrderPage = 1;
             UpdateOrderList();
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            if (_SelectedId == null) return;
+
+            var selectedOrder = Orders.GetOrderById((int) _SelectedId);
+
+            frmOrderReceipt frmOrderReceipt = new frmOrderReceipt((int) _SelectedId, selectedOrder.DateOrdered, "COD", _User.FullName, selectedOrder.TotalPrice);
+
+            frmOrderReceipt.ShowDialog(this);
         }
     }
 }

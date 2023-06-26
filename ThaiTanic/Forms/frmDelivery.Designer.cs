@@ -38,22 +38,15 @@ namespace ThaiTanic.Forms
             this.btnToPay = new Guna.UI2.WinForms.Guna2Button();
             this.btnAll = new Guna.UI2.WinForms.Guna2Button();
             this.pnlSearch = new Guna.UI2.WinForms.Guna2Panel();
-            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnlOrders = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlOrderItems = new Guna.UI2.WinForms.Guna2Panel();
             this.lblItemPageIndicator = new System.Windows.Forms.Label();
-            this.btnItemsPageForward = new Guna.UI2.WinForms.Guna2Button();
-            this.btnItemsPageBackward = new Guna.UI2.WinForms.Guna2Button();
             this.lblOrderNumber = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlOrderedBatch = new System.Windows.Forms.FlowLayoutPanel();
             this.btnPrevious = new Guna.UI2.WinForms.Guna2Button();
             this.btnNext = new Guna.UI2.WinForms.Guna2Button();
             this.pnlCustomerDetails = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblPostalCodeBrgyProvince = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblCity = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblCountry = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -76,16 +69,23 @@ namespace ThaiTanic.Forms
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblOrderPage = new System.Windows.Forms.Label();
+            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnItemsPageForward = new Guna.UI2.WinForms.Guna2Button();
+            this.btnItemsPageBackward = new Guna.UI2.WinForms.Guna2Button();
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnlButtonTabs.SuspendLayout();
             this.pnlSearch.SuspendLayout();
             this.pnlOrderItems.SuspendLayout();
             this.pnlCustomerDetails.SuspendLayout();
+            this.pnlOrderSummary.SuspendLayout();
+            this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            this.pnlOrderSummary.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlButtonTabs
@@ -221,35 +221,6 @@ namespace ThaiTanic.Forms
             this.pnlSearch.Size = new System.Drawing.Size(1134, 62);
             this.pnlSearch.TabIndex = 1;
             // 
-            // txtSearch
-            // 
-            this.txtSearch.BorderColor = System.Drawing.Color.Silver;
-            this.txtSearch.BorderRadius = 10;
-            this.txtSearch.BorderThickness = 0;
-            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearch.DefaultText = "";
-            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
-            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtSearch.ForeColor = System.Drawing.Color.White;
-            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtSearch.IconLeft")));
-            this.txtSearch.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txtSearch.IconLeftSize = new System.Drawing.Size(36, 36);
-            this.txtSearch.Location = new System.Drawing.Point(31, 16);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PasswordChar = '\0';
-            this.txtSearch.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(139)))), ((int)(((byte)(139)))));
-            this.txtSearch.PlaceholderText = "Look for your Orders here by searching the Order ID or Product name";
-            this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(1072, 42);
-            this.txtSearch.TabIndex = 0;
-            // 
             // pnlOrders
             // 
             this.pnlOrders.Location = new System.Drawing.Point(0, 104);
@@ -285,42 +256,6 @@ namespace ThaiTanic.Forms
             this.lblItemPageIndicator.Size = new System.Drawing.Size(45, 24);
             this.lblItemPageIndicator.TabIndex = 17;
             this.lblItemPageIndicator.Text = "1 / 1";
-            // 
-            // btnItemsPageForward
-            // 
-            this.btnItemsPageForward.BorderRadius = 5;
-            this.btnItemsPageForward.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnItemsPageForward.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnItemsPageForward.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnItemsPageForward.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnItemsPageForward.FillColor = System.Drawing.Color.Gray;
-            this.btnItemsPageForward.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnItemsPageForward.ForeColor = System.Drawing.Color.White;
-            this.btnItemsPageForward.Image = global::ThaiTanic.Properties.Resources.btn_forward;
-            this.btnItemsPageForward.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnItemsPageForward.Location = new System.Drawing.Point(93, 318);
-            this.btnItemsPageForward.Name = "btnItemsPageForward";
-            this.btnItemsPageForward.Size = new System.Drawing.Size(26, 26);
-            this.btnItemsPageForward.TabIndex = 4;
-            this.btnItemsPageForward.Click += new System.EventHandler(this.btnItemsPageForward_Click);
-            // 
-            // btnItemsPageBackward
-            // 
-            this.btnItemsPageBackward.BorderRadius = 5;
-            this.btnItemsPageBackward.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnItemsPageBackward.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnItemsPageBackward.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnItemsPageBackward.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnItemsPageBackward.FillColor = System.Drawing.Color.Gray;
-            this.btnItemsPageBackward.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnItemsPageBackward.ForeColor = System.Drawing.Color.White;
-            this.btnItemsPageBackward.Image = global::ThaiTanic.Properties.Resources.btn_back;
-            this.btnItemsPageBackward.ImageSize = new System.Drawing.Size(15, 15);
-            this.btnItemsPageBackward.Location = new System.Drawing.Point(14, 318);
-            this.btnItemsPageBackward.Name = "btnItemsPageBackward";
-            this.btnItemsPageBackward.Size = new System.Drawing.Size(26, 26);
-            this.btnItemsPageBackward.TabIndex = 3;
-            this.btnItemsPageBackward.Click += new System.EventHandler(this.btnItemsPageBackward_Click);
             // 
             // lblOrderNumber
             // 
@@ -412,50 +347,6 @@ namespace ThaiTanic.Forms
             this.pnlCustomerDetails.Name = "pnlCustomerDetails";
             this.pnlCustomerDetails.Size = new System.Drawing.Size(736, 196);
             this.pnlCustomerDetails.TabIndex = 7;
-            // 
-            // guna2PictureBox4
-            // 
-            this.guna2PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox4.Image")));
-            this.guna2PictureBox4.ImageRotate = 0F;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(36, 154);
-            this.guna2PictureBox4.Name = "guna2PictureBox4";
-            this.guna2PictureBox4.Size = new System.Drawing.Size(21, 21);
-            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox4.TabIndex = 16;
-            this.guna2PictureBox4.TabStop = false;
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(34, 123);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(20, 20);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox3.TabIndex = 15;
-            this.guna2PictureBox3.TabStop = false;
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(35, 90);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(20, 20);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 14;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(36, 57);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(20, 20);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 13;
-            this.guna2PictureBox1.TabStop = false;
             // 
             // lblPostalCodeBrgyProvince
             // 
@@ -588,6 +479,7 @@ namespace ThaiTanic.Forms
             this.btnPrint.Size = new System.Drawing.Size(180, 45);
             this.btnPrint.TabIndex = 2;
             this.btnPrint.Text = "Print Receipt";
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // guna2Panel2
             // 
@@ -734,6 +626,115 @@ namespace ThaiTanic.Forms
             this.lblOrderPage.TabIndex = 18;
             this.lblOrderPage.Text = "1 / 1";
             // 
+            // guna2PictureBox4
+            // 
+            this.guna2PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox4.Image")));
+            this.guna2PictureBox4.ImageRotate = 0F;
+            this.guna2PictureBox4.Location = new System.Drawing.Point(36, 154);
+            this.guna2PictureBox4.Name = "guna2PictureBox4";
+            this.guna2PictureBox4.Size = new System.Drawing.Size(21, 21);
+            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox4.TabIndex = 16;
+            this.guna2PictureBox4.TabStop = false;
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(34, 123);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(20, 20);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox3.TabIndex = 15;
+            this.guna2PictureBox3.TabStop = false;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(35, 90);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(20, 20);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 14;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(36, 57);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 13;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // btnItemsPageForward
+            // 
+            this.btnItemsPageForward.BorderRadius = 5;
+            this.btnItemsPageForward.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnItemsPageForward.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnItemsPageForward.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnItemsPageForward.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnItemsPageForward.FillColor = System.Drawing.Color.Gray;
+            this.btnItemsPageForward.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnItemsPageForward.ForeColor = System.Drawing.Color.White;
+            this.btnItemsPageForward.Image = global::ThaiTanic.Properties.Resources.btn_forward;
+            this.btnItemsPageForward.ImageSize = new System.Drawing.Size(15, 15);
+            this.btnItemsPageForward.Location = new System.Drawing.Point(93, 318);
+            this.btnItemsPageForward.Name = "btnItemsPageForward";
+            this.btnItemsPageForward.Size = new System.Drawing.Size(26, 26);
+            this.btnItemsPageForward.TabIndex = 4;
+            this.btnItemsPageForward.Click += new System.EventHandler(this.btnItemsPageForward_Click);
+            // 
+            // btnItemsPageBackward
+            // 
+            this.btnItemsPageBackward.BorderRadius = 5;
+            this.btnItemsPageBackward.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnItemsPageBackward.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnItemsPageBackward.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnItemsPageBackward.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnItemsPageBackward.FillColor = System.Drawing.Color.Gray;
+            this.btnItemsPageBackward.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnItemsPageBackward.ForeColor = System.Drawing.Color.White;
+            this.btnItemsPageBackward.Image = global::ThaiTanic.Properties.Resources.btn_back;
+            this.btnItemsPageBackward.ImageSize = new System.Drawing.Size(15, 15);
+            this.btnItemsPageBackward.Location = new System.Drawing.Point(14, 318);
+            this.btnItemsPageBackward.Name = "btnItemsPageBackward";
+            this.btnItemsPageBackward.Size = new System.Drawing.Size(26, 26);
+            this.btnItemsPageBackward.TabIndex = 3;
+            this.btnItemsPageBackward.Click += new System.EventHandler(this.btnItemsPageBackward_Click);
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.BorderColor = System.Drawing.Color.Silver;
+            this.txtSearch.BorderRadius = 10;
+            this.txtSearch.BorderThickness = 0;
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.DefaultText = "";
+            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
+            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtSearch.ForeColor = System.Drawing.Color.White;
+            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtSearch.IconLeft")));
+            this.txtSearch.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtSearch.IconLeftSize = new System.Drawing.Size(36, 36);
+            this.txtSearch.Location = new System.Drawing.Point(31, 16);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PasswordChar = '\0';
+            this.txtSearch.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(139)))), ((int)(((byte)(139)))));
+            this.txtSearch.PlaceholderText = "Look for your Orders here by searching the Order ID or Product name";
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.Size = new System.Drawing.Size(1072, 42);
+            this.txtSearch.TabIndex = 0;
+            // 
             // frmDelivery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -759,14 +760,14 @@ namespace ThaiTanic.Forms
             this.pnlOrderItems.PerformLayout();
             this.pnlCustomerDetails.ResumeLayout(false);
             this.pnlCustomerDetails.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.pnlOrderSummary.ResumeLayout(false);
             this.pnlOrderSummary.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

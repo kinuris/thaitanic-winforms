@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ThaiTanic.Entities;
-using ThaiTanic.Forms.reusable;
+using ThaiTanic.Forms.Reusable;
 
 namespace ThaiTanic.Forms
 {

@@ -1,4 +1,4 @@
-﻿namespace ThaiTanic.Forms.reusable
+﻿namespace ThaiTanic.Forms.Reusable
 {
     partial class frmPassPrompt
     {
