@@ -78,6 +78,26 @@ namespace ThaiTanic.Entities
             }
         }
 
+        public static User GetUserByUsername(string username)
+        {
+            string sql = @"SELECT id, username, first_name, last_name, middle_name, phone_number, birthday, email, role_enum, created_at, updated_at 
+                        FROM user WHERE username = @username";
+
+            using (MySqlConnection conn = new MySqlConnection(Connection.ConnectionString))
+            using (MySqlCommand cmd = new MySqlCommand(sql, conn))
+            {
+                conn.Open();
+                cmd.Parameters.AddWithValue("@username", username);
+
+                var reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                    return new User(reader);
+                else
+                    return null;
+            }
+        }
+
         public void UpdatePassword(string oldPass, string newPass)
         {
             string sql = "UPDATE user SET password = MD5(@password) WHERE id = @id";
