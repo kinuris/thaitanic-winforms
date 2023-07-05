@@ -78,7 +78,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmPassPrompt";
-            this.Text = "Old Password";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Current Password";
             this.ResumeLayout(false);
 
         }
