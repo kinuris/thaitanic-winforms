@@ -59,7 +59,7 @@ namespace ThaiTanic.Forms
             _CategoryPage = _CartPage = 1;
             _CurrentCategory = ItemCategory.Breakfast;
             _SetCurrentSelected = setCurrentSelected;
-            _CurrentItems = Items.GetAllItems().Where(i => i.Category == _CurrentCategory).ToList();
+            _CurrentItems = Items.GetAllItems().Where(i => i.Category == _CurrentCategory && i.Available).ToList();
 
             UpdateShownMenuItems();
             UpdateLabels();
@@ -95,7 +95,7 @@ namespace ThaiTanic.Forms
         {
             _CurrentCategory = category;
             _CategoryPage = 1;
-            _CurrentItems = Items.GetAllItems().Where(i => i.Category == _CurrentCategory).ToList();
+            _CurrentItems = Items.GetAllItems().Where(i => i.Category == _CurrentCategory && i.Available).ToList();
             UpdateShownMenuItems();
         }
 
@@ -131,7 +131,7 @@ namespace ThaiTanic.Forms
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if (_CategoryPage <= _CurrentItems.Count / 8)
+            if (_CurrentItems.Count() / 8.0 > _CategoryPage)
             {
                 _CategoryPage++;
                 UpdateShownMenuItems();
