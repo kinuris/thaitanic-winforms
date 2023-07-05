@@ -54,6 +54,15 @@ namespace ThaiTanic.Forms
                 return;
             }
 
+            var user = User.GetUserByUsername(txtUsername.Text);
+
+            if (user != null && user.Id != _LoggedInUser.Id)
+            {
+                MessageBox.Show("Username already exists", "Already Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+            }
+
             _LoggedInUser.Update(txtUsername.Text, txtFirstName.Text, txtMiddleName.Text, txtLastName.Text, txtEmail.Text, txtPhoneNumber.Text, dtpBirthday.Value);
             MessageBox.Show("Profile successfully updated", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
