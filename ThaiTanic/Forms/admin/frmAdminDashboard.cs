@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using ThaiTanic.Entities;
 
 namespace ThaiTanic.Forms.admin
 {
@@ -84,6 +85,14 @@ namespace ThaiTanic.Forms.admin
             pnlContainer.Controls.Clear();
             pnlContainer.Controls.Add(frmManageUsers);
             frmManageUsers.Show();
+        }
+
+        private void btnUserView_Click(object sender, EventArgs e)
+        {
+            frmDashboard frmDashboard = new frmDashboard(User.AuthUser(_Username, _Password));
+
+            Close();
+            frmDashboard.Show();
         }
     }
 }

@@ -32,6 +32,7 @@ namespace ThaiTanic.Forms.admin
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdminDashboard));
             this.pnlNavigation = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnUserView = new Guna.UI2.WinForms.Guna2Button();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.btnManageUsers = new Guna.UI2.WinForms.Guna2Button();
             this.btnManageItems = new Guna.UI2.WinForms.Guna2Button();
@@ -45,6 +46,7 @@ namespace ThaiTanic.Forms.admin
             // 
             // pnlNavigation
             // 
+            this.pnlNavigation.Controls.Add(this.btnUserView);
             this.pnlNavigation.Controls.Add(this.btnLogout);
             this.pnlNavigation.Controls.Add(this.btnManageUsers);
             this.pnlNavigation.Controls.Add(this.btnManageItems);
@@ -57,6 +59,25 @@ namespace ThaiTanic.Forms.admin
             this.pnlNavigation.Size = new System.Drawing.Size(232, 720);
             this.pnlNavigation.TabIndex = 0;
             // 
+            // btnUserView
+            // 
+            this.btnUserView.BackColor = System.Drawing.Color.Transparent;
+            this.btnUserView.BorderRadius = 10;
+            this.btnUserView.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUserView.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUserView.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUserView.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUserView.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
+            this.btnUserView.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnUserView.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.btnUserView.Location = new System.Drawing.Point(18, 445);
+            this.btnUserView.Name = "btnUserView";
+            this.btnUserView.Size = new System.Drawing.Size(196, 42);
+            this.btnUserView.TabIndex = 9;
+            this.btnUserView.Text = "User View";
+            this.btnUserView.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnUserView.Click += new System.EventHandler(this.btnUserView_Click);
+            // 
             // btnLogout
             // 
             this.btnLogout.BackColor = System.Drawing.Color.Transparent;
@@ -68,7 +89,7 @@ namespace ThaiTanic.Forms.admin
             this.btnLogout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(31)))), ((int)(((byte)(44)))));
             this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.btnLogout.Location = new System.Drawing.Point(18, 366);
+            this.btnLogout.Location = new System.Drawing.Point(18, 394);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(196, 42);
             this.btnLogout.TabIndex = 8;
@@ -188,5 +209,6 @@ namespace ThaiTanic.Forms.admin
         private Guna.UI2.WinForms.Guna2Button btnManageItems;
         private Guna.UI2.WinForms.Guna2Button btnManageOrders;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private Guna.UI2.WinForms.Guna2Button btnUserView;
     }
 }

@@ -31,7 +31,7 @@ namespace ThaiTanic.Forms.admin
             _ReversedOrders = false;
             _SortBy = SortByOptions.Date;
 
-            cbUsers.Items.AddRange(User.GetAllUsers().Where(user => user.Role != UserRole.Admin).ToArray());
+            cbUsers.Items.AddRange(User.GetAllUsers().ToArray());
             //-----------------------------DUMMY ORDERS--------------------------------------
             //int[] orderNumbers = new int[] { 13123, 42523, 41236, 21893 };
             //int[] itemCounts = new int[] { 4, 3, 2, 7 };
