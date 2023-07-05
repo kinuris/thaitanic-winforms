@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ThaiTanic.Entities;
+using ThaiTanic.Forms.admin;
+using ThaiTanic.Forms.Reusable;
 using ThaiTanic.State;
 
 namespace ThaiTanic.Forms
@@ -40,6 +42,15 @@ namespace ThaiTanic.Forms
             catch (FileNotFoundException)
             {
                 // PASS
+            }
+            catch (Exception)
+            {
+                _Cart.Clear();
+            }
+
+            if (_LoggedInUser.Role != UserRole.Admin)
+            {
+                btnAdminView.Visible = false;
             }
 
             frmMenu frmMenu = new frmMenu(_LoggedInUser, DisplayInDashboardFormHook, AddCartEntry, _Cart.SubtractCartEntry, _Cart.AddEntriesToDGV, _Cart.Clear, _Cart.Entries, SetCurrentSelected)
@@ -113,6 +124,22 @@ namespace ThaiTanic.Forms
             };
 
             DisplayInDashboardFormHook(frmAccount);
+        }
+
+        private void btnAdminView_Click(object sender, EventArgs e)
+        {
+            frmPassPrompt frmPassPrompt = new frmPassPrompt(_LoggedInUser);
+
+            frmPassPrompt.ShowDialog(this);
+            _Cart.Serialize();
+
+            if (frmPassPrompt.DialogResult == DialogResult.OK) 
+            {
+                frmAdminDashboard frmAdminDashboard = new frmAdminDashboard(_LoggedInUser.Username, frmPassPrompt.TextPassword);
+
+                Close();
+                frmAdminDashboard.Show();
+            }
         }
     }
 }
