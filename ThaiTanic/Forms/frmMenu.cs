@@ -232,6 +232,8 @@ namespace ThaiTanic.Forms
                 return;
             }
 
+            _ClearCart();
+
             var frmDelivery = new frmDelivery(_User)
             {
                 TopLevel = false
