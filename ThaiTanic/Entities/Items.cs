@@ -248,7 +248,7 @@ namespace ThaiTanic.Entities
 
         public override string ToString()
         {
-            return Name;
+            return $"{Name} {(Available ? "" : "(Not Available)")}";
         }
     }
 }
