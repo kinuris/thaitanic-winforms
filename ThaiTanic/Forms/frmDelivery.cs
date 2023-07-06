@@ -95,6 +95,7 @@ namespace ThaiTanic.Forms
 
             lblCity.Text = associatedAddress.City;
             lblPhoneNumber.Text = associatedAddress.PhoneNumber;
+            lblAddressLabel.Text = associatedAddress.FullName;
             lblPostalCodeBrgyProvince.Text = $"{associatedAddress.PostalCode} Brgy. {associatedAddress.Barangay}, {associatedAddress.City}, {associatedAddress.Province}";
 
             pnlOrderedBatch.Controls.Clear();
