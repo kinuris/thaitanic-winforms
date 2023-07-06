@@ -76,7 +76,7 @@ namespace ThaiTanic.Forms
 
                 ucCategoryCard categoryCard = new ucCategoryCard(category.DBString(), Items.GetAllItems().Where(e => e.Category == category).Where(entry => entry.Available).Count(), SetCurrentCategory)
                 {
-                    BgColor = colors[iteration++]
+                    BgColor = colors[iteration++ % 9]
                 };
 
                 pnlContainerCategories.Controls.Add(categoryCard);
