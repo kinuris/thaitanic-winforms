@@ -64,6 +64,8 @@ namespace ThaiTanic.Forms
             UpdateShownMenuItems();
             UpdateLabels();
 
+            lblCategoryIndicator.Text = ItemCategory.Breakfast.DBString();
+
             //------------------- DUMMY CATEGORIES -------------------------------------
             Color[] colors = new Color[] { Color.FromArgb(170, 216, 213), Color.FromArgb(194, 156, 156), Color.FromArgb(174, 201, 217), Color.FromArgb(255, 200, 221), Color.FromArgb(162, 210, 255), Color.FromArgb(205, 180, 219), Color.FromArgb(255, 178, 178), Color.FromArgb(246, 234, 194) };
             int iteration = 0;
@@ -93,6 +95,7 @@ namespace ThaiTanic.Forms
 
         public void SetCurrentCategory(ItemCategory category)
         {
+            lblCategoryIndicator.Text = category.DBString();
             _CurrentCategory = category;
             _CategoryPage = 1;
             _CurrentItems = Items.GetAllItems().Where(i => i.Category == _CurrentCategory && i.Available).ToList();
